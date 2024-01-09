@@ -1,0 +1,24 @@
+{
+  "name": "alpha-react-cli",
+  "version": "1.0.0",
+  "description": "It's a CLI to help developers to build their amazing react.js projects using clean architecture and tests already configured",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "bin": {
+    "alpha-react": "./dist/index.js"
+  },
+  "author": "Rivail Pinto",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "figlet": "^1.7.0",
+    "log-beautify": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.7",
+    "typescript": "^5.3.3"
+  }
+}

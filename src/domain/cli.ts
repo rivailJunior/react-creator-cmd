@@ -10,7 +10,7 @@ interface ICLI {
   createBlankFolder: (folderName: string) => Promise<any>;
   createBlankFile: (filePath: string) => Promise<any>;
 }
-export default class CLI implements ICLI {
+class CLI implements ICLI {
   constructor(readonly logger: ILogger) {}
   async listContent(filePath: string) {
     try {
@@ -48,3 +48,4 @@ export default class CLI implements ICLI {
     }
   }
 }
+export default CLI;

@@ -5,11 +5,14 @@ const path = require("path");
 
 import CLI from "./domain/cli";
 import LoggAdapter from "./adapters/loggAdapter";
+
+const logAdapter = new LoggAdapter();
 const program = new Command();
-const AlphaCli = new CLI(new LoggAdapter());
+const AlphaCli = new CLI(logAdapter);
+
 console.log(figlet.textSync("Alpha-React"));
 
-import { ABOVE_DIR_LOCATION, YOUR_PROJECT_FOLDER_AT } from "./constants";
+import { YOUR_PROJECT_FOLDER_AT } from "./constants";
 program
   .version("1.0.0")
   .description("Alpha-React CLI helper")
@@ -39,7 +42,7 @@ if (options.touch) {
 
 if (options.folder) {
   AlphaCli.createProjectFromTemplate(
-    path.resolve(ABOVE_DIR_LOCATION, options.folder)
+    path.resolve(YOUR_PROJECT_FOLDER_AT, options.folder)
   );
 }
 

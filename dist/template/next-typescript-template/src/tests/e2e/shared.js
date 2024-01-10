@@ -9,16 +9,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.copyFolder = void 0;
-const fs = require("fs");
-const path = require("path");
-const constants_1 = require("../constants");
-function copyFolder(folderPath) {
-    return __awaiter(this, void 0, void 0, function* () {
-        yield fs.cpSync(path.resolve(constants_1.ROOT_DIR_LOCATION + "/src/template/next-typescript-template"), folderPath, {
-            recursive: true,
+exports.PlayConfigPage = void 0;
+class PlayConfigPage {
+    constructor(page) {
+        this.page = page;
+    }
+    closePage() {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.page.close();
         });
-    });
+    }
+    goto(route = "/") {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.page.goto("http://localhost:3000" + route);
+        });
+    }
 }
-exports.copyFolder = copyFolder;
-//# sourceMappingURL=createDirFromTemplate.js.map
+exports.PlayConfigPage = PlayConfigPage;
+//# sourceMappingURL=shared.js.map

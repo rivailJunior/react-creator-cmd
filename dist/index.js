@@ -9,8 +9,9 @@ const figlet = require("figlet");
 const path = require("path");
 const cli_1 = __importDefault(require("./domain/cli"));
 const loggAdapter_1 = __importDefault(require("./adapters/loggAdapter"));
+const logAdapter = new loggAdapter_1.default();
 const program = new Command();
-const AlphaCli = new cli_1.default(new loggAdapter_1.default());
+const AlphaCli = new cli_1.default(logAdapter);
 console.log(figlet.textSync("Alpha-React"));
 const constants_1 = require("./constants");
 program
@@ -33,7 +34,7 @@ if (options.touch) {
     AlphaCli.createBlankFile(path.resolve(constants_1.YOUR_PROJECT_FOLDER_AT, options.touch));
 }
 if (options.folder) {
-    AlphaCli.createProjectFromTemplate(path.resolve(constants_1.ABOVE_DIR_LOCATION, options.folder));
+    AlphaCli.createProjectFromTemplate(path.resolve(constants_1.YOUR_PROJECT_FOLDER_AT, options.folder));
 }
 if (!process.argv.slice(2).length) {
     program.outputHelp();

@@ -9,16 +9,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.copyFolder = void 0;
-const fs = require("fs");
-const path = require("path");
-const constants_1 = require("../constants");
-function copyFolder(folderPath) {
-    return __awaiter(this, void 0, void 0, function* () {
-        yield fs.cpSync(path.resolve(constants_1.ROOT_DIR_LOCATION + "/src/template/next-typescript-template"), folderPath, {
-            recursive: true,
-        });
-    });
-}
-exports.copyFolder = copyFolder;
-//# sourceMappingURL=createDirFromTemplate.js.map
+const test_1 = require("@playwright/test");
+const shared_1 = require("./shared");
+test_1.test.describe("App", () => {
+    let ConfigPage;
+    test_1.test.beforeEach(({ page }) => __awaiter(void 0, void 0, void 0, function* () {
+        ConfigPage = new shared_1.PlayConfigPage(page);
+        yield ConfigPage.goto();
+    }));
+    (0, test_1.test)("should open App properly ", ({ page }) => __awaiter(void 0, void 0, void 0, function* () {
+        yield (0, test_1.expect)(page.getByText(/Hey, let’s build something together?/i)).toBeVisible();
+        yield (0, test_1.expect)(page.getByText(/We are here to help you configure easily your react.js project/i)).toBeVisible();
+    }));
+});
+//# sourceMappingURL=home.spec.js.map

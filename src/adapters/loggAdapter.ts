@@ -2,6 +2,7 @@ import ILogger from "../interfaces/logger";
 const log = require("log-beautify");
 
 export default class LoggAdapter implements ILogger {
+  constructor() {}
   success(message: string, options?: any) {
     log.success(message);
     if (options) {

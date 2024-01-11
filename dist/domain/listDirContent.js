@@ -8,16 +8,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.listDirContents = void 0;
-const fs = require("fs");
-const path = require("path");
+const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
 function listDirContents(filepath) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const files = yield fs.promises.readdir(filepath);
+            const files = yield fs_1.default.promises.readdir(filepath);
             const detailedFilesPromises = files.map((file) => __awaiter(this, void 0, void 0, function* () {
-                let fileDetails = yield fs.promises.lstat(path.resolve(filepath, file));
+                let fileDetails = yield fs_1.default.promises.lstat(path_1.default.resolve(filepath, file));
                 const { size, birthtime } = fileDetails;
                 return { filename: file, "size(KB)": size, created_at: birthtime };
             }));

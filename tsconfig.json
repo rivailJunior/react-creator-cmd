@@ -1,8 +1,62 @@
+// {
+//   "extends": "@tsconfig/node20/tsconfig.json",
+//   "compilerOptions": {
+//     "preserveConstEnums": true,
+//     "rootDir": "./src",
+//     "outDir": "./dist"
+//   },
+//   "include": ["src/**/*"],
+//   "exclude": ["**/*.spec.ts"]
+// }
+// {
+//   "include": ["src/**/*.ts", "src/index.ts"],
+//   "exclude": [
+//     "dist",
+//     "jest",
+//     "src/template/next-typescript-template/node_modules"
+//   ],
+//   "compilerOptions": {
+//     /* LANGUAGE COMPILATION OPTIONS */
+//     "target": "ES6",
+//     "lib": ["es6", "dom", "es2015.promise"],
+//     "module": "CommonJS",
+//     "moduleResolution": "Node",
+//     "resolveJsonModule": true,
+//     "allowJs": true,
+//     // "checkJs": true,
+
+//     /* EMIT RULES */
+//     "outDir": "./dist",
+//     "declaration": true,
+//     "declarationMap": true,
+//     "sourceMap": true,
+//     "removeComments": true,
+
+//     /* TYPE CHECKING RULES */
+//     "strict": false,
+//     "noFallthroughCasesInSwitch": true,
+//     "noImplicitOverride": true,
+//     "noImplicitReturns": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "useUnknownInCatchVariables": true,
+//     "noUncheckedIndexedAccess": false,
+
+//     /* OTHER OPTIONS */
+//     "allowSyntheticDefaultImports": true,
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "skipLibCheck": true,
+//     "useDefineForClassFields": true,
+//     "jsx": "react"
+//   }
+// }
+
 {
   "compilerOptions": {
     "allowJs": true,
-    "rootDir": "src",
-    "outDir": "dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "strict": false,
     "target": "es6",
     "module": "CommonJS",
@@ -15,8 +69,10 @@
     "noEmit": false,
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react"
+    "jsx": "react",
+    "suppressImplicitAnyIndexErrors": false,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/index.js"],
-  "exclude": ["dist", "jest"]
+  "include": ["src/**/*.ts", "src/index.ts"],
+  "exclude": ["dist", "./node_modules/**"]
 }

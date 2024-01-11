@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const log = require("log-beautify");
 class LoggAdapter {
+    constructor() { }
     success(message, options) {
         log.success(message);
         if (options) {

@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typecheck": "turbo typecheck",
-    "check": "turbo lint typecheck format:check",
     "build": "npx tsc",
-    "clean": "turbo clean && rm -rf node_modules"
+    "link-cli": "npm unlink -g alpha-react-cli && chmod +x ./dist/index.js && npm link alpha-react-cli"
   },
   "bin": {
-    "alpha-react": "./dist/index.js"
+    "alpha-react-cli": "./dist/index.js"
   },
   "author": "Rivail Pinto",
   "license": "ISC",

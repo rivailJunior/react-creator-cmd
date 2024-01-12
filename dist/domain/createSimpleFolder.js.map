@@ -1,1 +1,0 @@
-{"version":3,"file":"createSimpleFolder.js","sourceRoot":"","sources":["../../src/domain/createSimpleFolder.ts"],"names":[],"mappings":";;;;;;AAAA,4CAAoB;AAEpB,SAAgB,SAAS,CAAC,QAAgB;IACxC,IAAI,CAAC,YAAE,CAAC,UAAU,CAAC,QAAQ,CAAC,EAAE,CAAC;QAC7B,YAAE,CAAC,SAAS,CAAC,QAAQ,CAAC,CAAC;QACvB,OAAO,CAAC,GAAG,CAAC,6CAA6C,CAAC,CAAC;IAC7D,CAAC;AACH,CAAC;AALD,8BAKC"}

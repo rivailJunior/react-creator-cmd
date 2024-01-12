@@ -2,14 +2,14 @@
   "name": "alpha-react-cli",
   "version": "1.0.0",
   "description": "It's a CLI to help developers to build their amazing react.js projects using clean architecture and tests already configured",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
-    "link-cli": "npm unlink -g alpha-react-cli && chmod +x ./dist/index.js && npm link alpha-react-cli"
+    "link-cli": "npm --global unlink . && chmod +x ./dist/index.js && npm link ."
   },
   "bin": {
-    "alpha-react-cli": "./dist/index.js"
+    "alpha-react": "./dist/index.js"
   },
   "author": "Rivail Pinto",
   "license": "ISC",
@@ -46,7 +46,6 @@
     "@types/shelljs": "^0.8.15",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.3",

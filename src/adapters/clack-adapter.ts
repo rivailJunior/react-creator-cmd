@@ -10,7 +10,7 @@ import {
 import { setTimeout as sleep } from "node:timers/promises";
 import color from "picocolors";
 import CLI from "../domain/cli";
-import LoggAdapter from "../adapters/loggAdapter";
+import LoggAdapter from "./log-adapter";
 import { PromptTexts } from "../constants";
 const loggerAdapterObj = new LoggAdapter();
 const cli = new CLI(loggerAdapterObj);

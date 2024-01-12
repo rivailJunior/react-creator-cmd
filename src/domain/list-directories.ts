@@ -1,5 +1,12 @@
 import fs from "fs";
 import path from "path";
+
+/**
+ * Lists the contents of a directory.
+ *
+ * @param {string} filepath - The path of the directory.
+ * @return {Promise<void>} - A promise that resolves when the directory contents are listed.
+ */
 export async function listDirContents(filepath: string) {
   try {
     const files = await fs.promises.readdir(filepath);

@@ -1,8 +1,8 @@
 import ILogger from "../interfaces/logger";
-import { copyFolder } from "./createDirFromTemplate";
-import { createFile } from "./createFile";
-import { createDir } from "./createSimpleFolder";
-import { listDirContents } from "./listDirContent";
+import { copyFolder } from "./create-dir-from-template";
+import { createFile } from "./create-file-from-template";
+import { createDir } from "./create-dir";
+import { listDirContents } from "./list-directories";
 
 interface ICLI {
   listContent: (filePath: string) => Promise<any>;

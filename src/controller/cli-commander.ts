@@ -2,11 +2,11 @@ import { Command } from "commander";
 import figlet from "figlet";
 import path from "path";
 import CLI from "../domain/cli";
-import LoggAdapter from "../adapters/loggAdapter";
+import LogAdapter from "../adapters/log-adapter";
 import { IBaseController } from "../interfaces/base-controller";
 import { YOUR_PROJECT_FOLDER_AT } from "../constants";
 
-const logAdapter = new LoggAdapter();
+const logAdapter = new LogAdapter();
 const program = new Command();
 const AlphaCli = new CLI(logAdapter);
 

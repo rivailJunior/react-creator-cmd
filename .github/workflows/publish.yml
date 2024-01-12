@@ -14,6 +14,6 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org
       - name: publish
-        run: npm publish --access public
+        run: npm publish --access public --opt=b819cb47f0eff5d7c16c78a51be8c0c6aed89186dd1560ed44c1288c8be9fabb294da046ec55eb8412ba806a63082529df1f363f1cbb9f304ae499c720c4d7ad033f8558ad601e9831b985dbf585343d33b63bc96ece34a6e3545fb053520e94a5f331ba8a5bb6d3c2b4d9c9a5187e533858b323e847825e1de88ae1083890eac9241539dc64c7d7b55caf06ff1d1d55e5fb461dfd42d52dc86ff884f336c3f5
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

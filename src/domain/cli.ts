@@ -21,7 +21,8 @@ class CLI implements ICLI {
     }
   }
 
-  async createProjectFromTemplate(folderName: string = "example-alpha-react") {
+  async createProjectFromTemplate(folderName: string) {
+    if (!folderName) return;
     try {
       await copyFolder(folderName);
       this.logger.success("Alpha-React Project Created");

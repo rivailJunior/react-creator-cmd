@@ -1,6 +1,6 @@
 {
   "name": "react-creator-cmd",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "It's a CLI to help developers to build their amazing react.js projects using clean architecture and tests already configured",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "link-cli": "npm --global unlink . && chmod +x ./dist/index.js && npm link ."
   },
   "bin": {
-    "react-creator-cmd": "./dist/index.js"
+    "react-creator": "./dist/index.js"
   },
   "author": "Rivail Pinto",
   "license": "ISC",

@@ -1,5 +1,5 @@
 import ILogger from "../interfaces/logger";
-import { copyFolder } from "./create-dir-from-template";
+import { copyProject, copyRouter } from "./create-dir-from-template";
 import { createFile } from "./create-file-from-template";
 import { createDir } from "./create-dir";
 import { listDirContents } from "./list-directories";
@@ -7,6 +7,7 @@ import { listDirContents } from "./list-directories";
 interface ICLI {
   listContent: (filePath: string) => Promise<any>;
   createProjectFromTemplate: (folderName: string) => Promise<any>;
+  createRouteFromTemplate: (routeName: string) => Promise<any>;
   createBlankFolder: (folderName: string) => Promise<any>;
   createBlankFile: (filePath: string) => Promise<any>;
 }
@@ -24,8 +25,8 @@ class CLI implements ICLI {
   async createProjectFromTemplate(folderName: string) {
     if (!folderName) return;
     try {
-      await copyFolder(folderName);
-      this.logger.success("Alpha-React Project Created");
+      await copyProject(folderName);
+      this.logger.success("Project Created");
     } catch (err) {
       this.logger.error("Create Folder Error =>", err);
     }
@@ -46,6 +47,16 @@ class CLI implements ICLI {
       this.logger.success("File Created");
     } catch (err) {
       this.logger.error("Create File Error =>", err);
+    }
+  }
+
+  async createRouteFromTemplate(routeName) {
+    if (!routeName) return;
+    try {
+      await copyRouter(routeName);
+      this.logger.success("Route Created");
+    } catch (err) {
+      this.logger.error("Create Route Error =>", err);
     }
   }
 }

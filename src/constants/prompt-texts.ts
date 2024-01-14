@@ -1,4 +1,17 @@
 export const PromptTexts = {
+  firstQuestion: {
+    name: "What would you like to do?",
+    options: [
+      {
+        value: "create-project",
+        label: "Create Project",
+      },
+      {
+        value: "create-router",
+        label: "Create Router",
+      },
+    ],
+  },
   project: {
     name: "What is your project name?",
     placeholder: "my-coolest-react-app",
@@ -24,6 +37,10 @@ export const PromptTexts = {
         label: "no",
       },
     ],
+  },
+  folder: {
+    name: "What is your route name?",
+    placeholder: "my-coolest-route",
   },
   operation: {
     cancel: "Operation cancelled",

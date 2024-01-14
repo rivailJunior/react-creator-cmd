@@ -31,48 +31,59 @@ export default class ClackAdapter {
     );
 
     const projectOrFolder = await select({
-      message: "What would you like to create?",
-      options: [
-        {
-          value: "project",
-          label: "New Project",
-        },
-      ],
+      message: PromptTexts.firstQuestion.name,
+      options: PromptTexts.firstQuestion.options,
     });
+
+    console.log("project or folder", projectOrFolder);
 
     if (isCancel(projectOrFolder)) {
       cancelOperation();
     }
 
-    const projectName = await text({
-      message: PromptTexts.project.name,
-      placeholder: PromptTexts.project.placeholder,
-    });
+    if (projectOrFolder === "create-project") {
+      // create project
+      const projectName = await text({
+        message: PromptTexts.project.name,
+        placeholder: PromptTexts.project.placeholder,
+      });
 
-    if (isCancel(projectName)) {
-      cancelOperation();
-    }
+      if (isCancel(projectName)) {
+        cancelOperation();
+      }
 
-    const projectType = await select({
-      message: PromptTexts.projectType.name,
-      options: PromptTexts.projectType.options,
-    });
+      const projectType = await select({
+        message: PromptTexts.projectType.name,
+        options: PromptTexts.projectType.options,
+      });
 
-    const selectTestConfigurations = await select({
-      message: PromptTexts.test.name,
-      options: PromptTexts.test.options,
-    });
+      const selectTestConfigurations = await select({
+        message: PromptTexts.test.name,
+        options: PromptTexts.test.options,
+      });
 
-    if (isCancel(selectTestConfigurations)) {
-      cancelOperation();
-    }
+      if (isCancel(selectTestConfigurations)) {
+        cancelOperation();
+      }
 
-    if (isCancel(projectType)) {
-      cancelOperation();
+      if (isCancel(projectType)) {
+        cancelOperation();
+      } else {
+        const projectNameValue = projectName || PromptTexts.project.placeholder;
+        cli.createProjectFromTemplate(projectNameValue as string);
+      }
     } else {
-      console.log("project name", projectName);
-      const projectNameValue = projectName || PromptTexts.project.placeholder;
-      cli.createProjectFromTemplate(projectNameValue as string);
+      // create router
+      const folderName = await text({
+        message: PromptTexts.folder.name,
+        placeholder: PromptTexts.folder.placeholder,
+      });
+
+      if (isCancel(folderName)) {
+        cancelOperation();
+      } else {
+        cli.createRouteFromTemplate(folderName as string);
+      }
     }
 
     const s = spinner();

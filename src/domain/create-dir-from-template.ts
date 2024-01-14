@@ -8,10 +8,20 @@ import { ROOT_DIR_LOCATION } from "../constants";
  * @param {string} folderPath - The path of the folder to be copied.
  * @return {Promise<void>} Returns a promise that resolves when the folder is copied successfully.
  */
-export async function copyFolder(folderPath: string) {
+export async function copyProject(folderPath: string) {
   await fs.cpSync(
     path.resolve(ROOT_DIR_LOCATION + "/src/template/next-ts-vite-workflow"),
     folderPath,
+    {
+      recursive: true,
+    }
+  );
+}
+
+export async function copyRouter(routerName: string) {
+  await fs.cpSync(
+    path.resolve(ROOT_DIR_LOCATION + "/src/template/route-template"),
+    routerName,
     {
       recursive: true,
     }

@@ -10,7 +10,7 @@ import { ROOT_DIR_LOCATION } from "../constants";
  */
 export async function copyFolder(folderPath: string) {
   await fs.cpSync(
-    path.resolve(ROOT_DIR_LOCATION + "/dist/template/next-ts-vite-workflow"),
+    path.resolve(ROOT_DIR_LOCATION + "/src/template/next-ts-vite-workflow"),
     folderPath,
     {
       recursive: true,

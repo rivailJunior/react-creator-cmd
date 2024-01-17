@@ -1,8 +1,15 @@
 #! /usr/bin/env node
 
-// import CommanderController from "./controller/cli-commander";
+import ClackAdapter from "./adapters/clack-adapter";
+import LogAdapter from "./adapters/log-adapter";
 import CliPromptController from "./controller/cli-prompt";
+import CLI from "./domain/cli";
+
+// logger
+const logger = new LogAdapter();
+
+// domain
+const cli = new CLI(logger);
 
 // controllers
-new CliPromptController().execute();
-// new CommanderController("1.0.0").execute();
+new CliPromptController(new ClackAdapter(cli)).execute();

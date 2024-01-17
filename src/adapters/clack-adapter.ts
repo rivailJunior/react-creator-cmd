@@ -9,92 +9,92 @@ import {
 } from "@clack/prompts";
 import { setTimeout as sleep } from "node:timers/promises";
 import color from "picocolors";
-import CLI from "../domain/cli";
-import LoggAdapter from "./log-adapter";
 import { PromptTexts } from "../constants";
-const loggerAdapterObj = new LoggAdapter();
-const cli = new CLI(loggerAdapterObj);
+import { ICLI } from "../interfaces/cli";
 
 export default class ClackAdapter {
-  constructor() {}
+  private loader: ReturnType<typeof spinner>;
+  private CREATE_PROJECT = "create-project";
+  private CANCEL_OPERATION = "cancel-operation";
+  private PRESENTATION =
+    "Let's create a new project or some new folder for your react project?";
+  constructor(readonly cli: ICLI) {
+    intro(color.inverse(this.PRESENTATION));
+    this.loader = spinner();
+  }
+  private cancelOperation() {
+    cancel(PromptTexts.operation.cancel);
+    return process.exit(0);
+  }
 
-  static async main() {
-    const cancelOperation = () => {
-      cancel(PromptTexts.operation.cancel);
-      return process.exit(0);
-    };
-
-    intro(
-      color.inverse(
-        "Let's create a new project or some new folder for your react project?"
-      )
-    );
-
-    const projectOrFolder = await select({
-      message: PromptTexts.firstQuestion.name,
-      options: PromptTexts.firstQuestion.options,
+  async createRouter() {
+    const folderName = await text({
+      message: PromptTexts.folder.name,
+      placeholder: PromptTexts.folder.placeholder,
     });
 
-    console.log("project or folder", projectOrFolder);
-
-    if (isCancel(projectOrFolder)) {
-      cancelOperation();
-    }
-
-    if (projectOrFolder === "create-project") {
-      // create project
-      const projectName = await text({
-        message: PromptTexts.project.name,
-        placeholder: PromptTexts.project.placeholder,
-      });
-
-      if (isCancel(projectName)) {
-        cancelOperation();
-      }
-
-      const projectType = await select({
-        message: PromptTexts.projectType.name,
-        options: PromptTexts.projectType.options,
-      });
-
-      const selectTestConfigurations = await select({
-        message: PromptTexts.test.name,
-        options: PromptTexts.test.options,
-      });
-
-      if (isCancel(selectTestConfigurations)) {
-        cancelOperation();
-      }
-
-      if (isCancel(projectType)) {
-        cancelOperation();
-      } else {
-        const projectNameValue = projectName || PromptTexts.project.placeholder;
-        cli.createProjectFromTemplate(projectNameValue as string);
-      }
+    if (isCancel(folderName)) {
+      this.cancelOperation();
     } else {
-      // create router
-      const folderName = await text({
-        message: PromptTexts.folder.name,
-        placeholder: PromptTexts.folder.placeholder,
-      });
+      this.cli.createRouteFromTemplate(folderName as string);
+    }
+  }
 
-      if (isCancel(folderName)) {
-        cancelOperation();
-      } else {
-        cli.createRouteFromTemplate(folderName as string);
-      }
+  async createProject() {
+    const projectName = await text({
+      message: PromptTexts.project.name,
+      placeholder: PromptTexts.project.placeholder,
+    });
+
+    if (isCancel(projectName)) {
+      throw this.CANCEL_OPERATION;
     }
 
-    const s = spinner();
-    s.start(PromptTexts.operation.installing);
+    const projectType = await select({
+      message: PromptTexts.projectType.name,
+      options: PromptTexts.projectType.options,
+    });
 
-    await sleep(3000);
+    if (isCancel(projectType)) {
+      throw this.CANCEL_OPERATION;
+    }
 
-    s.stop(PromptTexts.operation.created);
+    const selectTestConfigurations = await select({
+      message: PromptTexts.test.name,
+      options: PromptTexts.test.options,
+    });
 
-    outro(PromptTexts.operation.success);
+    if (isCancel(selectTestConfigurations)) {
+      throw this.CANCEL_OPERATION;
+    }
 
-    await sleep(1000);
+    const projectNameValue = projectName || PromptTexts.project.placeholder;
+    this.cli.createProjectFromTemplate(projectNameValue as string);
+  }
+
+  async init() {
+    try {
+      const isProjectOrRoute = await select({
+        message: PromptTexts.firstQuestion.name,
+        options: PromptTexts.firstQuestion.options,
+      });
+
+      if (isCancel(isProjectOrRoute)) {
+        throw this.CANCEL_OPERATION;
+      }
+
+      if (isProjectOrRoute === this.CREATE_PROJECT) {
+        await this.createProject();
+        this.loader.start(PromptTexts.operation.installing);
+        await sleep(3000);
+        this.loader.stop(PromptTexts.operation.created);
+      } else {
+        await this.createRouter();
+      }
+    } catch (err) {
+      this.cancelOperation();
+    } finally {
+      outro(PromptTexts.operation.success);
+    }
   }
 }

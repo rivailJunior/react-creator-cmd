@@ -1,6 +1,6 @@
 {
   "name": "react-creator-cmd",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "It's a CLI to help developers to build their amazing react.js projects using clean architecture and tests already configured",
   "main": "dist/index.js",
   "scripts": {

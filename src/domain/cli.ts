@@ -3,14 +3,8 @@ import { copyProject, copyRouter } from "./create-dir-from-template";
 import { createFile } from "./create-file-from-template";
 import { createDir } from "./create-dir";
 import { listDirContents } from "./list-directories";
+import { ICLI } from "../interfaces/cli";
 
-interface ICLI {
-  listContent: (filePath: string) => Promise<any>;
-  createProjectFromTemplate: (folderName: string) => Promise<any>;
-  createRouteFromTemplate: (routeName: string) => Promise<any>;
-  createBlankFolder: (folderName: string) => Promise<any>;
-  createBlankFile: (filePath: string) => Promise<any>;
-}
 class CLI implements ICLI {
   constructor(readonly logger: ILogger) {}
   async listContent(filePath: string) {
@@ -26,7 +20,7 @@ class CLI implements ICLI {
     if (!folderName) return;
     try {
       await copyProject(folderName);
-      this.logger.success("Project Created");
+      // this.logger.success("Project Created");
     } catch (err) {
       this.logger.error("Create Folder Error =>", err);
     }

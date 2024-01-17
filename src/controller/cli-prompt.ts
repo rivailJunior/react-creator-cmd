@@ -1,8 +1,9 @@
-import ClackAdapter from "../adapters/clack-adapter";
+import { IAdapterExecutor } from "../interfaces/adapter-executor";
 import { IBaseController } from "../interfaces/base-controller";
 
 export default class CliPromptController implements IBaseController {
-  execute() {
-    ClackAdapter.main();
+  constructor(readonly Adapter: IAdapterExecutor) {}
+  async execute() {
+    await this.Adapter.init();
   }
 }

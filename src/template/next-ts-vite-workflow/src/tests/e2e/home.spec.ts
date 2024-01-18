@@ -14,9 +14,7 @@ test.describe("App", () => {
     ).toBeVisible();
 
     await expect(
-      page.getByText(
-        /We are here to help you configure easily your react.js project/i
-      )
+      page.getByText(/We are here to help you with your Next.js project/i)
     ).toBeVisible();
   });
 });

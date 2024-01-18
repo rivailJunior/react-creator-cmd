@@ -1,6 +1,6 @@
 {
   "name": "next-typescript-template",
-  "version": "0.1.0",
+  "version": "0.0.10",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,7 @@
     "react": "^18",
     "react-dom": "^18",
     "next": "14.0.4",
-    "eslint": "latest"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "typescript": "^5",

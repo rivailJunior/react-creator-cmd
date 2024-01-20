@@ -10,6 +10,10 @@ export const PromptTexts = {
         value: "create-router",
         label: "Create Router",
       },
+      {
+        value: "create-http-module",
+        label: "Create Http Module",
+      },
     ],
   },
   project: {
@@ -17,30 +21,18 @@ export const PromptTexts = {
     placeholder: "my-coolest-react-app",
   },
   projectType: {
-    name: "Pick a project type.",
-    options: [
-      {
-        value: "ts",
-        label: "TypeScript",
-      },
-    ],
+    name: "Would you like to use TypeScript?",
   },
   test: {
     name: "Would you like to add tests?",
-    options: [
-      {
-        value: true,
-        label: "yes",
-      },
-      {
-        value: false,
-        label: "no",
-      },
-    ],
   },
   folder: {
     name: "What is your route name?",
     placeholder: "my-coolest-route",
+  },
+  module: {
+    name: "Would you like to add a http module?",
+    placeholder: "it will generate a http-module inside folder modules",
   },
   operation: {
     cancel: "Operation cancelled",

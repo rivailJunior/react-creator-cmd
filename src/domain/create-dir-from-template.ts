@@ -27,3 +27,15 @@ export async function copyRouter(routerName: string) {
     }
   );
 }
+
+export async function copyHttpModule() {
+  await fs.cpSync(
+    path.resolve(
+      ROOT_DIR_LOCATION + "/src/template/modules-template/http-module"
+    ),
+    "modules/http-module",
+    {
+      recursive: true,
+    }
+  );
+}

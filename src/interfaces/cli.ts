@@ -4,4 +4,5 @@ export interface ICLI {
   createRouteFromTemplate: (routeName: string) => Promise<any>;
   createBlankFolder: (folderName: string) => Promise<any>;
   createBlankFile: (filePath: string) => Promise<any>;
+  createModuleFromTemplate: () => Promise<any>;
 }

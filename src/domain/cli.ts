@@ -1,5 +1,9 @@
 import ILogger from "../interfaces/logger";
-import { copyProject, copyRouter } from "./create-dir-from-template";
+import {
+  copyHttpModule,
+  copyProject,
+  copyRouter,
+} from "./create-dir-from-template";
 import { createFile } from "./create-file-from-template";
 import { createDir } from "./create-dir";
 import { listDirContents } from "./list-directories";
@@ -7,6 +11,14 @@ import { ICLI } from "../interfaces/cli";
 
 class CLI implements ICLI {
   constructor(readonly logger: ILogger) {}
+  async createModuleFromTemplate() {
+    try {
+      copyHttpModule();
+      // this.logger.success("Module Created");
+    } catch (err) {
+      this.logger.error("Create Module Error =>", err);
+    }
+  }
   async listContent(filePath: string) {
     try {
       await listDirContents(filePath);

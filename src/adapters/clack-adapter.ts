@@ -14,7 +14,6 @@ import color from "picocolors";
 import { PromptTexts } from "../constants";
 import { ICLI } from "../interfaces/cli";
 
-//TODO - remove the logic from here and let only things related to the clack adapter
 export default class ClackAdapter {
   private loader: ReturnType<typeof spinner>;
   private CREATE_PROJECT = "create-project";
@@ -33,18 +32,19 @@ export default class ClackAdapter {
     return process.exit(0);
   }
 
+  private isOperationCanceled(operation: any) {
+    if (isCancel(operation)) {
+      throw this.CANCEL_OPERATION;
+    }
+  }
+
   private async createModule(moduleType: "http" | "log" | "event-tracker") {
     if (moduleType === "http") {
-      const folderName = await text({
+      const wouldLikeToCreateHttpModule = await confirm({
         message: PromptTexts.module.name,
-        placeholder: PromptTexts.module.placeholder,
       });
-
-      if (isCancel(folderName)) {
-        this.cancelOperation();
-      } else {
-        this.cli.createModuleFromTemplate();
-      }
+      if (!wouldLikeToCreateHttpModule) throw this.CANCEL_OPERATION;
+      await this.cli.createModuleFromTemplate();
     }
   }
 
@@ -53,12 +53,12 @@ export default class ClackAdapter {
       message: PromptTexts.folder.name,
       placeholder: PromptTexts.folder.placeholder,
     });
+    this.isOperationCanceled(folderName);
+    await this.cli.createRouteFromTemplate(folderName as string);
+  }
 
-    if (isCancel(folderName)) {
-      this.cancelOperation();
-    } else {
-      this.cli.createRouteFromTemplate(folderName as string);
-    }
+  private confirmWarningMessages(operation: any, message: string) {
+    if (!operation) log.warn(color.yellow(message));
   }
 
   private async createProject() {
@@ -66,45 +66,46 @@ export default class ClackAdapter {
       message: PromptTexts.project.name,
       placeholder: PromptTexts.project.placeholder,
     });
+    this.isOperationCanceled(projectName);
 
-    if (isCancel(projectName)) {
-      throw this.CANCEL_OPERATION;
-    }
-
-    const isToUseTypescriptConfig = await confirm({
+    const wouldLikeToUseTypescript = await confirm({
       message: PromptTexts.projectType.name,
     });
+    this.isOperationCanceled(wouldLikeToUseTypescript);
 
-    if (isCancel(isToUseTypescriptConfig)) {
-      throw this.CANCEL_OPERATION;
-    }
+    this.confirmWarningMessages(
+      wouldLikeToUseTypescript,
+      "Sorry, Typescript is configured by default."
+    );
 
-    // TODO - improve this
-    if (isToUseTypescriptConfig) {
-      log.success(color.blue("Typescript is configured by default ;)"));
-    } else {
-      log.warn(color.yellow("Sorry, Typescript is configured by default."));
-    }
-
-    const selectTestConfigurations = await confirm({
+    const wouldLikeToAddTest = await confirm({
       message: PromptTexts.test.name,
     });
-
-    //TODO - improve this
-    if (selectTestConfigurations) {
-      log.success(
-        color.blue("You have no choices, tests are configured by default.")
-      );
-    } else {
-      log.warn(color.yellow("Sorry, tests are configured by default."));
-    }
-
-    if (isCancel(selectTestConfigurations)) {
-      throw this.CANCEL_OPERATION;
-    }
+    this.isOperationCanceled(wouldLikeToAddTest);
+    this.confirmWarningMessages(
+      wouldLikeToAddTest,
+      "Sorry, tests are configured by default."
+    );
 
     const projectNameValue = projectName || PromptTexts.project.placeholder;
-    this.cli.createProjectFromTemplate(projectNameValue as string);
+    await this.cli.createProjectFromTemplate(projectNameValue as string);
+  }
+
+  private async initializer(operation: any) {
+    switch (operation) {
+      case this.CREATE_PROJECT:
+        await this.createProject();
+        this.loader.start(PromptTexts.operation.installing);
+        await sleep(3000);
+        this.loader.stop(PromptTexts.operation.created);
+        break;
+      case this.CREATE_ROUTER:
+        await this.createRouter();
+        break;
+      case this.CREATE_HTTP_MODULE:
+        await this.createModule("http");
+        break;
+    }
   }
 
   async init() {
@@ -114,21 +115,8 @@ export default class ClackAdapter {
         options: PromptTexts.firstQuestion.options,
       });
 
-      if (isCancel(initialQuestion)) {
-        throw this.CANCEL_OPERATION;
-      }
-
-      // TODO use a switch
-      if (initialQuestion === this.CREATE_PROJECT) {
-        await this.createProject();
-        this.loader.start(PromptTexts.operation.installing);
-        await sleep(3000);
-        this.loader.stop(PromptTexts.operation.created);
-      } else if (initialQuestion === this.CREATE_ROUTER) {
-        await this.createRouter();
-      } else if (initialQuestion === this.CREATE_HTTP_MODULE) {
-        await this.createModule("http");
-      }
+      this.isOperationCanceled(initialQuestion);
+      await this.initializer(initialQuestion);
     } catch (err) {
       this.cancelOperation();
     } finally {

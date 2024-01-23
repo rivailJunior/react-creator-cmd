@@ -1,4 +1,4 @@
-export interface ICLI {
+export interface ICommandLine {
   listContent: (filePath: string) => Promise<any>;
   createProjectFromTemplate: (folderName: string) => Promise<any>;
   createRouteFromTemplate: (routeName: string) => Promise<any>;

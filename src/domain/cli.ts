@@ -7,63 +7,69 @@ import {
 import { createFile } from "./create-file-from-template";
 import { createDir } from "./create-dir";
 import { listDirContents } from "./list-directories";
-import { ICLI } from "../interfaces/cli";
+import { ICommandLine } from "../interfaces/command-line";
 
-class CLI implements ICLI {
+class CLI implements ICommandLine {
+  private REQUIRED_ERROR = (param: string) => `${param} is required`;
   constructor(readonly logger: ILogger) {}
-  async createModuleFromTemplate() {
-    try {
-      copyHttpModule();
-      // this.logger.success("Module Created");
-    } catch (err) {
-      this.logger.error("Create Module Error =>", err);
-    }
-  }
+
+  private FEEDBACK_MESSAGE_ERROR = (path: string, error?: any) => {
+    this.logger.error(`Error occurred while creating: ${path}\n`, error);
+  };
+
   async listContent(filePath: string) {
+    if (!filePath) throw new Error(this.REQUIRED_ERROR("FILEPATH"));
     try {
       await listDirContents(filePath);
       this.logger.success("Showing all files inside the content");
     } catch (err) {
-      this.logger.error("List Content Error =>", err);
-    }
-  }
-
-  async createProjectFromTemplate(folderName: string) {
-    if (!folderName) return;
-    try {
-      await copyProject(folderName);
-      // this.logger.success("Project Created");
-    } catch (err) {
-      this.logger.error("Create Folder Error =>", err);
-    }
-  }
-
-  async createBlankFolder(folderName: string = "folder-alpha") {
-    try {
-      await createDir(folderName);
-      this.logger.success("Folder Created");
-    } catch (err) {
-      this.logger.error("Create Folder Error =>", err);
+      this.logger.error("Error occurred while list CONTENTS\n", err);
     }
   }
 
   async createBlankFile(filePath: string) {
+    if (!filePath) throw new Error(this.REQUIRED_ERROR("FILEPATH"));
     try {
       await createFile(filePath);
-      this.logger.success("File Created");
     } catch (err) {
-      this.logger.error("Create File Error =>", err);
+      this.FEEDBACK_MESSAGE_ERROR("BLANK FILE", err);
     }
   }
 
-  async createRouteFromTemplate(routeName) {
-    if (!routeName) return;
+  async createBlankFolder(folderName: string) {
+    if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
+    try {
+      await createDir(folderName);
+    } catch (err) {
+      this.FEEDBACK_MESSAGE_ERROR("BLANK FOLDER", err);
+    }
+  }
+
+  async createProjectFromTemplate(folderName: string) {
+    if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
+    try {
+      await copyProject(folderName);
+    } catch (err) {
+      this.FEEDBACK_MESSAGE_ERROR("TEMPLATE PROJECT", err);
+    }
+  }
+
+  async createRouteFromTemplate(routeName: string) {
+    if (!routeName) throw new Error(this.REQUIRED_ERROR("ROUTENAME"));
     try {
       await copyRouter(routeName);
-      this.logger.success("Route Created");
     } catch (err) {
-      this.logger.error("Create Route Error =>", err);
+      this.FEEDBACK_MESSAGE_ERROR("ROUTE", err);
+    }
+  }
+
+  async createModuleFromTemplate() {
+    try {
+      copyHttpModule();
+    } catch (err) {
+      this.FEEDBACK_MESSAGE_ERROR("MODULE", err);
     }
   }
 }
+
 export default CLI;

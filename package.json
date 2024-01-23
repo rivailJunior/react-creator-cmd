@@ -1,6 +1,6 @@
 {
   "name": "react-creator-cmd",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "It's a CLI to help developers to build their amazing react.js projects using clean architecture and tests already configured",
   "main": "dist/index.js",
   "scripts": {
@@ -18,7 +18,6 @@
     "@types/eslint": "^8.56.2",
     "@types/jest": "^29.5.11",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "commander": "^11.1.0",
     "eslint": "latest",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",

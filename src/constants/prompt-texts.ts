@@ -1,4 +1,6 @@
 export const PromptTexts = {
+  intro:
+    "Let's create a new project or some new folder for your react project?",
   firstQuestion: {
     name: "What would you like to do?",
     options: [
@@ -24,7 +26,7 @@ export const PromptTexts = {
     name: "Would you like to use TypeScript?",
   },
   test: {
-    name: "Would you like to add tests?",
+    name: "Would you like to add Vitest?",
   },
   folder: {
     name: "What is your route name?",
@@ -36,7 +38,7 @@ export const PromptTexts = {
   },
   operation: {
     cancel: "Operation cancelled",
-    installing: "Installing packages",
+    installing: "Creating...",
     created: "Created!",
     error: "Something went wrong",
     success: "Done!",

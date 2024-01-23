@@ -11,40 +11,41 @@ import {
 } from "@clack/prompts";
 import { setTimeout as sleep } from "node:timers/promises";
 import color from "picocolors";
-import { PromptTexts } from "../constants";
-import { ICLI } from "../interfaces/cli";
+import { PromptTexts, ClackOperations } from "../constants";
+import { ICommandLine } from "../interfaces/command-line";
 
-//TODO - remove the logic from here and let only things related to the clack adapter
 export default class ClackAdapter {
   private loader: ReturnType<typeof spinner>;
-  private CREATE_PROJECT = "create-project";
-  private CREATE_ROUTER = "create-router";
-  private CREATE_HTTP_MODULE = "create-http-module";
-  private CANCEL_OPERATION = "cancel-operation";
-  private PRESENTATION =
-    "Let's create a new project or some new folder for your react project?";
-
-  constructor(readonly cli: ICLI) {
-    intro(color.inverse(this.PRESENTATION));
+  constructor(readonly cli: ICommandLine) {
+    intro(color.inverse(PromptTexts.intro));
     this.loader = spinner();
   }
-  private cancelOperation() {
-    cancel(PromptTexts.operation.cancel);
-    return process.exit(0);
+
+  private isToShowWarningMessage(operationResponse: any, term: string) {
+    if (!operationResponse)
+      log.warn(color.yellow(`Sorry ${term} is configured by default.`));
+  }
+
+  private isToThrowCancelation(operation: any) {
+    if (isCancel(operation)) {
+      throw ClackOperations.CANCEL_OPERATION;
+    }
+  }
+
+  private async handleOperation(callback: () => void) {
+    await callback();
+    this.loader.start(PromptTexts.operation.installing);
+    await sleep(3000);
+    this.loader.stop(PromptTexts.operation.created);
   }
 
   private async createModule(moduleType: "http" | "log" | "event-tracker") {
     if (moduleType === "http") {
-      const folderName = await text({
+      const wouldLikeToCreateHttpModule = await confirm({
         message: PromptTexts.module.name,
-        placeholder: PromptTexts.module.placeholder,
       });
-
-      if (isCancel(folderName)) {
-        this.cancelOperation();
-      } else {
-        this.cli.createModuleFromTemplate();
-      }
+      if (!wouldLikeToCreateHttpModule) throw ClackOperations.CANCEL_OPERATION;
+      await this.cli.createModuleFromTemplate(); // todo: remove this from here
     }
   }
 
@@ -53,12 +54,8 @@ export default class ClackAdapter {
       message: PromptTexts.folder.name,
       placeholder: PromptTexts.folder.placeholder,
     });
-
-    if (isCancel(folderName)) {
-      this.cancelOperation();
-    } else {
-      this.cli.createRouteFromTemplate(folderName as string);
-    }
+    this.isToThrowCancelation(folderName);
+    await this.cli.createRouteFromTemplate(folderName as string); // todo: remove this from here
   }
 
   private async createProject() {
@@ -66,45 +63,36 @@ export default class ClackAdapter {
       message: PromptTexts.project.name,
       placeholder: PromptTexts.project.placeholder,
     });
+    this.isToThrowCancelation(projectName);
 
-    if (isCancel(projectName)) {
-      throw this.CANCEL_OPERATION;
-    }
-
-    const isToUseTypescriptConfig = await confirm({
+    const wouldLikeToUseTypescript = await confirm({
       message: PromptTexts.projectType.name,
     });
+    this.isToThrowCancelation(wouldLikeToUseTypescript);
+    this.isToShowWarningMessage(wouldLikeToUseTypescript, "Typescript");
 
-    if (isCancel(isToUseTypescriptConfig)) {
-      throw this.CANCEL_OPERATION;
-    }
-
-    // TODO - improve this
-    if (isToUseTypescriptConfig) {
-      log.success(color.blue("Typescript is configured by default ;)"));
-    } else {
-      log.warn(color.yellow("Sorry, Typescript is configured by default."));
-    }
-
-    const selectTestConfigurations = await confirm({
+    const wouldLikeToAddTest = await confirm({
       message: PromptTexts.test.name,
     });
-
-    //TODO - improve this
-    if (selectTestConfigurations) {
-      log.success(
-        color.blue("You have no choices, tests are configured by default.")
-      );
-    } else {
-      log.warn(color.yellow("Sorry, tests are configured by default."));
-    }
-
-    if (isCancel(selectTestConfigurations)) {
-      throw this.CANCEL_OPERATION;
-    }
+    this.isToThrowCancelation(wouldLikeToAddTest);
+    this.isToShowWarningMessage(wouldLikeToAddTest, "Vitest");
 
     const projectNameValue = projectName || PromptTexts.project.placeholder;
-    this.cli.createProjectFromTemplate(projectNameValue as string);
+    await this.cli.createProjectFromTemplate(projectNameValue as string); // todo: remove this from here
+  }
+
+  private async initializer(operation: any) {
+    switch (operation) {
+      case ClackOperations.CREATE_PROJECT:
+        await this.handleOperation(() => this.createProject());
+        break;
+      case ClackOperations.CREATE_ROUTER:
+        await this.handleOperation(() => this.createRouter());
+        break;
+      case ClackOperations.CREATE_HTTP_MODULE:
+        await this.handleOperation(() => this.createModule("http"));
+        break;
+    }
   }
 
   async init() {
@@ -113,26 +101,14 @@ export default class ClackAdapter {
         message: PromptTexts.firstQuestion.name,
         options: PromptTexts.firstQuestion.options,
       });
-
-      if (isCancel(initialQuestion)) {
-        throw this.CANCEL_OPERATION;
-      }
-
-      // TODO use a switch
-      if (initialQuestion === this.CREATE_PROJECT) {
-        await this.createProject();
-        this.loader.start(PromptTexts.operation.installing);
-        await sleep(3000);
-        this.loader.stop(PromptTexts.operation.created);
-      } else if (initialQuestion === this.CREATE_ROUTER) {
-        await this.createRouter();
-      } else if (initialQuestion === this.CREATE_HTTP_MODULE) {
-        await this.createModule("http");
-      }
+      this.isToThrowCancelation(initialQuestion);
+      await this.initializer(initialQuestion);
     } catch (err) {
-      this.cancelOperation();
+      cancel(PromptTexts.operation.cancel);
+      return process.exit(0);
     } finally {
       outro(PromptTexts.operation.success);
     }
   }
 }
+//TODO: This adapter should have only logic to work with Clack.js. Command Line calls should be removed

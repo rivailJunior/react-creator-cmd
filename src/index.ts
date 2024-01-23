@@ -2,7 +2,7 @@
 
 import ClackAdapter from "./adapters/clack-adapter";
 import LogAdapter from "./adapters/log-adapter";
-import CliPromptController from "./controller/cli-prompt";
+import CliPromptController from "./controller/cli-controller";
 import CLI from "./domain/cli";
 
 // logger

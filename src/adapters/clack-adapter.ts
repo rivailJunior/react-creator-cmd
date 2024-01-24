@@ -26,13 +26,13 @@ export default class ClackAdapter {
       log.warn(color.yellow(`Sorry ${term} is configured by default.`));
   }
 
-  private isToThrowCancelation(operation: any) {
+  private checkCancelation(operation: any) {
     if (isCancel(operation)) {
       throw ClackOperations.CANCEL_OPERATION;
     }
   }
 
-  private async handleOperation(callback: () => void) {
+  private async handleOperation(callback: () => Promise<void>) {
     await callback();
     this.loader.start(PromptTexts.operation.installing);
     await sleep(3000);
@@ -50,12 +50,14 @@ export default class ClackAdapter {
   }
 
   private async createRouter() {
-    const folderName = await text({
+    const routeName = await text({
       message: PromptTexts.folder.name,
       placeholder: PromptTexts.folder.placeholder,
     });
-    this.isToThrowCancelation(folderName);
-    await this.cli.createRouteFromTemplate(folderName as string); // todo: remove this from here
+
+    this.checkCancelation(routeName);
+    const route = routeName || PromptTexts.folder.placeholder;
+    await this.cli.createRouteFromTemplate(route as string); // todo: remove this from here
   }
 
   private async createProject() {
@@ -63,18 +65,18 @@ export default class ClackAdapter {
       message: PromptTexts.project.name,
       placeholder: PromptTexts.project.placeholder,
     });
-    this.isToThrowCancelation(projectName);
+    this.checkCancelation(projectName);
 
     const wouldLikeToUseTypescript = await confirm({
       message: PromptTexts.projectType.name,
     });
-    this.isToThrowCancelation(wouldLikeToUseTypescript);
+    this.checkCancelation(wouldLikeToUseTypescript);
     this.isToShowWarningMessage(wouldLikeToUseTypescript, "Typescript");
 
     const wouldLikeToAddTest = await confirm({
       message: PromptTexts.test.name,
     });
-    this.isToThrowCancelation(wouldLikeToAddTest);
+    this.checkCancelation(wouldLikeToAddTest);
     this.isToShowWarningMessage(wouldLikeToAddTest, "Vitest");
 
     const projectNameValue = projectName || PromptTexts.project.placeholder;
@@ -101,7 +103,7 @@ export default class ClackAdapter {
         message: PromptTexts.firstQuestion.name,
         options: PromptTexts.firstQuestion.options,
       });
-      this.isToThrowCancelation(initialQuestion);
+      this.checkCancelation(initialQuestion);
       await this.initializer(initialQuestion);
     } catch (err) {
       cancel(PromptTexts.operation.cancel);

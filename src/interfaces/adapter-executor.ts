@@ -1,3 +1,3 @@
 export interface IAdapterExecutor {
-  init: () => void;
+  init: () => Promise<any>;
 }

@@ -1,11 +1,12 @@
 {
   "name": "react-creator-cmd",
-  "version": "0.0.15",
+  "version": "0.0.17",
   "description": "It's a CLI to help developers to build their amazing react.js projects using clean architecture and tests already configured",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc",
-    "link-cli": "npm --global unlink . && chmod +x ./dist/index.js && npm link ."
+    "link-cli": "npm --global unlink . && chmod +x ./dist/index.js && npm link .",
+    "test": "vitest"
   },
   "bin": {
     "react-creator": "./dist/index.js"

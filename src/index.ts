@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-import ClackAdapter from "./adapters/clack-adapter";
+import ClackAdapter from "./adapters/clack/clack-adapter";
 import LogAdapter from "./adapters/log-adapter";
 import CliPromptController from "./controller/cli-controller";
 import CLI from "./domain/cli";
@@ -12,4 +12,4 @@ const logger = new LogAdapter();
 const cli = new CLI(logger);
 
 // controllers
-new CliPromptController(new ClackAdapter(cli)).execute();
+new CliPromptController(new ClackAdapter(), cli).execute();

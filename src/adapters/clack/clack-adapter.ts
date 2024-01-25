@@ -34,8 +34,6 @@ export default class ClackAdapter implements IAdapterExecutor {
     } catch (err) {
       clack.cancel(PromptTexts.operation.cancel);
       process.exit(0);
-    } finally {
-      clack.outro(PromptTexts.operation.success);
     }
   }
 }

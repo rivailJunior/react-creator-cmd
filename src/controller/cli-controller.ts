@@ -1,6 +1,7 @@
 import { TCreateModule } from "../adapters/clack/create-module";
 import { TCreateProject } from "../adapters/clack/create-project";
 import { TCreateRoute } from "../adapters/clack/create-router";
+import { handleOperation } from "../adapters/clack/handle-operations";
 import { IAdapterExecutor } from "../interfaces/adapter-executor";
 import { IBaseController } from "../interfaces/base-controller";
 import { ICommandLine } from "../interfaces/command-line";
@@ -15,13 +16,17 @@ export default class CliPromptController implements IBaseController {
     const data: InitializeT = await this.Adapter.init();
     switch (data.operation) {
       case "create-project":
-        return await this.commandLine.createProjectFromTemplate(
-          data?.projectName
-        );
+        return handleOperation(async () => {
+          await this.commandLine.createProjectFromTemplate(data?.projectName);
+        });
       case "create-module":
-        return await this.commandLine.createModuleFromTemplate();
+        return handleOperation(async () => {
+          await this.commandLine.createModuleFromTemplate();
+        });
       case "create-route":
-        return await this.commandLine.createRouteFromTemplate(data?.routeName);
+        return handleOperation(async () => {
+          await this.commandLine.createRouteFromTemplate(data?.routeName);
+        });
     }
   }
 }

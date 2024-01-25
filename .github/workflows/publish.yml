@@ -33,7 +33,7 @@ jobs:
   publish:
     needs: ["test"]
     runs-on: ubuntu-latest
-    if: github.ref == '${{ github.event.repository.default_branch }}'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: checkout
         uses: actions/checkout@v2

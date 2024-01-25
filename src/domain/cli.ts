@@ -9,7 +9,7 @@ import { createDir } from "./create-dir";
 import { listDirContents } from "./list-directories";
 import { ICommandLine } from "../interfaces/command-line";
 
-class CLI implements ICommandLine {
+export default class CLI implements ICommandLine {
   private REQUIRED_ERROR = (param: string) => `${param} is required`;
   constructor(readonly logger: ILogger) {}
 
@@ -72,4 +72,14 @@ class CLI implements ICommandLine {
   }
 }
 
-export default CLI;
+/**
+ * for test usage only
+ */
+export class CommandLineMemory implements ICommandLine {
+  listContent: (filePath: string) => Promise<any>;
+  createProjectFromTemplate: (folderName: string) => Promise<any>;
+  createRouteFromTemplate: (routeName: string) => Promise<any>;
+  createBlankFolder: (folderName: string) => Promise<any>;
+  createBlankFile: (filePath: string) => Promise<any>;
+  createModuleFromTemplate: () => Promise<any>;
+}

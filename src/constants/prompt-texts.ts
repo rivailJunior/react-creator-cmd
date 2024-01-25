@@ -33,8 +33,7 @@ export const PromptTexts = {
     placeholder: "my-coolest-route",
   },
   module: {
-    name: "Would you like to add a http module?",
-    placeholder: "it will generate a http-module inside folder modules",
+    name: "It will generate a http-module inside folder modules",
   },
   operation: {
     cancel: "Operation cancelled",

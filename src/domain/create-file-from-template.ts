@@ -4,8 +4,8 @@ import { ROOT_DIR_LOCATION } from "../constants";
 
 /**
  * Creates a file at the specified filepath.
- *
  * @param {string} filepath - The path where the file should be created.
+ * It's not used yet.
  */
 export function createFile(filepath: string) {
   const data = fs.readFileSync(

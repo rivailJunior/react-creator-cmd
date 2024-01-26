@@ -3,9 +3,9 @@ import path from "path";
 
 /**
  * Lists the contents of a directory.
- *
  * @param {string} filepath - The path of the directory.
  * @return {Promise<void>} - A promise that resolves when the directory contents are listed.
+ * It's not used yet
  */
 export async function listDirContents(filepath: string) {
   try {

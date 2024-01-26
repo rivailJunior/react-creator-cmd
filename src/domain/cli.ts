@@ -1,54 +1,24 @@
 import ILogger from "../interfaces/logger";
-import {
-  copyHttpModule,
-  copyProject,
-  copyRouter,
-} from "./create-dir-from-template";
-import { createFile } from "./create-file-from-template";
-import { createDir } from "./create-dir";
-import { listDirContents } from "./list-directories";
 import { ICommandLine } from "../interfaces/command-line";
 
 export default class CLI implements ICommandLine {
   private REQUIRED_ERROR = (param: string) => `${param} is required`;
-  constructor(readonly logger: ILogger) {}
+  constructor(
+    readonly logger: ILogger,
+    readonly copyHttpModule: any,
+    readonly copyProject: any,
+    readonly copyRouter: any
+  ) {}
 
   private FEEDBACK_MESSAGE_ERROR = (path: string, error?: any) => {
     this.logger.error(`Error occurred while creating: ${path}\n`, error);
   };
 
-  async listContent(filePath: string) {
-    if (!filePath) throw new Error(this.REQUIRED_ERROR("FILEPATH"));
-    try {
-      await listDirContents(filePath);
-      this.logger.success("Showing all files inside the content");
-    } catch (err) {
-      this.logger.error("Error occurred while list CONTENTS\n", err);
-    }
-  }
-
-  async createBlankFile(filePath: string) {
-    if (!filePath) throw new Error(this.REQUIRED_ERROR("FILEPATH"));
-    try {
-      await createFile(filePath);
-    } catch (err) {
-      this.FEEDBACK_MESSAGE_ERROR("BLANK FILE", err);
-    }
-  }
-
-  async createBlankFolder(folderName: string) {
-    if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
-    try {
-      await createDir(folderName);
-    } catch (err) {
-      this.FEEDBACK_MESSAGE_ERROR("BLANK FOLDER", err);
-    }
-  }
-
   async createProjectFromTemplate(folderName: string) {
     if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
     try {
-      await copyProject(folderName);
+      await this.copyProject(folderName);
+      return "Project created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("TEMPLATE PROJECT", err);
     }
@@ -57,7 +27,8 @@ export default class CLI implements ICommandLine {
   async createRouteFromTemplate(routeName: string) {
     if (!routeName) throw new Error(this.REQUIRED_ERROR("ROUTENAME"));
     try {
-      await copyRouter(routeName);
+      await this.copyRouter(routeName);
+      return "Route created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("ROUTE", err);
     }
@@ -65,7 +36,8 @@ export default class CLI implements ICommandLine {
 
   async createModuleFromTemplate() {
     try {
-      copyHttpModule();
+      await this.copyHttpModule();
+      return "Module created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("MODULE", err);
     }
@@ -73,13 +45,10 @@ export default class CLI implements ICommandLine {
 }
 
 /**
- * for test usage only
+ * for tests purposes only
  */
 export class CommandLineMemory implements ICommandLine {
-  listContent: (filePath: string) => Promise<any>;
   createProjectFromTemplate: (folderName: string) => Promise<any>;
   createRouteFromTemplate: (routeName: string) => Promise<any>;
-  createBlankFolder: (folderName: string) => Promise<any>;
-  createBlankFile: (filePath: string) => Promise<any>;
   createModuleFromTemplate: () => Promise<any>;
 }

@@ -7,8 +7,7 @@ import fs from "fs";
  * @return {void} - This function does not return a value.
  */
 export function createDir(filepath: string) {
-  if (!fs.existsSync(filepath)) {
-    fs.mkdirSync(filepath);
-    console.log("The directory has been created successfully");
-  }
+  if (fs.existsSync(filepath)) throw new Error("The directory already exists");
+  fs.mkdirSync(filepath);
+  return "The directory has been created successfully";
 }

@@ -7,15 +7,22 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "node",
+    include: ["**/src/**/tests/**"],
     exclude: [
       ...configDefaults.exclude,
-      "**/e2e/**",
-      "**/node_modules/**",
-      "**/dist/**",
-      "**/src/template/**",
+      "**/src/template/http-module/**",
+      "**/src/template/route-template/**",
+      "**/src/template/next-ts-vite-workflow/**",
+      "**/coverage/**",
     ],
     coverage: {
-      reporter: ["text", "json", "html"],
+      reporter: ["text", "json-summary", "json"],
+      thresholds: {
+        lines: 40,
+        branches: 40,
+        functions: 30,
+        statements: 40,
+      },
     },
   },
 });

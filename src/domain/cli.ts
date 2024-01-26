@@ -1,14 +1,14 @@
 import ILogger from "../interfaces/logger";
-import {
-  copyHttpModule,
-  copyProject,
-  copyRouter,
-} from "./create-dir-from-template";
 import { ICommandLine } from "../interfaces/command-line";
 
 export default class CLI implements ICommandLine {
   private REQUIRED_ERROR = (param: string) => `${param} is required`;
-  constructor(readonly logger: ILogger) {}
+  constructor(
+    readonly logger: ILogger,
+    readonly copyHttpModule: any,
+    readonly copyProject: any,
+    readonly copyRouter: any
+  ) {}
 
   private FEEDBACK_MESSAGE_ERROR = (path: string, error?: any) => {
     this.logger.error(`Error occurred while creating: ${path}\n`, error);
@@ -17,7 +17,8 @@ export default class CLI implements ICommandLine {
   async createProjectFromTemplate(folderName: string) {
     if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
     try {
-      await copyProject(folderName);
+      await this.copyProject(folderName);
+      return "Project created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("TEMPLATE PROJECT", err);
     }
@@ -26,7 +27,8 @@ export default class CLI implements ICommandLine {
   async createRouteFromTemplate(routeName: string) {
     if (!routeName) throw new Error(this.REQUIRED_ERROR("ROUTENAME"));
     try {
-      await copyRouter(routeName);
+      await this.copyRouter(routeName);
+      return "Route created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("ROUTE", err);
     }
@@ -34,7 +36,8 @@ export default class CLI implements ICommandLine {
 
   async createModuleFromTemplate() {
     try {
-      copyHttpModule();
+      await this.copyHttpModule();
+      return "Module created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("MODULE", err);
     }

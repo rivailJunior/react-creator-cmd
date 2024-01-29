@@ -11,7 +11,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["./setupTest.ts"],
     exclude: [...configDefaults.exclude, "**/e2e/**"],
     coverage: {
       reporter: ["text", "json", "html"],

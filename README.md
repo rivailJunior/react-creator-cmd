@@ -1,12 +1,20 @@
-# react-creator-cmd
+## React Creator CMD
 
-The `react-creator-cmd` tool is designed to help developers quickly generate new Next.js projects with predefined configurations, including GitHub workflows, unit tests, and end-to-end tests.
+The `react-creator` tool is designed to assist developers in rapidly generating new Next.js projects with predefined configurations, including `GitHub` workflows, `Unit` and `end-to-end` tests.
 
-Additionally, the CLI offers features for creating new routes and HTTP modules (fetch).
+### Features
+* Create new `next.js` project
+  * [app router](https://nextjs.org/docs/app/building-your-application/routing/defining-routes)
+  * [playwright](https://playwright.dev/)
+  * [vitest](https://vitest.dev/) 
+  * [github workflows](https://docs.github.com/en/actions/using-workflows) 
+
+* Generate `http-module` (fetch)
+* Generate new `Routes`
 
 ### Installation
 
-To install `react-creator-cmd`, you can use npm, yarn, or npx:
+To install `react-creator-cmd`, you can use `npm`, `yarn`, or `npx`:
 
 ```bash
 npm install -g react-creator-cmd
@@ -19,15 +27,13 @@ npx react-creator-cmd
 ### Usage
 
 ```bash
-npm run react-creator-cmd
-# and follow the questions
+npx react-creator
 ```
 
-<img width="712" alt="Screenshot 2024-01-19 at 21 26 50" src="https://github.com/rivailJunior/react-creator-cmd/assets/5783143/209c7588-1621-46ca-a88e-a3561bb2777f">
+<img width="780" alt="Screenshot 2024-01-29 at 15 04 04" src="https://github.com/rivailJunior/react-creator-cmd/assets/5783143/c1c14707-5fca-4347-8e6e-faee8312a116">
+<img width="780" alt="Screenshot 2024-01-29 at 15 03 42" src="https://github.com/rivailJunior/react-creator-cmd/assets/5783143/576c583e-cac3-45c8-8ce3-7597c02a06fa">
+<img width="780" alt="Screenshot 2024-01-29 at 15 03 15" src="https://github.com/rivailJunior/react-creator-cmd/assets/5783143/850094a1-0511-40a6-a291-bc85a08d02e5">
 
-<img width="750" alt="Screenshot 2024-01-19 at 21 28 03" src="https://github.com/rivailJunior/react-creator-cmd/assets/5783143/5a2aa123-9560-4bad-a471-d57d2488683e">
-
-<img width="316" alt="Screenshot 2024-01-19 at 21 29 03" src="https://github.com/rivailJunior/react-creator-cmd/assets/5783143/da0e110f-2b42-4ad8-a0ee-54284ad708c6">
 
 ### License
 

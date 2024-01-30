@@ -1,7 +1,7 @@
 import { TCreateModule } from "../adapters/clack/usecases/create-module";
 import { TCreateProject } from "../adapters/clack/usecases/create-project";
 import { TCreateRoute } from "../adapters/clack/usecases/create-router";
-import { handleOperation } from "../adapters/clack/usecases/handle-operations";
+import { handleSuccessFeedback } from "../adapters/clack/usecases/operation-feedback";
 import { IAdapterExecutor } from "../interfaces/adapter-executor";
 import { IBaseController } from "../interfaces/base-controller";
 import { ICommandLine } from "../interfaces/command-line";
@@ -13,20 +13,19 @@ export default class MainController implements IBaseController {
     readonly commandLine: ICommandLine
   ) {}
   async execute() {
-    const data: InitializeT = await this.Adapter.init();
-    switch (data.operation) {
-      case "create-project":
-        return handleOperation(async () => {
+    try {
+      const data: InitializeT = await this.Adapter.init();
+      switch (data.operation) {
+        case "create-project":
           await this.commandLine.createProjectFromTemplate(data?.projectName);
-        });
-      case "create-module":
-        return handleOperation(async () => {
+          return await handleSuccessFeedback();
+        case "create-module":
           await this.commandLine.createModuleFromTemplate();
-        });
-      case "create-route":
-        return handleOperation(async () => {
+          return await handleSuccessFeedback();
+        case "create-route":
           await this.commandLine.createRouteFromTemplate(data?.routeName);
-        });
-    }
+          return await handleSuccessFeedback();
+      }
+    } catch (err) {}
   }
 }

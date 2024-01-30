@@ -25,24 +25,52 @@ afterEach(() => {
 });
 
 describe("CLI", () => {
-  it("should create project from template", async () => {
-    const projectName = "projectPathName";
-    const result = await cli.createProjectFromTemplate(projectName);
-    expect(copyProject).toBeCalledWith(projectName);
-    expect(result).toBe("Project created");
-  });
+  it.only.each([
+    [
+      "vitest",
+      {
+        operation: "create-project",
+        projectName: "projectWithVitest",
+        typescript: true,
+        vitest: true,
+        jest: false,
+      },
+      "/src/template/next-ts-vite-workflow",
+    ],
+  ])(
+    "should create project from template",
+    async (testMethod, objectExpected, route) => {
+      const projectName = objectExpected.projectName;
+      const result = await cli.createProjectFromTemplate(
+        projectName,
+        objectExpected
+      );
+      expect(copyProject).toBeCalledWith(projectName);
+      expect(result).toBe("Project created");
+    }
+  );
 
   it("should throw error when project name is empty", () => {
-    expect(cli.createProjectFromTemplate("")).rejects.toThrow(
-      "FOLDERNAME is required"
-    );
+    expect(
+      cli.createProjectFromTemplate("", {
+        projectName: "my-first-react-project",
+        typescript: true,
+        vitest: false,
+        jest: true,
+      })
+    ).rejects.toThrow("FOLDERNAME is required");
     expect(copyProject).not.toBeCalled();
   });
 
   it("should throw error when project name is null", () => {
-    expect(cli.createProjectFromTemplate(null as any)).rejects.toThrow(
-      "FOLDERNAME is required"
-    );
+    expect(
+      cli.createProjectFromTemplate(null as any, {
+        projectName: "my-first-react-project",
+        typescript: true,
+        vitest: false,
+        jest: true,
+      })
+    ).rejects.toThrow("FOLDERNAME is required");
     expect(copyProject).not.toBeCalled();
   });
 

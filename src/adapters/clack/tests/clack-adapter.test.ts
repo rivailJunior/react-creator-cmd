@@ -25,31 +25,56 @@ afterEach(() => {
 });
 
 describe("clack-adapter", () => {
-  test("should call create project and return with object containing operation, projectName, typescript and vitest", async () => {
-    vi.spyOn(clack, "select").mockImplementation(() =>
-      Promise.resolve("create-project")
-    );
-    vi.spyOn(clack, "text").mockImplementation(() =>
-      Promise.resolve("my-first-react-project")
-    );
-    vi.spyOn(clack, "confirm").mockImplementation(() => Promise.resolve(true));
-    vi.spyOn(clack, "isCancel").mockImplementation(() => false);
+  test.each([
+    [
+      "vitest",
+      {
+        operation: "create-project",
+        projectName: "my-first-react-project",
+        typescript: true,
+        vitest: true,
+        jest: false,
+      },
+    ],
+    [
+      "jest",
+      {
+        operation: "create-project",
+        projectName: "my-first-react-project",
+        typescript: true,
+        vitest: false,
+        jest: true,
+      },
+    ],
+  ])(
+    "should call create project and return with object containing operation, projectName, typescript and %s as true",
+    async (testMethod, expectedObject) => {
+      const selectMock = vi
+        .spyOn(clack, "select")
+        .mockImplementationOnce(() => Promise.resolve("create-project"));
 
-    const clackAdapter = new ClackAdapter();
-    const response = await clackAdapter.init();
+      vi.spyOn(clack, "text").mockImplementation(() =>
+        Promise.resolve("my-first-react-project")
+      );
+      vi.spyOn(clack, "confirm").mockImplementation(() =>
+        Promise.resolve(true)
+      );
 
-    expect(clack.select).toHaveBeenCalled();
-    expect(clack.text).toHaveBeenCalled();
-    expect(clack.confirm).toHaveBeenCalled();
-    expect(clack.isCancel).toHaveBeenCalled();
+      vi.spyOn(clack, "isCancel").mockImplementation(() => false);
 
-    expect(response).toStrictEqual({
-      operation: "create-project",
-      projectName: "my-first-react-project",
-      typescript: true,
-      vitest: true,
-    });
-  });
+      selectMock.mockImplementation(() => Promise.resolve(testMethod));
+
+      const clackAdapter = new ClackAdapter();
+      const response = await clackAdapter.init();
+
+      expect(clack.select).toHaveBeenCalledTimes(2);
+      expect(clack.text).toHaveBeenCalled();
+      expect(clack.confirm).toHaveBeenCalled();
+      expect(clack.isCancel).toHaveBeenCalled();
+
+      expect(response).toStrictEqual(expectedObject);
+    }
+  );
 
   test("should call create route and return with object containing operation and routeName", async () => {
     vi.spyOn(clack, "select").mockImplementation(() =>

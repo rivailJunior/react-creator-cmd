@@ -9,11 +9,11 @@ import { ROOT_DIR_LOCATION } from "../../constants";
  */
 export function copyProject(
   folderPath: string,
-  pathRoute: string = ROOT_DIR_LOCATION + "/src/template/next-ts-vite-workflow"
+  pathRoute: string = "/src/template/next-ts-vite-workflow"
 ) {
   if (fs.existsSync(folderPath))
     throw new Error(`${folderPath} already exists`);
-  return fs.cpSync(path.resolve(pathRoute), folderPath, {
+  return fs.cpSync(path.resolve(ROOT_DIR_LOCATION + pathRoute), folderPath, {
     recursive: true,
   });
 }

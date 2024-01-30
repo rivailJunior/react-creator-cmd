@@ -13,19 +13,21 @@ export default class MainController implements IBaseController {
     readonly commandLine: ICommandLine
   ) {}
   async execute() {
-    try {
-      const data: InitializeT = await this.Adapter.init();
-      switch (data.operation) {
-        case "create-project":
-          await this.commandLine.createProjectFromTemplate(data?.projectName);
-          return await handleSuccessFeedback();
-        case "create-module":
-          await this.commandLine.createModuleFromTemplate();
-          return await handleSuccessFeedback();
-        case "create-route":
-          await this.commandLine.createRouteFromTemplate(data?.routeName);
-          return await handleSuccessFeedback();
-      }
-    } catch (err) {}
+    const data: InitializeT = await this.Adapter.init();
+
+    switch (data.operation) {
+      case "create-project":
+        await this.commandLine.createProjectFromTemplate(
+          data?.projectName,
+          data
+        );
+        return await handleSuccessFeedback();
+      case "create-module":
+        await this.commandLine.createModuleFromTemplate();
+        return await handleSuccessFeedback();
+      case "create-route":
+        await this.commandLine.createRouteFromTemplate(data?.routeName);
+        return await handleSuccessFeedback();
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { confirm, text } from "@clack/prompts";
+import { confirm, text, select } from "@clack/prompts";
 import { PromptTexts } from "../../../constants";
 import { checkCancelation, isToShowWarningMessage } from "./helpers";
 
@@ -7,6 +7,7 @@ export type TCreateProject = {
   projectName: string;
   typescript: boolean;
   vitest: boolean;
+  jest: boolean;
 };
 
 async function createProject(): Promise<TCreateProject> {
@@ -22,18 +23,21 @@ async function createProject(): Promise<TCreateProject> {
   checkCancelation(wouldLikeToUseTypescript);
   isToShowWarningMessage(wouldLikeToUseTypescript, "Typescript");
 
-  const wouldLikeToAddTest = await confirm({
+  const whatTestWouldYouLikeToUse = await select({
     message: PromptTexts.test.name,
+    options: PromptTexts.test.options,
   });
-  checkCancelation(wouldLikeToAddTest);
-  isToShowWarningMessage(wouldLikeToAddTest, "Vitest");
+
+  checkCancelation(whatTestWouldYouLikeToUse);
+  isToShowWarningMessage(whatTestWouldYouLikeToUse, "Vitest");
   const projectNameValue = projectName || PromptTexts.project.placeholder;
 
   return {
     operation: "create-project",
     projectName: projectNameValue as string,
     typescript: !!wouldLikeToUseTypescript,
-    vitest: !!wouldLikeToAddTest,
+    vitest: "vitest" === whatTestWouldYouLikeToUse,
+    jest: "jest" === whatTestWouldYouLikeToUse,
   };
 }
 

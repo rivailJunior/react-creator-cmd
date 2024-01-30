@@ -13,6 +13,7 @@ export default defineConfig({
       "**/src/template/http-module/**",
       "**/src/template/route-template/**",
       "**/src/template/next-ts-vite-workflow/**",
+      "**/src/template/next-jest-playwrigth-template/**",
       "**/coverage/**",
     ],
     coverage: {

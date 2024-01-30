@@ -1,5 +1,5 @@
 import ILogger from "../interfaces/logger";
-import { ICommandLine } from "../interfaces/command-line";
+import { ICommandLine, TCreateProjectData } from "../interfaces/command-line";
 
 export default class CLI implements ICommandLine {
   constructor(
@@ -13,10 +13,21 @@ export default class CLI implements ICommandLine {
     this.logger.error(`Error occurred while creating: ${path}\n`, error);
   };
 
-  async createProjectFromTemplate(folderName: string) {
+  async createProjectFromTemplate(
+    folderName: string,
+    data: TCreateProjectData
+  ) {
     try {
       if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
-      this.copyProject(folderName);
+      if (!data) throw new Error(this.REQUIRED_ERROR("DATA"));
+      if (data.jest) {
+        this.copyProject(
+          folderName,
+          "/src/template/next-jest-playwrigth-template"
+        );
+      } else {
+        this.copyProject(folderName);
+      }
       return "Project created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("TEMPLATE PROJECT", err);
@@ -50,7 +61,7 @@ export default class CLI implements ICommandLine {
  * for tests purposes only
  */
 export class CommandLineMemory implements ICommandLine {
-  createProjectFromTemplate: (folderName: string) => Promise<any>;
+  createProjectFromTemplate: (folderName: string, data: any) => Promise<any>;
   createRouteFromTemplate: (routeName: string) => Promise<any>;
   createModuleFromTemplate: () => Promise<any>;
 }

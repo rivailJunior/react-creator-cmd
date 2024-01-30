@@ -1,8 +1,8 @@
 import { PromptTexts, ClackOperations } from "../../constants";
-import { createRouter } from "./create-router";
-import { createProject } from "./create-project";
-import { createModule } from "./create-module";
-import { checkCancelation, introduction } from "./helpers";
+import { createRouter } from "./usecases/create-router";
+import { createProject } from "./usecases/create-project";
+import { createModule } from "./usecases/create-module";
+import { checkCancelation, introduction } from "./usecases/helpers";
 import * as clack from "@clack/prompts";
 import { IAdapterExecutor } from "../../interfaces/adapter-executor";
 

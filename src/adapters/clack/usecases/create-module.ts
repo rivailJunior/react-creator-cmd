@@ -1,5 +1,5 @@
 import { confirm } from "@clack/prompts";
-import { ClackOperations, PromptTexts } from "../../constants";
+import { ClackOperations, PromptTexts } from "../../../constants";
 
 type moduleT = "http" | "log" | "event-tracker";
 

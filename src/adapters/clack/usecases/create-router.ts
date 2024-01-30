@@ -1,5 +1,5 @@
 import { text } from "@clack/prompts";
-import { PromptTexts } from "../../constants";
+import { PromptTexts } from "../../../constants";
 import { checkCancelation } from "./helpers";
 
 export type TCreateRoute = {

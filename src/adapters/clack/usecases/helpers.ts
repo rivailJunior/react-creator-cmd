@@ -1,5 +1,5 @@
 import { intro, isCancel, log } from "@clack/prompts";
-import { ClackOperations, PromptTexts } from "../../constants";
+import { ClackOperations, PromptTexts } from "../../../constants";
 import color from "picocolors";
 
 function isToShowWarningMessage(operationResponse: any, term: string) {

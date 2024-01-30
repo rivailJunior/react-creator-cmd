@@ -1,5 +1,5 @@
 import { spinner, outro } from "@clack/prompts";
-import { PromptTexts } from "../../constants";
+import { PromptTexts } from "../../../constants";
 import { setTimeout as sleep } from "node:timers/promises";
 const loader = spinner();
 async function handleOperation(

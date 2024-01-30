@@ -1,7 +1,7 @@
 import * as fs from "fs";
-import { copyProject } from "../create-dir-from-template";
+import { copyProject } from "../usecases/create-dir-from-template";
 import { describe } from "vitest";
-import { createDir } from "../create-dir";
+import { createDir } from "../usecases/create-dir";
 
 const destinationPath = "copy-dir";
 const removeDir = (dirPath: string) => {

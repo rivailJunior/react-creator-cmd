@@ -1,4 +1,4 @@
-import ILogger from "../interfaces/logger";
+import ILogger from "../../interfaces/logger";
 const log = require("log-beautify");
 
 export default class LogAdapter implements ILogger {

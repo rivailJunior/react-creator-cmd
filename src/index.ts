@@ -1,14 +1,14 @@
 #! /usr/bin/env node
 
 import ClackAdapter from "./adapters/clack/clack-adapter";
-import LogAdapter from "./adapters/log-adapter";
-import CliPromptController from "./controller/cli-controller";
+import LogAdapter from "./adapters/loger/log-adapter";
+import MainController from "./controller/main";
 import CLI from "./domain/cli";
 import {
   copyHttpModule,
   copyProject,
   copyRouter,
-} from "./domain/create-dir-from-template";
+} from "./domain/usecases/create-dir-from-template";
 
 // logger
 const logger = new LogAdapter();
@@ -17,4 +17,4 @@ const logger = new LogAdapter();
 const cli = new CLI(logger, copyHttpModule, copyProject, copyRouter);
 
 // controllers
-new CliPromptController(new ClackAdapter(), cli).execute();
+new MainController(new ClackAdapter(), cli).execute();

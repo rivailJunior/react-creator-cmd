@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import { ROOT_DIR_LOCATION } from "../constants";
+import { ROOT_DIR_LOCATION } from "../../constants";
 
 /**
  * Reads the content of a file asynchronously.

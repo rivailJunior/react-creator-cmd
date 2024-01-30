@@ -1,5 +1,5 @@
 import { confirm, text } from "@clack/prompts";
-import { PromptTexts } from "../../constants";
+import { PromptTexts } from "../../../constants";
 import { checkCancelation, isToShowWarningMessage } from "./helpers";
 
 export type TCreateProject = {

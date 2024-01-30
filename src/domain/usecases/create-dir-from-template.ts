@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { ROOT_DIR_LOCATION } from "../constants";
+import { ROOT_DIR_LOCATION } from "../../constants";
 
 /**
  * Copies a folder from the source path to the destination path.

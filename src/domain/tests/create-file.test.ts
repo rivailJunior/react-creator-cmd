@@ -1,4 +1,4 @@
-import { createFile } from "../create-file-from-template";
+import { createFile } from "../usecases/create-file-from-template";
 import fs from "fs";
 import { vi } from "vitest";
 

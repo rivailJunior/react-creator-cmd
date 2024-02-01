@@ -52,9 +52,9 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@v2
 
   publish:
+    if: ${{  github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, 'chore(release)') }}
     needs: ["test-coverage"]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: checkout
         uses: actions/checkout@v2

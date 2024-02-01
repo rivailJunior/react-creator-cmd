@@ -36,7 +36,7 @@ jobs:
 
   test-coverage:
     runs-on: ubuntu-latest
-
+    needs: ["test"]
     steps:
       - uses: actions/checkout@v4
       - name: "Install Node"
@@ -52,7 +52,7 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@v2
 
   publish:
-    needs: ["test"]
+    needs: ["test-coverage"]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:

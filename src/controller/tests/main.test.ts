@@ -58,4 +58,31 @@ describe("Constructor", () => {
       expect(adapter.init).toHaveReturnedWith(objectExpected);
     }
   );
+
+  it("should call create route and pass data", async () => {
+    adapter.init = vi.fn().mockImplementation(() =>
+      Promise.resolve({
+        operation: "create-route",
+        routeName: "users",
+      })
+    );
+    commandLine.createRouteFromTemplate = vi
+      .fn()
+      .mockImplementation(() => Promise.resolve("Route created"));
+    await mainController.execute();
+    expect(commandLine.createRouteFromTemplate).toHaveBeenCalled();
+  });
+
+  it("should call create module and pass data", async () => {
+    adapter.init = vi.fn().mockImplementation(() =>
+      Promise.resolve({
+        operation: "create-module",
+      })
+    );
+    commandLine.createModuleFromTemplate = vi
+      .fn()
+      .mockImplementation(() => Promise.resolve("Module created"));
+    await mainController.execute();
+    expect(commandLine.createModuleFromTemplate).toHaveBeenCalled();
+  });
 });

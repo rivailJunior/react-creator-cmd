@@ -1,6 +1,6 @@
 import { CommandLineMemory } from "../../domain/cli";
 import MainController from "../main";
-import { describe, test, vi } from "vitest";
+import { describe, vi } from "vitest";
 
 vi.mock("../../adapters/clack/usecases/operation-feedback");
 class AdapterExecutor {
@@ -20,7 +20,7 @@ const commandLine = new CommandLineMemory();
 const mainController = new MainController(adapter, commandLine);
 
 describe("Constructor", () => {
-  it.only.each([
+  it.each([
     [
       "vitest",
       {

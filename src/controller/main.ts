@@ -1,11 +1,10 @@
 import { TCreateModule } from "../adapters/clack/usecases/create-module";
-import { TCreateProject } from "../adapters/clack/usecases/create-project";
 import { TCreateRoute } from "../adapters/clack/usecases/create-router";
 import { handleSuccessFeedback } from "../adapters/clack/usecases/operation-feedback";
 import { IAdapterExecutor } from "../interfaces/adapter-executor";
 import { IBaseController } from "../interfaces/base-controller";
-import { ICommandLine } from "../interfaces/command-line";
-type InitializeT = TCreateProject & TCreateModule & TCreateRoute;
+import { ICommandLine, TCreateProjectData } from "../interfaces/command-line";
+type InitializeT = TCreateProjectData & TCreateModule & TCreateRoute;
 
 export default class MainController implements IBaseController {
   constructor(

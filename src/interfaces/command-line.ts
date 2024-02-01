@@ -1,8 +1,9 @@
 export type TCreateProjectData = {
+  operation: string;
   projectName: string;
   typescript: boolean;
-  vitest: boolean;
-  jest: boolean;
+  unit: string;
+  endToEnd: string;
 };
 export interface ICommandLine {
   createProjectFromTemplate: (

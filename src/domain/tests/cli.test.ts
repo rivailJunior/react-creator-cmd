@@ -25,17 +25,28 @@ afterEach(() => {
 });
 
 describe("CLI", () => {
-  it.only.each([
+  it.each([
     [
       "vitest",
       {
         operation: "create-project",
         projectName: "projectWithVitest",
         typescript: true,
-        vitest: true,
-        jest: false,
+        unit: "vitest",
+        endToEnd: "playwright",
       },
-      "/src/template/next-ts-vite-workflow",
+      "/src/template/next-vitest-playwright",
+    ],
+    [
+      "jest",
+      {
+        operation: "create-project",
+        projectName: "projectWithVitest",
+        typescript: true,
+        unit: "jest",
+        endToEnd: "playwright",
+      },
+      "/src/template/next-jest-playwright",
     ],
   ])(
     "should create project from template",
@@ -45,8 +56,8 @@ describe("CLI", () => {
         projectName,
         objectExpected
       );
-      expect(copyProject).toBeCalledWith(projectName);
       expect(result).toBe("Project created");
+      expect(copyProject).toHaveBeenCalledWith(projectName, route);
     }
   );
 
@@ -55,8 +66,8 @@ describe("CLI", () => {
       cli.createProjectFromTemplate("", {
         projectName: "my-first-react-project",
         typescript: true,
-        vitest: false,
-        jest: true,
+        unit: "jest",
+        endToEnd: "playwright",
       })
     ).rejects.toThrow("FOLDERNAME is required");
     expect(copyProject).not.toBeCalled();
@@ -67,8 +78,8 @@ describe("CLI", () => {
       cli.createProjectFromTemplate(null as any, {
         projectName: "my-first-react-project",
         typescript: true,
-        vitest: false,
-        jest: true,
+        unit: "jest",
+        endToEnd: "playwright",
       })
     ).rejects.toThrow("FOLDERNAME is required");
     expect(copyProject).not.toBeCalled();

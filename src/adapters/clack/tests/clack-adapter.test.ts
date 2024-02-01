@@ -32,8 +32,8 @@ describe("clack-adapter", () => {
         operation: "create-project",
         projectName: "my-first-react-project",
         typescript: true,
-        vitest: true,
-        jest: false,
+        unit: "vitest",
+        endToEnd: "playwright",
       },
     ],
     [
@@ -42,8 +42,8 @@ describe("clack-adapter", () => {
         operation: "create-project",
         projectName: "my-first-react-project",
         typescript: true,
-        vitest: false,
-        jest: true,
+        unit: "jest",
+        endToEnd: "playwright",
       },
     ],
   ])(

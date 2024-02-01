@@ -8,26 +8,25 @@ export default class CLI implements ICommandLine {
     readonly copyProject: any,
     readonly copyRouter: any
   ) {}
+
   private REQUIRED_ERROR = (param: string) => `${param} is required`;
   private FEEDBACK_MESSAGE_ERROR = (path: string, error?: any) => {
     this.logger.error(`Error occurred while creating: ${path}\n`, error);
   };
 
+  private getTemplatePath(unitTest: string, endToEndTest: string) {
+    return `/src/template/next-${unitTest}-${endToEndTest}`;
+  }
+
   async createProjectFromTemplate(
     folderName: string,
-    data: TCreateProjectData
+    data: Omit<TCreateProjectData, "operation">
   ) {
     try {
       if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
       if (!data) throw new Error(this.REQUIRED_ERROR("DATA"));
-      if (data.jest) {
-        this.copyProject(
-          folderName,
-          "/src/template/next-jest-playwrigth-template"
-        );
-      } else {
-        this.copyProject(folderName);
-      }
+      const template = this.getTemplatePath(data.unit, data.endToEnd);
+      this.copyProject(folderName, template);
       return "Project created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("TEMPLATE PROJECT", err);

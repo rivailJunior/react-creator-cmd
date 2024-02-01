@@ -25,24 +25,63 @@ afterEach(() => {
 });
 
 describe("CLI", () => {
-  it("should create project from template", async () => {
-    const projectName = "projectPathName";
-    const result = await cli.createProjectFromTemplate(projectName);
-    expect(copyProject).toBeCalledWith(projectName);
-    expect(result).toBe("Project created");
-  });
+  it.each([
+    [
+      "vitest",
+      {
+        operation: "create-project",
+        projectName: "projectWithVitest",
+        typescript: true,
+        unit: "vitest",
+        endToEnd: "playwright",
+      },
+      "/src/template/next-vitest-playwright",
+    ],
+    [
+      "jest",
+      {
+        operation: "create-project",
+        projectName: "projectWithVitest",
+        typescript: true,
+        unit: "jest",
+        endToEnd: "playwright",
+      },
+      "/src/template/next-jest-playwright",
+    ],
+  ])(
+    "should create project from template",
+    async (testMethod, objectExpected, route) => {
+      const projectName = objectExpected.projectName;
+      const result = await cli.createProjectFromTemplate(
+        projectName,
+        objectExpected
+      );
+      expect(result).toBe("Project created");
+      expect(copyProject).toHaveBeenCalledWith(projectName, route);
+    }
+  );
 
   it("should throw error when project name is empty", () => {
-    expect(cli.createProjectFromTemplate("")).rejects.toThrow(
-      "FOLDERNAME is required"
-    );
+    expect(
+      cli.createProjectFromTemplate("", {
+        projectName: "my-first-react-project",
+        typescript: true,
+        unit: "jest",
+        endToEnd: "playwright",
+      })
+    ).rejects.toThrow("FOLDERNAME is required");
     expect(copyProject).not.toBeCalled();
   });
 
   it("should throw error when project name is null", () => {
-    expect(cli.createProjectFromTemplate(null as any)).rejects.toThrow(
-      "FOLDERNAME is required"
-    );
+    expect(
+      cli.createProjectFromTemplate(null as any, {
+        projectName: "my-first-react-project",
+        typescript: true,
+        unit: "jest",
+        endToEnd: "playwright",
+      })
+    ).rejects.toThrow("FOLDERNAME is required");
     expect(copyProject).not.toBeCalled();
   });
 

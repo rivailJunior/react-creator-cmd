@@ -1,5 +1,5 @@
 import ILogger from "../interfaces/logger";
-import { ICommandLine } from "../interfaces/command-line";
+import { ICommandLine, TCreateProjectData } from "../interfaces/command-line";
 
 export default class CLI implements ICommandLine {
   constructor(
@@ -8,15 +8,25 @@ export default class CLI implements ICommandLine {
     readonly copyProject: any,
     readonly copyRouter: any
   ) {}
+
   private REQUIRED_ERROR = (param: string) => `${param} is required`;
   private FEEDBACK_MESSAGE_ERROR = (path: string, error?: any) => {
     this.logger.error(`Error occurred while creating: ${path}\n`, error);
   };
 
-  async createProjectFromTemplate(folderName: string) {
+  private getTemplatePath(unitTest: string, endToEndTest: string) {
+    return `/src/template/next-${unitTest}-${endToEndTest}`;
+  }
+
+  async createProjectFromTemplate(
+    folderName: string,
+    data: Omit<TCreateProjectData, "operation">
+  ) {
     try {
       if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
-      this.copyProject(folderName);
+      if (!data) throw new Error(this.REQUIRED_ERROR("DATA"));
+      const template = this.getTemplatePath(data.unit, data.endToEnd);
+      this.copyProject(folderName, template);
       return "Project created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("TEMPLATE PROJECT", err);
@@ -50,7 +60,7 @@ export default class CLI implements ICommandLine {
  * for tests purposes only
  */
 export class CommandLineMemory implements ICommandLine {
-  createProjectFromTemplate: (folderName: string) => Promise<any>;
+  createProjectFromTemplate: (folderName: string, data: any) => Promise<any>;
   createRouteFromTemplate: (routeName: string) => Promise<any>;
   createModuleFromTemplate: () => Promise<any>;
 }

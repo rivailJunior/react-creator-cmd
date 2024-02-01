@@ -7,13 +7,10 @@ import { ROOT_DIR_LOCATION } from "../../constants";
  *
  * @param {string} folderPath - The path of the folder to be copied.
  */
-export function copyProject(
-  folderPath: string,
-  pathRoute: string = ROOT_DIR_LOCATION + "/src/template/next-ts-vite-workflow"
-) {
+export function copyProject(folderPath: string, pathRoute: string) {
   if (fs.existsSync(folderPath))
     throw new Error(`${folderPath} already exists`);
-  return fs.cpSync(path.resolve(pathRoute), folderPath, {
+  return fs.cpSync(path.resolve(ROOT_DIR_LOCATION + pathRoute), folderPath, {
     recursive: true,
   });
 }

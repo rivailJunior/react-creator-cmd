@@ -26,7 +26,17 @@ export const PromptTexts = {
     name: "🟡 Would you like to use TypeScript?",
   },
   test: {
-    name: "🟡 Would you like to add Vitest?",
+    name: "🟡 Would you like to config Vitest or Jest?",
+    options: [
+      {
+        value: "vitest",
+        label: "🧪 Vitest",
+      },
+      {
+        value: "jest",
+        label: "🧪 Jest",
+      },
+    ],
   },
   folder: {
     name: "📍📝 What is your route name?",

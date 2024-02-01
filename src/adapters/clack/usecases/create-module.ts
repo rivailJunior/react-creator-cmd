@@ -12,7 +12,6 @@ async function createModule(
   moduleType: moduleT
 ): Promise<TCreateModule | undefined> {
   if (moduleType === "http") {
-    console.log("create module");
     const wouldLikeToCreateHttpModule = await confirm({
       message: PromptTexts.module.name,
     });

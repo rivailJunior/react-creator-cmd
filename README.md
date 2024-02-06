@@ -1,15 +1,18 @@
 ## React Creator CMD
 
-The `react-creator` tool is designed to assist developers in rapidly generating new Next.js projects with predefined configurations, including `GitHub` workflows, `Unit` and `end-to-end` tests.
+The `react-creator-cmd` tool is designed to assist developers in rapidly generating new Next.js projects with predefined configurations, including `GitHub Workflows`, `Unit Tests`, `Integration Tests` and `End-to-End Tests`.
 
 ### Features
 
-- Create new `next.js` project
+- Create new `Next.js` project.
 
+  - [next.js](https://nextjs.org/docs)
   - [app router](https://nextjs.org/docs/app/building-your-application/routing/defining-routes)
   - [playwright](https://playwright.dev/)
   - [vitest](https://vitest.dev/)
-  - [github workflows](https://docs.github.com/en/actions/using-workflows)
+  - [jest](https://jestjs.io/)
+  - [git workflow](https://docs.github.com/en/actions/using-workflows)
+  - [commit convention](https://www.conventionalcommits.org/en/v1.0.0/)
 
 - Generate `http-module` (fetch)
 - Generate new `Routes`

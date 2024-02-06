@@ -11,12 +11,6 @@ permissions:
   pull-requests: write
 
 jobs:
-  check-git:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out github.event
-        run: echo "${{ toJson(github.event.head_commit)}}"
-
   test:
     name: Unit tests
     runs-on: ubuntu-latest

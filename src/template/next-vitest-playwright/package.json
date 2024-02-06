@@ -1,6 +1,6 @@
 {
-  "name": "next-typescript-template",
-  "version": "0.0.10",
+  "name": "react-creator-cmd-template",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test:unit": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "dependencies": {
     "react": "^18",
@@ -17,6 +19,9 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "husky": "^9.0.10",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",

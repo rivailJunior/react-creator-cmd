@@ -1,6 +1,5 @@
 export const PromptTexts = {
-  intro:
-    "💬 Let's create a new project or some new folder for your react project?",
+  intro: "💬 Hey, Let's create!!!",
   firstQuestion: {
     name: "🗃 What would you like to do?",
     options: [

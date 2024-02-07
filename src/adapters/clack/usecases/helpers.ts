@@ -14,7 +14,7 @@ function checkCancelation(operation: any) {
 }
 
 function introduction() {
-  intro(color.inverse(PromptTexts.intro));
+  intro(color.cyan(PromptTexts.intro));
 }
 
 export { introduction, checkCancelation, isToShowWarningMessage };

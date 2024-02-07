@@ -1,6 +1,6 @@
 ## React Creator CMD
 
-The `react-creator-cmd` tool is designed to assist developers in rapidly generating new Next.js projects with predefined configurations, including `GitHub Workflows`, `Unit Tests`, `Integration Tests` and `End-to-End Tests`.
+The `react-creator-cmd` tool is designed to assist developers in rapidly generating new Next.js projects with predefined configurations including `GitHub Workflows`, `Unit Tests`, `Integration Tests`, `End-to-End Tests`, and `Commit Convention`.
 
 ### Features
 
@@ -13,6 +13,7 @@ The `react-creator-cmd` tool is designed to assist developers in rapidly generat
   - [jest](https://jestjs.io/)
   - [git workflow](https://docs.github.com/en/actions/using-workflows)
   - [commit convention](https://www.conventionalcommits.org/en/v1.0.0/)
+  - [zod](https://zod.dev/?id=introduction)
 
 - Generate `http-module` (fetch)
 - Generate new `Routes`
@@ -29,6 +30,11 @@ npx react-creator-cmd
 
 ```bash
 npx react-creator-cmd
+
+# cd <your-project>
+# create .env file based on the .env.example file
+
+npm install
 ```
 
 <img width="780" alt="Screenshot 2024-01-29 at 15 04 04" src="https://github.com/rivailJunior/react-creator-cmd/assets/5783143/c1c14707-5fca-4347-8e6e-faee8312a116">

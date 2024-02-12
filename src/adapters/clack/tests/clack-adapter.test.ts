@@ -28,6 +28,7 @@ describe("clack-adapter", () => {
   test.each([
     [
       "vitest",
+      "playwright",
       {
         operation: "create-project",
         projectName: "my-first-react-project",
@@ -38,6 +39,7 @@ describe("clack-adapter", () => {
     ],
     [
       "jest",
+      "playwright",
       {
         operation: "create-project",
         projectName: "my-first-react-project",
@@ -46,9 +48,20 @@ describe("clack-adapter", () => {
         endToEnd: "playwright",
       },
     ],
+    [
+      "vitest",
+      "cypress",
+      {
+        operation: "create-project",
+        projectName: "my-first-react-project",
+        typescript: true,
+        unit: "vitest",
+        endToEnd: "cypress",
+      },
+    ],
   ])(
     "should call create project and return with object containing operation, projectName, typescript and %s as true",
-    async (testMethod, expectedObject) => {
+    async (testMethod, endToEndTestMethod, expectedObject) => {
       const selectMock = vi
         .spyOn(clack, "select")
         .mockImplementationOnce(() => Promise.resolve("create-project"));
@@ -62,14 +75,15 @@ describe("clack-adapter", () => {
 
       vi.spyOn(clack, "isCancel").mockImplementation(() => false);
 
-      selectMock.mockImplementation(() => Promise.resolve(testMethod));
+      selectMock
+        .mockResolvedValueOnce(testMethod)
+        .mockResolvedValueOnce(endToEndTestMethod);
 
       const clackAdapter = new ClackAdapter();
       const response = await clackAdapter.init();
 
-      expect(clack.select).toHaveBeenCalledTimes(2);
       expect(clack.text).toHaveBeenCalled();
-      expect(clack.confirm).toHaveBeenCalled();
+      expect(clack.select).toHaveBeenCalledTimes(3);
       expect(clack.isCancel).toHaveBeenCalled();
 
       expect(response).toStrictEqual(expectedObject);

@@ -1,6 +1,6 @@
-import { confirm, text, select } from "@clack/prompts";
+import { text, select } from "@clack/prompts";
 import { PromptTexts } from "../../../constants";
-import { checkCancelation, isToShowWarningMessage } from "./helpers";
+import { checkCancelation } from "./helpers";
 import { TCreateProjectData } from "../../../interfaces/command-line";
 
 async function createProject(): Promise<TCreateProjectData> {
@@ -10,11 +10,6 @@ async function createProject(): Promise<TCreateProjectData> {
   });
 
   checkCancelation(projectName);
-  const wouldLikeToUseTypescript = await confirm({
-    message: PromptTexts.projectType.name,
-  });
-  checkCancelation(wouldLikeToUseTypescript);
-  isToShowWarningMessage(wouldLikeToUseTypescript, "Typescript");
 
   const whatTestWouldYouLikeToUse = await select({
     message: PromptTexts.test.name,
@@ -22,15 +17,20 @@ async function createProject(): Promise<TCreateProjectData> {
   });
 
   checkCancelation(whatTestWouldYouLikeToUse);
-  isToShowWarningMessage(whatTestWouldYouLikeToUse, "Vitest");
   const projectNameValue = projectName || PromptTexts.project.placeholder;
+
+  const endToEndTests = await select({
+    message: PromptTexts.endToEndTest.name,
+    options: PromptTexts.endToEndTest.options,
+  });
+  checkCancelation(endToEndTests);
 
   return {
     operation: "create-project",
     projectName: projectNameValue as string,
-    typescript: !!wouldLikeToUseTypescript,
+    typescript: true, //default
     unit: whatTestWouldYouLikeToUse as string,
-    endToEnd: "playwright",
+    endToEnd: endToEndTests as string,
   };
 }
 

@@ -9,6 +9,7 @@ The `react-creator-cmd` tool is designed to assist developers in rapidly generat
   - [next.js](https://nextjs.org/docs)
   - [app router](https://nextjs.org/docs/app/building-your-application/routing/defining-routes)
   - [playwright](https://playwright.dev/)
+  - [cypress](https://www.cypress.io/) - BETA
   - [vitest](https://vitest.dev/)
   - [jest](https://jestjs.io/)
   - [git workflow](https://docs.github.com/en/actions/using-workflows)

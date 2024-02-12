@@ -21,11 +21,8 @@ export const PromptTexts = {
     name: "📂📝 What is your project name?",
     placeholder: "my-coolest-react-app",
   },
-  projectType: {
-    name: "🟡 Would you like to use TypeScript?",
-  },
   test: {
-    name: "🟡 Would you like to config Vitest or Jest?",
+    name: "Would you like to config Vitest or Jest?",
     options: [
       {
         value: "vitest",
@@ -34,6 +31,19 @@ export const PromptTexts = {
       {
         value: "jest",
         label: "🧪 Jest",
+      },
+    ],
+  },
+  endToEndTest: {
+    name: "Would you like to config Cypress or Playwright?",
+    options: [
+      {
+        value: "cypress",
+        label: "🧪 Cypress",
+      },
+      {
+        value: "playwright",
+        label: "🧪 Playwright",
       },
     ],
   },

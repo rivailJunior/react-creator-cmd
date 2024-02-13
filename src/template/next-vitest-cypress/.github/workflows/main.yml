@@ -85,6 +85,7 @@ jobs:
 
       - name: Running test
         run: npm run test:unit
+
   test-e2e:
     needs: ["test"]
     name: E2E

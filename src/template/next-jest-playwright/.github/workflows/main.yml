@@ -1,5 +1,8 @@
 name: CI/CD
 
+env:
+  WELCOME_MESSAGE: We are here to help you with your Next.js project 🥳
+
 on:
   push:
     branches: ["main", "dev"]

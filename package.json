@@ -1,6 +1,6 @@
 {
   "name": "react-creator-cmd",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "CLI to bootstrap Next.js 15 projects with React 19, Tailwind v4, testing, AI assistant configs, and modern tooling",
   "main": "dist/index.js",
   "scripts": {

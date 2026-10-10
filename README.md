@@ -1,10 +1,10 @@
 [![ISC License](https://img.shields.io/badge/License-ISC-green.svg)](https://choosealicense.com/licenses/isc/)
 
-## React Creator CMD v2.0
+## React Creator CMD v2.1
 
 A CLI tool to bootstrap **production-ready Next.js 15** projects with modern tooling, testing, and **AI assistant configurations** — all pre-configured and ready to go.
 
-### What's New in v2.0
+### What's New in v2.1
 
 - **Next.js 15** with App Router, Server Components, and **Turbopack**
 - **React 19** — latest React with Server Components support

@@ -25,12 +25,26 @@ async function createProject(): Promise<TCreateProjectData> {
   });
   checkCancelation(endToEndTests);
 
+  const lintingChoice = await select({
+    message: PromptTexts.linting.name,
+    options: PromptTexts.linting.options,
+  });
+  checkCancelation(lintingChoice);
+
+  const uiLibraryChoice = await select({
+    message: PromptTexts.uiLibrary.name,
+    options: PromptTexts.uiLibrary.options,
+  });
+  checkCancelation(uiLibraryChoice);
+
   return {
-    operation: "create-project",
+    operation: 'create-project',
     projectName: projectNameValue as string,
-    typescript: true, //default
+    typescript: true,
     unit: whatTestWouldYouLikeToUse as string,
     endToEnd: endToEndTests as string,
+    linting: lintingChoice as string,
+    uiLibrary: uiLibraryChoice as string,
   };
 }
 

@@ -6,11 +6,13 @@ vi.mock("../../adapters/clack/usecases/operation-feedback");
 class AdapterExecutor {
   async init() {
     return {
-      operation: "create-project",
-      projectName: "my-first-react-project",
+      operation: 'create-project',
+      projectName: 'my-first-react-project',
       typescript: true,
-      vitest: false,
-      jest: true,
+      unit: 'vitest',
+      endToEnd: 'playwright',
+      linting: 'biome',
+      uiLibrary: 'none',
     };
   }
 }
@@ -22,41 +24,42 @@ const mainController = new MainController(adapter, commandLine);
 describe("Constructor", () => {
   it.each([
     [
-      "vitest",
+      'vitest + playwright + biome',
       {
-        operation: "create-project",
-        projectName: "my-first-react-project",
+        operation: 'create-project',
+        projectName: 'my-first-react-project',
         typescript: true,
-        vitest: true,
-        jest: false,
+        unit: 'vitest',
+        endToEnd: 'playwright',
+        linting: 'biome',
+        uiLibrary: 'none',
       },
     ],
     [
-      "jest",
+      'jest + cypress + eslint + shadcn',
       {
-        operation: "create-project",
-        projectName: "my-first-react-project",
+        operation: 'create-project',
+        projectName: 'my-first-react-project',
         typescript: true,
-        vitest: false,
-        jest: true,
+        unit: 'jest',
+        endToEnd: 'cypress',
+        linting: 'eslint',
+        uiLibrary: 'shadcn',
       },
     ],
   ])(
-    "should call create project and pass data with %s",
-    async (testMethod, objectExpected) => {
+    'should call create project and pass data with %s',
+    async (_label, objectExpected) => {
       commandLine.createProjectFromTemplate = vi
         .fn()
-        .mockImplementation((objectExpected) =>
-          Promise.resolve(objectExpected)
-        );
-      adapter.init = vi
-        .fn()
-        .mockImplementation(() => Promise.resolve(objectExpected));
+        .mockImplementation(() => Promise.resolve('Project created'));
+      adapter.init = vi.fn().mockResolvedValue(objectExpected);
       await mainController.execute();
       expect(commandLine.createProjectFromTemplate).toHaveBeenCalled();
       expect(adapter.init).toHaveBeenCalled();
-      expect(adapter.init).toHaveReturnedWith(objectExpected);
-    }
+      const result = await adapter.init();
+      expect(result).toStrictEqual(objectExpected);
+    },
   );
 
   it("should call create route and pass data", async () => {

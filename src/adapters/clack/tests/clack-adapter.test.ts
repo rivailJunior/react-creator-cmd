@@ -27,67 +27,87 @@ afterEach(() => {
 describe("clack-adapter", () => {
   test.each([
     [
-      "vitest",
-      "playwright",
+      'vitest',
+      'playwright',
+      'biome',
+      'none',
       {
-        operation: "create-project",
-        projectName: "my-first-react-project",
+        operation: 'create-project',
+        projectName: 'my-first-react-project',
         typescript: true,
-        unit: "vitest",
-        endToEnd: "playwright",
+        unit: 'vitest',
+        endToEnd: 'playwright',
+        linting: 'biome',
+        uiLibrary: 'none',
       },
     ],
     [
-      "jest",
-      "playwright",
+      'jest',
+      'playwright',
+      'eslint',
+      'shadcn',
       {
-        operation: "create-project",
-        projectName: "my-first-react-project",
+        operation: 'create-project',
+        projectName: 'my-first-react-project',
         typescript: true,
-        unit: "jest",
-        endToEnd: "playwright",
+        unit: 'jest',
+        endToEnd: 'playwright',
+        linting: 'eslint',
+        uiLibrary: 'shadcn',
       },
     ],
     [
-      "vitest",
-      "cypress",
+      'vitest',
+      'cypress',
+      'biome',
+      'shadcn',
       {
-        operation: "create-project",
-        projectName: "my-first-react-project",
+        operation: 'create-project',
+        projectName: 'my-first-react-project',
         typescript: true,
-        unit: "vitest",
-        endToEnd: "cypress",
+        unit: 'vitest',
+        endToEnd: 'cypress',
+        linting: 'biome',
+        uiLibrary: 'shadcn',
       },
     ],
   ])(
-    "should call create project and return with object containing operation, projectName, typescript and %s as true",
-    async (testMethod, endToEndTestMethod, expectedObject) => {
+    'should call create project with unit=%s e2e=%s linting=%s ui=%s',
+    async (
+      testMethod,
+      endToEndTestMethod,
+      lintingMethod,
+      uiLibraryMethod,
+      expectedObject,
+    ) => {
       const selectMock = vi
-        .spyOn(clack, "select")
-        .mockImplementationOnce(() => Promise.resolve("create-project"));
+        .spyOn(clack, 'select')
+        .mockImplementationOnce(() => Promise.resolve('create-project'));
 
-      vi.spyOn(clack, "text").mockImplementation(() =>
-        Promise.resolve("my-first-react-project")
+      vi.spyOn(clack, 'text').mockImplementation(() =>
+        Promise.resolve('my-first-react-project'),
       );
-      vi.spyOn(clack, "confirm").mockImplementation(() =>
-        Promise.resolve(true)
+      vi.spyOn(clack, 'confirm').mockImplementation(() =>
+        Promise.resolve(true),
       );
 
-      vi.spyOn(clack, "isCancel").mockImplementation(() => false);
+      vi.spyOn(clack, 'isCancel').mockImplementation(() => false);
 
       selectMock
         .mockResolvedValueOnce(testMethod)
-        .mockResolvedValueOnce(endToEndTestMethod);
+        .mockResolvedValueOnce(endToEndTestMethod)
+        .mockResolvedValueOnce(lintingMethod)
+        .mockResolvedValueOnce(uiLibraryMethod);
 
       const clackAdapter = new ClackAdapter();
       const response = await clackAdapter.init();
 
       expect(clack.text).toHaveBeenCalled();
-      expect(clack.select).toHaveBeenCalledTimes(3);
+      expect(clack.select).toHaveBeenCalledTimes(5);
       expect(clack.isCancel).toHaveBeenCalled();
 
       expect(response).toStrictEqual(expectedObject);
-    }
+    },
   );
 
   test("should call create route and return with object containing operation and routeName", async () => {

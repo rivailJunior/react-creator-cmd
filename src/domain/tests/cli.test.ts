@@ -27,61 +27,81 @@ afterEach(() => {
 describe("CLI", () => {
   it.each([
     [
-      "vitest",
+      'vitest + playwright + biome',
       {
-        operation: "create-project",
-        projectName: "projectWithVitest",
+        operation: 'create-project',
+        projectName: 'projectWithVitest',
         typescript: true,
-        unit: "vitest",
-        endToEnd: "playwright",
+        unit: 'vitest',
+        endToEnd: 'playwright',
+        linting: 'biome',
+        uiLibrary: 'none',
       },
-      "/src/template/next-vitest-playwright",
+      {
+        projectName: 'projectWithVitest',
+        unit: 'vitest',
+        endToEnd: 'playwright',
+        linting: 'biome',
+        uiLibrary: 'none',
+      },
     ],
     [
-      "jest",
+      'jest + playwright + eslint + shadcn',
       {
-        operation: "create-project",
-        projectName: "projectWithVitest",
+        operation: 'create-project',
+        projectName: 'projectWithJest',
         typescript: true,
-        unit: "jest",
-        endToEnd: "playwright",
+        unit: 'jest',
+        endToEnd: 'playwright',
+        linting: 'eslint',
+        uiLibrary: 'shadcn',
       },
-      "/src/template/next-jest-playwright",
+      {
+        projectName: 'projectWithJest',
+        unit: 'jest',
+        endToEnd: 'playwright',
+        linting: 'eslint',
+        uiLibrary: 'shadcn',
+      },
     ],
   ])(
-    "should create project from template",
-    async (testMethod, objectExpected, route) => {
-      const projectName = objectExpected.projectName;
+    'should create project from template (%s)',
+    async (_label, inputData, expectedOptions) => {
+      const projectName = inputData.projectName;
       const result = await cli.createProjectFromTemplate(
         projectName,
-        objectExpected
+        inputData,
       );
-      expect(result).toBe("Project created");
-      expect(copyProject).toHaveBeenCalledWith(projectName, route);
-    }
+      expect(result).toBe('Project created');
+      expect(copyProject).toHaveBeenCalledWith(projectName, expectedOptions);
+    },
   );
 
-  it("should throw error when project name is empty", () => {
-    expect(
-      cli.createProjectFromTemplate("", {
-        projectName: "my-first-react-project",
+  it('should throw error when project name is empty', async () => {
+    await expect(
+      cli.createProjectFromTemplate('', {
+        projectName: 'my-first-react-project',
         typescript: true,
-        unit: "jest",
-        endToEnd: "playwright",
-      })
-    ).rejects.toThrow("FOLDERNAME is required");
+        unit: 'jest',
+        endToEnd: 'playwright',
+        linting: 'biome',
+        uiLibrary: 'none',
+      }),
+    ).rejects.toThrow('FOLDERNAME is required');
     expect(copyProject).not.toBeCalled();
   });
 
-  it("should throw error when project name is null", () => {
-    expect(
+  it('should throw error when project name is null', async () => {
+    await expect(
       cli.createProjectFromTemplate(null as any, {
-        projectName: "my-first-react-project",
+        projectName: 'my-first-react-project',
         typescript: true,
-        unit: "jest",
-        endToEnd: "playwright",
-      })
-    ).rejects.toThrow("FOLDERNAME is required");
+        unit: 'jest',
+        endToEnd: 'playwright',
+        linting: 'eslint',
+        uiLibrary: 'none',
+      }),
+    ).rejects.toThrow('FOLDERNAME is required');
     expect(copyProject).not.toBeCalled();
   });
 
@@ -98,10 +118,10 @@ describe("CLI", () => {
     expect(result).toBe("Route created");
   });
 
-  it("should throw error when route name is empty", () => {
-    expect(cli.createRouteFromTemplate("")).rejects.toThrow(
-      "ROUTENAME is required"
+  it('should throw error when route name is empty', async () => {
+    await expect(cli.createRouteFromTemplate('')).rejects.toThrow(
+      'ROUTENAME is required',
     );
+    expect(copyRouter).not.toBeCalled();
   });
-  expect(copyRouter).not.toBeCalled();
 });

@@ -14,10 +14,6 @@ export default class CLI implements ICommandLine {
     this.logger.error(`Error occurred while creating: ${path}\n`, error);
   };
 
-  private getTemplatePath(unitTest: string, endToEndTest: string) {
-    return `/src/template/next-${unitTest}-${endToEndTest}`;
-  }
-
   async createProjectFromTemplate(
     folderName: string,
     data: Omit<TCreateProjectData, "operation">
@@ -25,8 +21,13 @@ export default class CLI implements ICommandLine {
     try {
       if (!folderName) throw new Error(this.REQUIRED_ERROR("FOLDERNAME"));
       if (!data) throw new Error(this.REQUIRED_ERROR("DATA"));
-      const template = this.getTemplatePath(data.unit, data.endToEnd);
-      this.copyProject(folderName, template);
+      this.copyProject(folderName, {
+        projectName: folderName,
+        unit: data.unit,
+        endToEnd: data.endToEnd,
+        linting: data.linting,
+        uiLibrary: data.uiLibrary,
+      });
       return "Project created";
     } catch (err) {
       this.FEEDBACK_MESSAGE_ERROR("TEMPLATE PROJECT", err);

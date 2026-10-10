@@ -4,6 +4,8 @@ export type TCreateProjectData = {
   typescript: boolean;
   unit: string;
   endToEnd: string;
+  linting: string;
+  uiLibrary: string;
 };
 export interface ICommandLine {
   createProjectFromTemplate: (

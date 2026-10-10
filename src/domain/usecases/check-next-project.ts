@@ -20,11 +20,14 @@ export const checkIfIsNextJsProject = () => {
   const packageJsonPath = path.join(rootDir, 'package.json');
   const nextConfigJs = path.join(rootDir, 'next.config.js');
   const nextConfigMjs = path.join(rootDir, 'next.config.mjs');
+  const nextConfigTs = path.join(rootDir, 'next.config.ts');
 
   // Perform the checks
   const isNextJsProject =
     checkPackageJson(packageJsonPath) &&
-    (checkExists(nextConfigJs) || checkExists(nextConfigMjs));
+    (checkExists(nextConfigJs) ||
+      checkExists(nextConfigMjs) ||
+      checkExists(nextConfigTs));
 
   // Output the result
   if (!isNextJsProject) {

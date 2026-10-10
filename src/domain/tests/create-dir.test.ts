@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import * as path from 'path';
 import {
   copyProject,
   copyHttpModule,
@@ -6,12 +7,21 @@ import {
 import { describe, vi } from 'vitest';
 import { createDir } from '../usecases/create-dir';
 import { checkIfIsNextJsProject } from '../usecases/check-next-project';
+import { ProjectOptions } from '../usecases/generate-package-json';
 
 vi.mock('../usecases/check-next-project.ts');
 
 const rootDir = process.cwd();
 const destinationPath = 'copy-dir';
 const modulesDestinationPath = rootDir + '/modules';
+
+const DEFAULT_OPTIONS: ProjectOptions = {
+  projectName: 'copy-dir',
+  unit: 'vitest',
+  endToEnd: 'playwright',
+  linting: 'biome',
+  uiLibrary: 'none',
+};
 
 const removeDir = (dirPath: string) => {
   if (fs.existsSync(dirPath)) {
@@ -25,21 +35,46 @@ afterEach(() => {
 });
 
 describe('Create Folder From Template', () => {
-  it('should copy a folder from template', () => {
-    copyProject(destinationPath, 'src/interfaces');
+  it('should copy a folder from template with base + overlays', () => {
+    copyProject(destinationPath, DEFAULT_OPTIONS);
     const existDir = fs.existsSync(destinationPath);
     expect(existDir).toBe(true);
-  });
-
-  it('should throw an error when attempting to copy a non-existing folder', () => {
-    expect(() => copyProject(destinationPath, 'nonExistingPath')).toThrow();
+    // Should have package.json generated
+    expect(fs.existsSync(path.join(destinationPath, 'package.json'))).toBe(
+      true,
+    );
+    // Should have AI files generated
+    expect(fs.existsSync(path.join(destinationPath, 'CLAUDE.md'))).toBe(true);
+    expect(fs.existsSync(path.join(destinationPath, 'README.md'))).toBe(true);
   });
 
   it('should throw an error when attempting to copy a folder that already exists', () => {
-    copyProject(destinationPath, 'src/interfaces');
-    expect(() => copyProject(destinationPath, 'src/interfaces')).toThrow(
-      'copy-dir already exists'
+    copyProject(destinationPath, DEFAULT_OPTIONS);
+    expect(() => copyProject(destinationPath, DEFAULT_OPTIONS)).toThrow(
+      'copy-dir already exists',
     );
+  });
+
+  it('should include vitest overlay files', () => {
+    copyProject(destinationPath, { ...DEFAULT_OPTIONS, unit: 'vitest' });
+    expect(fs.existsSync(path.join(destinationPath, 'vitest.config.ts'))).toBe(
+      true,
+    );
+  });
+
+  it('should include biome overlay files', () => {
+    copyProject(destinationPath, { ...DEFAULT_OPTIONS, linting: 'biome' });
+    expect(fs.existsSync(path.join(destinationPath, 'biome.json'))).toBe(true);
+  });
+
+  it('should include shadcn overlay files', () => {
+    copyProject(destinationPath, { ...DEFAULT_OPTIONS, uiLibrary: 'shadcn' });
+    expect(fs.existsSync(path.join(destinationPath, 'components.json'))).toBe(
+      true,
+    );
+    expect(
+      fs.existsSync(path.join(destinationPath, 'src', 'lib', 'utils.ts')),
+    ).toBe(true);
   });
 });
 

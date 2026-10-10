@@ -2,19 +2,75 @@ import fs from "fs";
 import path from "path";
 import { ROOT_DIR_LOCATION } from "../../constants";
 import { checkIfIsNextJsProject } from './check-next-project';
+import { generatePackageJson, ProjectOptions } from './generate-package-json';
+import { generateCiWorkflow } from './generate-ci-workflow';
+import { generateAiFiles } from './generate-ai-files';
+import { generateReadme } from './generate-readme';
 
+const TEMPLATE_BASE = '/src/template/base';
+const TEMPLATE_OVERLAYS = '/src/template/overlays';
 
 /**
- * Copies a folder from the source path to the destination path.
- *
- * @param {string} folderPath - The path of the folder to be copied.
+ * Copies a composable project from base + overlays based on user choices.
  */
-export function copyProject(folderPath: string, pathRoute: string) {
+export function copyProject(folderPath: string, options: ProjectOptions) {
   if (fs.existsSync(folderPath))
     throw new Error(`${folderPath} already exists`);
-  return fs.cpSync(path.resolve(ROOT_DIR_LOCATION + pathRoute), folderPath, {
-    recursive: true,
-  });
+
+  const basePath = path.resolve(ROOT_DIR_LOCATION + TEMPLATE_BASE);
+
+  // 1. Copy base template
+  fs.cpSync(basePath, folderPath, { recursive: true });
+
+  // 2. Copy unit test overlay
+  const unitOverlay = path.resolve(
+    ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/' + options.unit,
+  );
+  if (fs.existsSync(unitOverlay)) {
+    fs.cpSync(unitOverlay, folderPath, { recursive: true });
+  }
+
+  // 3. Copy E2E test overlay
+  const e2eOverlay = path.resolve(
+    ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/' + options.endToEnd,
+  );
+  if (fs.existsSync(e2eOverlay)) {
+    fs.cpSync(e2eOverlay, folderPath, { recursive: true });
+  }
+
+  // 4. Copy linting overlay
+  const lintOverlay = path.resolve(
+    ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/' + options.linting,
+  );
+  if (fs.existsSync(lintOverlay)) {
+    fs.cpSync(lintOverlay, folderPath, { recursive: true });
+  }
+
+  // 5. Copy UI library overlay
+  if (options.uiLibrary === 'shadcn') {
+    const shadcnOverlay = path.resolve(
+      ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/shadcn',
+    );
+    if (fs.existsSync(shadcnOverlay)) {
+      fs.cpSync(shadcnOverlay, folderPath, { recursive: true });
+    }
+  }
+
+  // 6. Generate dynamic files
+  const packageJsonContent = generatePackageJson(options);
+  fs.writeFileSync(path.join(folderPath, 'package.json'), packageJsonContent);
+
+  const ciWorkflowDir = path.join(folderPath, '.github', 'workflows');
+  fs.mkdirSync(ciWorkflowDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(ciWorkflowDir, 'main.yml'),
+    generateCiWorkflow(options),
+  );
+
+  generateAiFiles(folderPath, options);
+  generateReadme(folderPath, options);
+
+  return 'Project created';
 }
 
 export function copyRouter(routerName: string) {
@@ -26,7 +82,7 @@ export function copyRouter(routerName: string) {
     routerName,
     {
       recursive: true,
-    }
+    },
   );
 }
 
@@ -37,11 +93,11 @@ export function copyHttpModule() {
     throw new Error(`${folderPath} already exists`);
   return fs.cpSync(
     path.resolve(
-      ROOT_DIR_LOCATION + '/src/template/modules-template/http-module'
+      ROOT_DIR_LOCATION + '/src/template/modules-template/http-module',
     ),
     folderPath,
     {
       recursive: true,
-    }
+    },
   );
 }

@@ -1,66 +1,85 @@
 [![ISC License](https://img.shields.io/badge/License-ISC-green.svg)](https://choosealicense.com/licenses/isc/)
 
-## React Creator CMD
+## React Creator CMD v2.0
 
-The `react-creator-cmd` tool is designed to assist developers in rapidly generating new Next.js projects with predefined configurations including `GitHub Workflows`, `Unit Tests`, `Integration Tests`, `End-to-End Tests`, and `Commit Convention`.
+A CLI tool to bootstrap **production-ready Next.js 15** projects with modern tooling, testing, and **AI assistant configurations** — all pre-configured and ready to go.
 
-### Features
+### What's New in v2.0
 
-- Create new `Next.js` project.
+- **Next.js 15** with App Router, Server Components, and **Turbopack**
+- **React 19** — latest React with Server Components support
+- **Tailwind CSS v4** — new CSS-first configuration
+- **AI Assistant Support** — auto-generated rules for Cursor, Windsurf, GitHub Copilot, and Claude
+- **Biome** option — fast all-in-one linter/formatter alternative to ESLint
+- **shadcn/ui** option — pre-configured component library
+- **Composable templates** — mix and match your preferred tools
 
-  - [next.js](https://nextjs.org/docs)
-  - [app router](https://nextjs.org/docs/app/building-your-application/routing/defining-routes)
-  - [playwright](https://playwright.dev/)
-  - [cypress](https://www.cypress.io/)
-  - [vitest](https://vitest.dev/)
-  - [jest](https://jestjs.io/)
-  - [git workflow](https://docs.github.com/en/actions/using-workflows)
-  - [commit convention](https://www.conventionalcommits.org/en/v1.0.0/)
-  - [zod](https://zod.dev/?id=introduction)
+### Stack Options
 
-- Generate `http-module` (fetch)
-- Generate new `Routes`
+| Category | Options |
+|---|---|
+| **Unit Testing** | [Vitest](https://vitest.dev/) or [Jest](https://jestjs.io/) |
+| **E2E Testing** | [Playwright](https://playwright.dev/) or [Cypress](https://www.cypress.io/) |
+| **Linting** | [Biome](https://biomejs.dev/) or [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) |
+| **UI Library** | [shadcn/ui](https://ui.shadcn.com/) or plain Tailwind CSS |
+
+**Always included:** [Zod](https://zod.dev/), [Conventional Commits](https://www.conventionalcommits.org/), [GitHub Actions CI/CD](https://docs.github.com/en/actions), [Husky](https://typicode.github.io/husky/)
+
+### AI Assistant Configs
+
+Every generated project includes configuration files for popular AI coding assistants:
+
+- `.cursor/rules/` — project-specific rules for Cursor IDE
+- `.windsurf/rules/` — project-specific rules for Windsurf IDE
+- `.github/copilot-instructions.md` — context for GitHub Copilot
+- `CLAUDE.md` — context for Claude Code
+
+These files are **dynamically generated** based on your chosen stack, so the AI assistants always know your project's conventions.
 
 ### Installation
 
 ```bash
-    npx react-creator-cmd
+npx react-creator-cmd
 ```
 
 ### Usage
 
 ```bash
-    npx react-creator-cmd
+npx react-creator-cmd
 
-    # cd <your-project>
-    # create .env file based on the .env.example file
+# Follow the interactive prompts to configure your project
+# cd <your-project>
+# cp .env.example .env
+# npm install
+# npm run dev
 ```
 
-### API
+### Features
 
-- **Create New Project** - It will create a new configured project based on your step-by-step commands.
+- **Create New Project** — Interactive CLI guides you through choosing your stack (unit tests, E2E tests, linter, UI library). Generates a fully configured project.
 
-![Screenshot 2024-02-12 at 18 32 41](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/9fe7052b-753e-4cc0-b89f-0bd9db3d974d)
+- **Generate Route** — Creates a new App Router route with `components/`, `tests/`, and `page.tsx`.
 
-![Screenshot 2024-02-12 at 18 33 40](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/65f2e773-5adf-41f6-a34e-090d2ccafffc)
+- **Generate Http-Module** — Creates an HTTP module with fetch adapter, interface, and tests inside `modules/`.
 
-![Screenshot 2024-02-12 at 18 33 59](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/8ed7163c-e5e5-4d75-a93e-90510514cf15)
+### Project Structure (Generated)
 
-![Screenshot 2024-02-12 at 18 34 15](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/b167ca04-7ce3-44fa-966d-6bfdd71f2fb2)
-
-![Screenshot 2024-02-12 at 18 34 37](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/43560f74-7aa9-44b5-a21a-9646e6a5e092)
-
-- **Generate Route** - It will generate a new route (app route) with: `components` folder, `tests` folder and `app.tsx` file.
-
-![Screenshot 2024-02-12 at 18 48 48](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/3799a27c-5bcd-4e84-a5ab-0fed5ad19880)
-
-![Screenshot 2024-02-12 at 18 49 18](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/09ad17c0-110a-43d7-b732-0feb6a020d93)
-
-- **Generate Http-Module** - It will generate an `http` module inside `modules` folder
-
-![Screenshot 2024-02-12 at 18 45 47](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/e5d145d1-c4a2-4b8e-aa09-e050238015ba)
-
-![Screenshot 2024-02-12 at 18 46 46](https://github.com/rivailJunior/react-creator-cmd/assets/5783143/69e9cacd-da9d-422e-9d30-ed3f70c39f94)
+```
+my-project/
+├── .cursor/rules/        # Cursor AI rules
+├── .windsurf/rules/      # Windsurf AI rules
+├── .github/
+│   ├── workflows/        # CI/CD pipeline
+│   └── copilot-instructions.md
+├── src/
+│   ├── app/              # Next.js App Router
+│   ├── components/       # Reusable components
+│   ├── config/           # Env validation (Zod)
+│   └── lib/              # Utilities
+├── CLAUDE.md             # Claude Code context
+├── next.config.ts        # Next.js 15 config
+└── package.json
+```
 
 ### Author
 

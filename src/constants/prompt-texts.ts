@@ -80,10 +80,18 @@ export const PromptTexts = {
   module: {
     name: '💬 It will generate a http-module inside folder modules, proceed?',
   },
+  stackPreview: {
+    message: '🔍 Review your stack before we create:',
+    confirm: 'Proceed with this configuration?',
+  },
   operation: {
     cancel: '🚫 Operation cancelled',
     installing: '⏳ Creating...',
+    postInstall: '📦 Installing dependencies & setting up git...',
     created: '✅ Created successfully',
+    postInstallDone: '✅ Dependencies installed & git initialized',
+    postInstallFailed:
+      '⚠️  Post-install failed — you can run npm install manually',
     error: '🧨 Something went wrong',
     success: `🎉🎊`,
   },

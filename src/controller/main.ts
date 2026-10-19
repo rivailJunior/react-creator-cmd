@@ -1,11 +1,13 @@
 import { TCreateModule } from "../adapters/clack/usecases/create-module";
 import { TCreateRoute } from "../adapters/clack/usecases/create-router";
-import { handleSuccessFeedback } from "../adapters/clack/usecases/operation-feedback";
+import {
+  handleSuccessFeedback,
+  handleProjectFeedback,
+} from '../adapters/clack/usecases/operation-feedback';
 import { IAdapterExecutor } from "../interfaces/adapter-executor";
 import { IBaseController } from "../interfaces/base-controller";
 import { ICommandLine, TCreateProjectData } from "../interfaces/command-line";
 type InitializeT = TCreateProjectData & TCreateModule & TCreateRoute;
-const { exec } = require("child_process");
 
 export default class MainController implements IBaseController {
   constructor(
@@ -21,8 +23,7 @@ export default class MainController implements IBaseController {
           data?.projectName,
           data
         );
-        await exec("cd " + data?.projectName + " && git init");
-        return await handleSuccessFeedback();
+        return await handleProjectFeedback(data?.projectName);
       case "create-module":
         await this.commandLine.createModuleFromTemplate();
         return await handleSuccessFeedback();

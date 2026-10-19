@@ -22,6 +22,18 @@ export function copyProject(folderPath: string, options: ProjectOptions) {
   // 1. Copy base template
   fs.cpSync(basePath, folderPath, { recursive: true });
 
+  // 1b. Rename dotfiles that npm strips during publish
+  const dotfileRenames: [string, string][] = [
+    ['gitignore', '.gitignore'],
+    ['env.example', '.env.example'],
+  ];
+  for (const [from, to] of dotfileRenames) {
+    const src = path.join(folderPath, from);
+    if (fs.existsSync(src)) {
+      fs.renameSync(src, path.join(folderPath, to));
+    }
+  }
+
   // 2. Copy unit test overlay
   const unitOverlay = path.resolve(
     ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/' + options.unit,

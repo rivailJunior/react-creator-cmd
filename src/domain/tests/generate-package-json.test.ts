@@ -81,6 +81,12 @@ describe("generatePackageJson", () => {
     expect(pkg.dependencies["tailwind-merge"]).toBeUndefined();
   });
 
+  test('should include tailwindcss and postcss plugin in base devDependencies', () => {
+    const pkg = JSON.parse(generatePackageJson(BASE_OPTIONS));
+    expect(pkg.devDependencies.tailwindcss).toBeDefined();
+    expect(pkg.devDependencies['@tailwindcss/postcss']).toBeDefined();
+  });
+
   test("should include turbopack in dev script", () => {
     const pkg = JSON.parse(generatePackageJson(BASE_OPTIONS));
     expect(pkg.scripts.dev).toContain("--turbopack");

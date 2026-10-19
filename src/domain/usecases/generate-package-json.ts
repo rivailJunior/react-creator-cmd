@@ -23,13 +23,15 @@ const BASE_DEPENDENCIES: Record<string, string> = {
 };
 
 const BASE_DEV_DEPENDENCIES: Record<string, string> = {
-  "@commitlint/cli": "^19.6.0",
-  "@commitlint/config-conventional": "^19.6.0",
-  husky: "^9.1.0",
-  typescript: "^5.7.0",
-  "@types/node": "^22.0.0",
-  "@types/react": "^19.0.0",
-  "@types/react-dom": "^19.0.0",
+  '@commitlint/cli': '^19.6.0',
+  '@commitlint/config-conventional': '^19.6.0',
+  husky: '^9.1.0',
+  typescript: '^5.7.0',
+  '@types/node': '^22.0.0',
+  '@types/react': '^19.0.0',
+  '@types/react-dom': '^19.0.0',
+  tailwindcss: '^4.0.0',
+  '@tailwindcss/postcss': '^4.0.0',
 };
 
 const BASE_SCRIPTS: Record<string, string> = {

@@ -3,11 +3,13 @@ import { generateCiWorkflow } from "../usecases/generate-ci-workflow";
 import { ProjectOptions } from "../usecases/generate-package-json";
 
 const BASE_OPTIONS: ProjectOptions = {
-  projectName: "test-project",
-  unit: "vitest",
-  endToEnd: "playwright",
-  linting: "biome",
-  uiLibrary: "none",
+  projectName: 'test-project',
+  unit: 'vitest',
+  endToEnd: 'playwright',
+  linting: 'biome',
+  uiLibrary: 'none',
+  docker: 'none',
+  storybook: 'none',
 };
 
 describe("generateCiWorkflow", () => {

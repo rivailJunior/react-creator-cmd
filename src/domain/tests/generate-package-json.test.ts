@@ -5,11 +5,13 @@ import {
 } from "../usecases/generate-package-json";
 
 const BASE_OPTIONS: ProjectOptions = {
-  projectName: "test-project",
-  unit: "vitest",
-  endToEnd: "playwright",
-  linting: "biome",
-  uiLibrary: "none",
+  projectName: 'test-project',
+  unit: 'vitest',
+  endToEnd: 'playwright',
+  linting: 'biome',
+  uiLibrary: 'none',
+  docker: 'none',
+  storybook: 'none',
 };
 
 describe("generatePackageJson", () => {
@@ -79,6 +81,22 @@ describe("generatePackageJson", () => {
     const pkg = JSON.parse(generatePackageJson({ ...BASE_OPTIONS, uiLibrary: "none" }));
     expect(pkg.dependencies.clsx).toBeUndefined();
     expect(pkg.dependencies["tailwind-merge"]).toBeUndefined();
+  });
+
+  test('should include storybook deps when storybook=storybook', () => {
+    const pkg = JSON.parse(
+      generatePackageJson({ ...BASE_OPTIONS, storybook: 'storybook' }),
+    );
+    expect(pkg.devDependencies.storybook).toBeDefined();
+    expect(pkg.devDependencies['@storybook/nextjs']).toBeDefined();
+    expect(pkg.scripts.storybook).toContain('storybook dev');
+    expect(pkg.scripts['build-storybook']).toBe('storybook build');
+  });
+
+  test('should NOT include storybook deps when storybook=none', () => {
+    const pkg = JSON.parse(generatePackageJson(BASE_OPTIONS));
+    expect(pkg.devDependencies.storybook).toBeUndefined();
+    expect(pkg.scripts.storybook).toBeUndefined();
   });
 
   test('should include tailwindcss and postcss plugin in base devDependencies', () => {

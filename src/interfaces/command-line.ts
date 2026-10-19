@@ -6,6 +6,8 @@ export type TCreateProjectData = {
   endToEnd: string;
   linting: string;
   uiLibrary: string;
+  docker: string;
+  storybook: string;
 };
 export interface ICommandLine {
   createProjectFromTemplate: (

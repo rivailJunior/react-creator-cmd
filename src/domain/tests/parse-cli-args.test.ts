@@ -18,11 +18,20 @@ describe('parseCliArgs', () => {
   it('should parse all flags correctly', () => {
     const result = parseCliArgs(
       buildArgv([
-        '--name', 'my-app',
-        '--unit', 'vitest',
-        '--e2e', 'playwright',
-        '--lint', 'biome',
-        '--ui', 'shadcn',
+        '--name',
+        'my-app',
+        '--unit',
+        'vitest',
+        '--e2e',
+        'playwright',
+        '--lint',
+        'biome',
+        '--ui',
+        'shadcn',
+        '--docker',
+        'docker',
+        '--storybook',
+        'storybook',
       ]),
     );
     expect(result).toEqual({
@@ -31,11 +40,22 @@ describe('parseCliArgs', () => {
       e2e: 'playwright',
       lint: 'biome',
       ui: 'shadcn',
+      docker: 'docker',
+      storybook: 'storybook',
     });
   });
 
   it('should parse partial flags', () => {
-    const result = parseCliArgs(buildArgv(['--name', 'my-app', '--unit', 'jest']));
+    const result = parseCliArgs(
+      buildArgv([
+        '--name',
+        'my-app',
+        '--unit',
+        'jest',
+        '--storybook',
+        'storybook',
+      ]),
+    );
     expect(result.name).toBe('my-app');
     expect(result.unit).toBe('jest');
     expect(result.e2e).toBeUndefined();
@@ -66,6 +86,18 @@ describe('parseCliArgs', () => {
       parseCliArgs(buildArgv(['--ui', 'material'])),
     ).toThrow('Invalid --ui value "material". Valid options: shadcn, none');
   });
+
+  it('should throw on invalid --docker value', () => {
+    expect(() => parseCliArgs(buildArgv(['--docker', 'podman']))).toThrow(
+      'Invalid --docker value "podman". Valid options: docker, none',
+    );
+  });
+
+  it('should throw on invalid --storybook value', () => {
+    expect(() => parseCliArgs(buildArgv(['--storybook', 'ladle']))).toThrow(
+      'Invalid --storybook value "ladle". Valid options: storybook, none',
+    );
+  });
 });
 
 describe('hasAllFlags', () => {
@@ -76,6 +108,8 @@ describe('hasAllFlags', () => {
       e2e: 'playwright',
       lint: 'biome',
       ui: 'shadcn',
+      docker: 'docker',
+      storybook: 'storybook',
     };
     expect(hasAllFlags(flags)).toBe(true);
   });

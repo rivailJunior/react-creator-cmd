@@ -70,11 +70,37 @@ async function createProject(
     uiChoice = response as string;
   }
 
+  let dockerChoice: string;
+  if (flags.docker) {
+    dockerChoice = flags.docker;
+  } else {
+    const response = await select({
+      message: PromptTexts.docker.name,
+      options: PromptTexts.docker.options,
+    });
+    checkCancelation(response);
+    dockerChoice = response as string;
+  }
+
+  let storybookChoice: string;
+  if (flags.storybook) {
+    storybookChoice = flags.storybook;
+  } else {
+    const response = await select({
+      message: PromptTexts.storybook.name,
+      options: PromptTexts.storybook.options,
+    });
+    checkCancelation(response);
+    storybookChoice = response as string;
+  }
+
   const choices = {
     unit: unitChoice,
     endToEnd: e2eChoice,
     linting: lintChoice,
     uiLibrary: uiChoice,
+    docker: dockerChoice,
+    storybook: storybookChoice,
   };
 
   const summary = [
@@ -83,6 +109,8 @@ async function createProject(
     `  ${color.bold('E2E')}:       ${color.cyan(choices.endToEnd)}`,
     `  ${color.bold('Linting')}:   ${color.cyan(choices.linting)}`,
     `  ${color.bold('UI')}:        ${color.cyan(choices.uiLibrary)}`,
+    `  ${color.bold('Docker')}:    ${color.cyan(choices.docker)}`,
+    `  ${color.bold('Storybook')}: ${color.cyan(choices.storybook)}`,
   ].join('\n');
 
   log.info(`${PromptTexts.stackPreview.message}\n${summary}`);

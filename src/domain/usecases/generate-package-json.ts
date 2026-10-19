@@ -4,6 +4,8 @@ export type ProjectOptions = {
   endToEnd: string;
   linting: string;
   uiLibrary: string;
+  docker: string;
+  storybook: string;
 };
 
 type PackageJson = {
@@ -122,10 +124,24 @@ const SHADCN_DEPENDENCIES: Record<string, string> = {
   "class-variance-authority": "^0.7.1",
 };
 
+const STORYBOOK_SCRIPTS: Record<string, string> = {
+  storybook: 'storybook dev -p 6006',
+  'build-storybook': 'storybook build',
+};
+
+const STORYBOOK_DEV_DEPENDENCIES: Record<string, string> = {
+  storybook: '^8.5.0',
+  '@storybook/addon-essentials': '^8.5.0',
+  '@storybook/addon-interactions': '^8.5.0',
+  '@storybook/nextjs': '^8.5.0',
+  '@storybook/react': '^8.5.0',
+  '@storybook/test': '^8.5.0',
+};
+
 export const generatePackageJson = (options: ProjectOptions): string => {
   const pkg: PackageJson = {
     name: options.projectName,
-    version: "1.0.0",
+    version: '1.0.0',
     private: true,
     scripts: { ...BASE_SCRIPTS },
     dependencies: { ...BASE_DEPENDENCIES },
@@ -133,36 +149,42 @@ export const generatePackageJson = (options: ProjectOptions): string => {
   };
 
   // Unit test overlay
-  if (options.unit === "vitest") {
+  if (options.unit === 'vitest') {
     Object.assign(pkg.scripts, VITEST_SCRIPTS);
     Object.assign(pkg.devDependencies, VITEST_DEV_DEPENDENCIES);
-  } else if (options.unit === "jest") {
+  } else if (options.unit === 'jest') {
     Object.assign(pkg.scripts, JEST_SCRIPTS);
     Object.assign(pkg.devDependencies, JEST_DEV_DEPENDENCIES);
   }
 
   // E2E test overlay
-  if (options.endToEnd === "playwright") {
+  if (options.endToEnd === 'playwright') {
     Object.assign(pkg.scripts, PLAYWRIGHT_SCRIPTS);
     Object.assign(pkg.devDependencies, PLAYWRIGHT_DEV_DEPENDENCIES);
-  } else if (options.endToEnd === "cypress") {
+  } else if (options.endToEnd === 'cypress') {
     Object.assign(pkg.scripts, CYPRESS_SCRIPTS);
     Object.assign(pkg.devDependencies, CYPRESS_DEV_DEPENDENCIES);
   }
 
   // Linting overlay
-  if (options.linting === "eslint") {
+  if (options.linting === 'eslint') {
     Object.assign(pkg.scripts, ESLINT_SCRIPTS);
     Object.assign(pkg.devDependencies, ESLINT_DEV_DEPENDENCIES);
-  } else if (options.linting === "biome") {
+  } else if (options.linting === 'biome') {
     Object.assign(pkg.scripts, BIOME_SCRIPTS);
     Object.assign(pkg.devDependencies, BIOME_DEV_DEPENDENCIES);
   }
 
   // UI library overlay
-  if (options.uiLibrary === "shadcn") {
+  if (options.uiLibrary === 'shadcn') {
     Object.assign(pkg.dependencies, SHADCN_DEPENDENCIES);
   }
 
-  return JSON.stringify(pkg, null, 2) + "\n";
-};
+  // Storybook overlay
+  if (options.storybook === 'storybook') {
+    Object.assign(pkg.scripts, STORYBOOK_SCRIPTS);
+    Object.assign(pkg.devDependencies, STORYBOOK_DEV_DEPENDENCIES);
+  }
+
+  return JSON.stringify(pkg, null, 2) + '\n';
+};;

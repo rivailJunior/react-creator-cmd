@@ -21,6 +21,8 @@ const DEFAULT_OPTIONS: ProjectOptions = {
   endToEnd: 'playwright',
   linting: 'biome',
   uiLibrary: 'none',
+  docker: 'none',
+  storybook: 'none',
 };
 
 const removeDir = (dirPath: string) => {
@@ -74,6 +76,38 @@ describe('Create Folder From Template', () => {
     );
     expect(
       fs.existsSync(path.join(destinationPath, 'src', 'lib', 'utils.ts')),
+    ).toBe(true);
+  });
+
+  it('should include docker overlay files', () => {
+    copyProject(destinationPath, { ...DEFAULT_OPTIONS, docker: 'docker' });
+    expect(fs.existsSync(path.join(destinationPath, 'Dockerfile'))).toBe(true);
+    expect(
+      fs.existsSync(path.join(destinationPath, 'docker-compose.yml')),
+    ).toBe(true);
+    expect(fs.existsSync(path.join(destinationPath, '.dockerignore'))).toBe(
+      true,
+    );
+    expect(
+      fs.readFileSync(path.join(destinationPath, 'next.config.ts'), 'utf-8'),
+    ).toContain('standalone');
+  });
+
+  it('should include storybook overlay files', () => {
+    copyProject(destinationPath, {
+      ...DEFAULT_OPTIONS,
+      storybook: 'storybook',
+    });
+    expect(
+      fs.existsSync(path.join(destinationPath, '.storybook', 'main.ts')),
+    ).toBe(true);
+    expect(
+      fs.existsSync(path.join(destinationPath, '.storybook', 'preview.ts')),
+    ).toBe(true);
+    expect(
+      fs.existsSync(
+        path.join(destinationPath, 'src', 'components', 'heading.stories.tsx'),
+      ),
     ).toBe(true);
   });
 });

@@ -68,7 +68,31 @@ export function copyProject(folderPath: string, options: ProjectOptions) {
     }
   }
 
-  // 6. Generate dynamic files
+  // 6. Copy Docker overlay
+  if (options.docker === 'docker') {
+    const dockerOverlay = path.resolve(
+      ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/docker',
+    );
+    if (fs.existsSync(dockerOverlay)) {
+      fs.cpSync(dockerOverlay, folderPath, { recursive: true });
+      const dockerignoreSrc = path.join(folderPath, 'dockerignore');
+      if (fs.existsSync(dockerignoreSrc)) {
+        fs.renameSync(dockerignoreSrc, path.join(folderPath, '.dockerignore'));
+      }
+    }
+  }
+
+  // 7. Copy Storybook overlay
+  if (options.storybook === 'storybook') {
+    const storybookOverlay = path.resolve(
+      ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/storybook',
+    );
+    if (fs.existsSync(storybookOverlay)) {
+      fs.cpSync(storybookOverlay, folderPath, { recursive: true });
+    }
+  }
+
+  // 8. Generate dynamic files
   const packageJsonContent = generatePackageJson(options);
   fs.writeFileSync(path.join(folderPath, 'package.json'), packageJsonContent);
 

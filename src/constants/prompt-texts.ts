@@ -73,6 +73,32 @@ export const PromptTexts = {
       },
     ],
   },
+  docker: {
+    name: '🐳 Would you like to include Docker configuration?',
+    options: [
+      {
+        value: 'docker',
+        label: '🐳 Yes (Dockerfile + docker-compose)',
+      },
+      {
+        value: 'none',
+        label: '🚫 No',
+      },
+    ],
+  },
+  storybook: {
+    name: '📚 Would you like to include Storybook?',
+    options: [
+      {
+        value: 'storybook',
+        label: '📚 Yes (component explorer + example story)',
+      },
+      {
+        value: 'none',
+        label: '🚫 No',
+      },
+    ],
+  },
   folder: {
     name: '📍📝 What is your route name?',
     placeholder: 'my-coolest-route',

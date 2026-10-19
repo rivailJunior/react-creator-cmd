@@ -1,10 +1,16 @@
 [![ISC License](https://img.shields.io/badge/License-ISC-green.svg)](https://choosealicense.com/licenses/isc/)
 
-## React Creator CMD v2.1
+## React Creator CMD v2.1.1
 
 A CLI tool to bootstrap **production-ready Next.js 15** projects with modern tooling, testing, and **AI assistant configurations** — all pre-configured and ready to go.
 
-### What's New in v2.1
+### What's New in v2.1.1
+
+- **Dotfile fix for npm publish** — template dotfiles (`.gitignore`, `.env.example`) are now stored without the leading dot and renamed at generation time, preventing npm from stripping them during `npm publish`
+- **Tailwind CSS v4 PostCSS plugin** — added `@tailwindcss/postcss` to base dev dependencies and a `postcss.config.mjs` to the base template for proper Tailwind v4 support
+- **Env schema default value** — `WELCOME_MESSAGE` now has a default value so projects work out of the box without requiring a `.env` file
+
+### v2.1
 
 - **Next.js 15** with App Router, Server Components, and **Turbopack**
 - **React 19** — latest React with Server Components support

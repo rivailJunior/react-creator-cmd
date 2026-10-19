@@ -36,6 +36,8 @@ describe("CLI", () => {
         endToEnd: 'playwright',
         linting: 'biome',
         uiLibrary: 'none',
+        docker: 'none',
+        storybook: 'none',
       },
       {
         projectName: 'projectWithVitest',
@@ -43,6 +45,8 @@ describe("CLI", () => {
         endToEnd: 'playwright',
         linting: 'biome',
         uiLibrary: 'none',
+        docker: 'none',
+        storybook: 'none',
       },
     ],
     [
@@ -55,6 +59,8 @@ describe("CLI", () => {
         endToEnd: 'playwright',
         linting: 'eslint',
         uiLibrary: 'shadcn',
+        docker: 'docker',
+        storybook: 'storybook',
       },
       {
         projectName: 'projectWithJest',
@@ -62,6 +68,8 @@ describe("CLI", () => {
         endToEnd: 'playwright',
         linting: 'eslint',
         uiLibrary: 'shadcn',
+        docker: 'docker',
+        storybook: 'storybook',
       },
     ],
   ])(
@@ -86,6 +94,8 @@ describe("CLI", () => {
         endToEnd: 'playwright',
         linting: 'biome',
         uiLibrary: 'none',
+        docker: 'none',
+        storybook: 'none',
       }),
     ).rejects.toThrow('FOLDERNAME is required');
     expect(copyProject).not.toBeCalled();
@@ -100,6 +110,8 @@ describe("CLI", () => {
         endToEnd: 'playwright',
         linting: 'eslint',
         uiLibrary: 'none',
+        docker: 'none',
+        storybook: 'none',
       }),
     ).rejects.toThrow('FOLDERNAME is required');
     expect(copyProject).not.toBeCalled();

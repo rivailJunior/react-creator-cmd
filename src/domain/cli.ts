@@ -27,6 +27,8 @@ export default class CLI implements ICommandLine {
         endToEnd: data.endToEnd,
         linting: data.linting,
         uiLibrary: data.uiLibrary,
+        docker: data.docker,
+        storybook: data.storybook,
       });
       return "Project created";
     } catch (err) {

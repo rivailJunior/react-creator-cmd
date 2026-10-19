@@ -31,6 +31,8 @@ describe("clack-adapter", () => {
       'playwright',
       'biome',
       'none',
+      'docker',
+      'none',
       {
         operation: 'create-project',
         projectName: 'my-first-react-project',
@@ -39,6 +41,8 @@ describe("clack-adapter", () => {
         endToEnd: 'playwright',
         linting: 'biome',
         uiLibrary: 'none',
+        docker: 'docker',
+        storybook: 'none',
       },
     ],
     [
@@ -46,6 +50,8 @@ describe("clack-adapter", () => {
       'playwright',
       'eslint',
       'shadcn',
+      'none',
+      'storybook',
       {
         operation: 'create-project',
         projectName: 'my-first-react-project',
@@ -54,6 +60,8 @@ describe("clack-adapter", () => {
         endToEnd: 'playwright',
         linting: 'eslint',
         uiLibrary: 'shadcn',
+        docker: 'none',
+        storybook: 'storybook',
       },
     ],
     [
@@ -61,6 +69,8 @@ describe("clack-adapter", () => {
       'cypress',
       'biome',
       'shadcn',
+      'docker',
+      'storybook',
       {
         operation: 'create-project',
         projectName: 'my-first-react-project',
@@ -69,15 +79,19 @@ describe("clack-adapter", () => {
         endToEnd: 'cypress',
         linting: 'biome',
         uiLibrary: 'shadcn',
+        docker: 'docker',
+        storybook: 'storybook',
       },
     ],
   ])(
-    'should call create project with unit=%s e2e=%s linting=%s ui=%s',
+    'should call create project with unit=%s e2e=%s linting=%s ui=%s docker=%s storybook=%s',
     async (
       testMethod,
       endToEndTestMethod,
       lintingMethod,
       uiLibraryMethod,
+      dockerMethod,
+      storybookMethod,
       expectedObject,
     ) => {
       const selectMock = vi
@@ -97,13 +111,15 @@ describe("clack-adapter", () => {
         .mockResolvedValueOnce(testMethod)
         .mockResolvedValueOnce(endToEndTestMethod)
         .mockResolvedValueOnce(lintingMethod)
-        .mockResolvedValueOnce(uiLibraryMethod);
+        .mockResolvedValueOnce(uiLibraryMethod)
+        .mockResolvedValueOnce(dockerMethod)
+        .mockResolvedValueOnce(storybookMethod);
 
       const clackAdapter = new ClackAdapter();
       const response = await clackAdapter.init();
 
       expect(clack.text).toHaveBeenCalled();
-      expect(clack.select).toHaveBeenCalledTimes(5);
+      expect(clack.select).toHaveBeenCalledTimes(7);
       expect(clack.isCancel).toHaveBeenCalled();
 
       expect(response).toStrictEqual(expectedObject);

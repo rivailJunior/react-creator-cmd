@@ -11,6 +11,10 @@ const getStackDescription = (options: ProjectOptions): string => {
     options.uiLibrary === "shadcn"
       ? "shadcn/ui + Tailwind CSS v4"
       : "Tailwind CSS v4";
+  const dockerLine =
+    options.docker === 'docker' ? '\n- **Containerization**: Docker' : '';
+  const storybookLine =
+    options.storybook === 'storybook' ? '\n- **Docs**: Storybook' : '';
 
   return `- **Framework**: Next.js 15 (App Router, Server Components, Turbopack)
 - **Language**: TypeScript 5.7+
@@ -19,7 +23,7 @@ const getStackDescription = (options: ProjectOptions): string => {
 - **E2E Testing**: ${e2eTest}
 - **Linting/Formatting**: ${linter}
 - **Validation**: Zod
-- **Commits**: Conventional Commits (commitlint + husky)`;
+- **Commits**: Conventional Commits (commitlint + husky)${dockerLine}${storybookLine}`;
 };
 
 const getRulesContent = (options: ProjectOptions): string => {

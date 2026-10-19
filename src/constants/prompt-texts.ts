@@ -73,6 +73,32 @@ export const PromptTexts = {
       },
     ],
   },
+  docker: {
+    name: '🐳 Would you like to include Docker configuration?',
+    options: [
+      {
+        value: 'docker',
+        label: '🐳 Yes (Dockerfile + docker-compose)',
+      },
+      {
+        value: 'none',
+        label: '🚫 No',
+      },
+    ],
+  },
+  storybook: {
+    name: '📚 Would you like to include Storybook?',
+    options: [
+      {
+        value: 'storybook',
+        label: '📚 Yes (component explorer + example story)',
+      },
+      {
+        value: 'none',
+        label: '🚫 No',
+      },
+    ],
+  },
   folder: {
     name: '📍📝 What is your route name?',
     placeholder: 'my-coolest-route',
@@ -80,10 +106,18 @@ export const PromptTexts = {
   module: {
     name: '💬 It will generate a http-module inside folder modules, proceed?',
   },
+  stackPreview: {
+    message: '🔍 Review your stack before we create:',
+    confirm: 'Proceed with this configuration?',
+  },
   operation: {
     cancel: '🚫 Operation cancelled',
     installing: '⏳ Creating...',
+    postInstall: '📦 Installing dependencies & setting up git...',
     created: '✅ Created successfully',
+    postInstallDone: '✅ Dependencies installed & git initialized',
+    postInstallFailed:
+      '⚠️  Post-install failed — you can run npm install manually',
     error: '🧨 Something went wrong',
     success: `🎉🎊`,
   },

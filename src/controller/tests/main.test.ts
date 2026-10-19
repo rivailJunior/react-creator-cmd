@@ -13,6 +13,8 @@ class AdapterExecutor {
       endToEnd: 'playwright',
       linting: 'biome',
       uiLibrary: 'none',
+      docker: 'none',
+      storybook: 'none',
     };
   }
 }
@@ -33,6 +35,8 @@ describe("Constructor", () => {
         endToEnd: 'playwright',
         linting: 'biome',
         uiLibrary: 'none',
+        docker: 'none',
+        storybook: 'none',
       },
     ],
     [
@@ -45,6 +49,8 @@ describe("Constructor", () => {
         endToEnd: 'cypress',
         linting: 'eslint',
         uiLibrary: 'shadcn',
+        docker: 'none',
+        storybook: 'none',
       },
     ],
   ])(

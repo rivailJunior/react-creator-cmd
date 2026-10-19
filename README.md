@@ -1,16 +1,22 @@
 [![ISC License](https://img.shields.io/badge/License-ISC-green.svg)](https://choosealicense.com/licenses/isc/)
 
-## React Creator CMD v2.1.1
+## React Creator CMD v2.2.0
 
 A CLI tool to bootstrap **production-ready Next.js 15** projects with modern tooling, testing, and **AI assistant configurations** — all pre-configured and ready to go.
 
-### What's New in v2.1.1
+### What's New in v2.2.0
 
-- **Dotfile fix for npm publish** — template dotfiles (`.gitignore`, `.env.example`) are now stored without the leading dot and renamed at generation time, preventing npm from stripping them during `npm publish`
-- **Tailwind CSS v4 PostCSS plugin** — added `@tailwindcss/postcss` to base dev dependencies and a `postcss.config.mjs` to the base template for proper Tailwind v4 support
-- **Env schema default value** — `WELCOME_MESSAGE` now has a default value so projects work out of the box without requiring a `.env` file
+- **CLI flags for non-interactive mode** — pass `--name`, `--unit`, `--e2e`, `--lint`, `--ui`, `--docker`, and `--storybook` to skip all prompts; ideal for CI and scripting
+- **Stack preview summary** — review your full stack selection and confirm before the project is generated
+- **Post-install auto-run** — automatically runs `npm install`, `git init`, and creates the first conventional commit with spinner feedback
+- **Docker overlay** — optional `Dockerfile` (multi-stage, Next.js standalone output), `docker-compose.yml`, and `.dockerignore`
+- **Storybook overlay** — optional `.storybook/` config (Next.js framework preset) and an example story for the generated `Heading` component
 
 ### v2.1
+
+- **Dotfile fix for npm publish** — template dotfiles (`.gitignore`, `.env.example`) are stored without the leading dot and renamed at generation time, preventing npm from stripping them during `npm publish`
+- **Tailwind CSS v4 PostCSS plugin** — `@tailwindcss/postcss` in base dev dependencies and a `postcss.config.mjs` in the base template for proper Tailwind v4 support
+- **Env schema default value** — `WELCOME_MESSAGE` has a default value so projects work out of the box without requiring a `.env` file
 
 - **Next.js 15** with App Router, Server Components, and **Turbopack**
 - **React 19** — latest React with Server Components support
@@ -28,6 +34,8 @@ A CLI tool to bootstrap **production-ready Next.js 15** projects with modern too
 | **E2E Testing** | [Playwright](https://playwright.dev/) or [Cypress](https://www.cypress.io/) |
 | **Linting** | [Biome](https://biomejs.dev/) or [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) |
 | **UI Library** | [shadcn/ui](https://ui.shadcn.com/) or plain Tailwind CSS |
+| **Containerization** | [Docker](https://www.docker.com/) (`Dockerfile`, `docker-compose.yml`, `.dockerignore`) or none |
+| **Component Docs** | [Storybook](https://storybook.js.org/) (`.storybook/` config + example story) or none |
 
 **Always included:** [Zod](https://zod.dev/), [Conventional Commits](https://www.conventionalcommits.org/), [GitHub Actions CI/CD](https://docs.github.com/en/actions), [Husky](https://typicode.github.io/husky/)
 
@@ -54,15 +62,31 @@ npx react-creator-cmd
 npx react-creator-cmd
 
 # Follow the interactive prompts to configure your project
+# Review the stack preview and confirm
+# Dependencies are installed and the first commit is created automatically
 # cd <your-project>
 # cp .env.example .env
-# npm install
 # npm run dev
+```
+
+#### Non-interactive mode (CI / scripting)
+
+Provide all flags to skip the prompts entirely:
+
+```bash
+npx react-creator-cmd \
+  --name my-app \
+  --unit vitest \        # vitest | jest
+  --e2e playwright \     # playwright | cypress
+  --lint biome \         # biome | eslint
+  --ui shadcn \          # shadcn | none
+  --docker docker \      # docker | none
+  --storybook storybook  # storybook | none
 ```
 
 ### Features
 
-- **Create New Project** — Interactive CLI guides you through choosing your stack (unit tests, E2E tests, linter, UI library). Generates a fully configured project.
+- **Create New Project** — Interactive CLI guides you through choosing your stack (unit tests, E2E tests, linter, UI library, Docker, Storybook), shows a stack preview for confirmation, then generates a fully configured project with dependencies installed and an initial commit.
 
 - **Generate Route** — Creates a new App Router route with `components/`, `tests/`, and `page.tsx`.
 

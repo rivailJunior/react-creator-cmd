@@ -9,6 +9,7 @@
     "link-cli": "npm --global unlink . && chmod +x ./dist/index.js && npm link .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
+    "test:integration": "RUN_INTEGRATION=1 vitest run integration",
     "prepare": "husky",
     "commitlint": "commitlint --edit"
   },

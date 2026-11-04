@@ -10,6 +10,7 @@ export default defineConfig({
     include: ['**/src/**/tests/**'],
     exclude: [
       ...configDefaults.exclude,
+      '**/__snapshots__/**',
       '**/src/template/http-module/**',
       '**/src/template/route-template/**',
       '**/src/template/**',

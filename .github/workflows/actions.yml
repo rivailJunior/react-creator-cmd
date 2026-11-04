@@ -1,8 +1,8 @@
-name: "Tests & Publish"
+name: "CI"
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "dev"]
   pull_request:
     branches: ["main", "dev"]
 
@@ -10,64 +10,132 @@ permissions:
   contents: read
   pull-requests: write
 
+# Cancel superseded runs on the same ref (replaces cancel-workflow-action)
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
 jobs:
   test:
-    name: Unit tests
+    name: Typecheck & tests (Node ${{ matrix.node }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["20", "22"]
     steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
+      - name: Setup Node ${{ matrix.node }}
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: ${{ matrix.node }}
+          cache: npm
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
+      - name: Install deps
+        run: npm ci
 
-      - name: Running test
-        run: npm run test
+      - name: Typecheck
+        run: npx tsc --noEmit
 
-  test-coverage:
+      - name: Run tests
+        run: npx vitest run
+
+  coverage:
+    name: Coverage report
     runs-on: ubuntu-latest
     needs: ["test"]
     steps:
       - uses: actions/checkout@v4
-      - name: "Install Node"
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-      - name: "Install Deps"
-        run: npm install
-      - name: "Test"
-        run: npx vitest --coverage.enabled true
-      - name: "Report Coverage"
+          node-version: 22
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Test with coverage
+        run: npx vitest run --coverage.enabled true
+
+      - name: Report coverage
         if: always()
         uses: davelosert/vitest-coverage-report-action@v2
 
-  publish:
-    if: ${{  github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, 'chore(release)') }}
-    needs: ["test-coverage"]
+  build:
+    name: Build
     runs-on: ubuntu-latest
+    needs: ["test"]
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: node
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org
-      - name: install
+          node-version: 22
+          cache: npm
+
+      - name: Install deps
         run: npm ci
-      - name: build
+
+      - name: Compile
         run: npm run build
-      - name: publish
-        run: npm publish --access public
+
+      - name: Verify CLI entrypoint exists
+        run: test -f dist/index.js
+
+  integration:
+    name: Integration (generate -> install -> build -> test)
+    # Slow (npm install + next build): only gate main, not every PR
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    needs: ["test"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build CLI
+        run: npm run build
+
+      - name: Run integration test
+        run: npm run test:integration
+
+  publish:
+    name: Publish to npm
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' && contains(github.event.head_commit.message, 'chore(release)') }}
+    needs: ["coverage", "build", "integration"]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # enables npm provenance attestation
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish
+        run: npm publish --access public --provenance
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

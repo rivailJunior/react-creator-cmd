@@ -32,8 +32,10 @@ const BASE_DEV_DEPENDENCIES: Record<string, string> = {
   '@types/node': '^22.0.0',
   '@types/react': '^19.0.0',
   '@types/react-dom': '^19.0.0',
-  tailwindcss: '^4.0.0',
-  '@tailwindcss/postcss': '^4.0.0',
+  // Pinned to 4.2.x: 4.3+ ships @tailwindcss/node -> ESM-only magic-string@1.x,
+  // which fails `next build` on Node <22.12 (no unflagged require(esm)).
+  tailwindcss: '~4.2.4',
+  '@tailwindcss/postcss': '~4.2.4',
 };
 
 const BASE_SCRIPTS: Record<string, string> = {

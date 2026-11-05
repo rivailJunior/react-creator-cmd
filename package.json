@@ -1,6 +1,6 @@
 {
   "name": "react-creator-cmd",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "CLI to bootstrap Next.js 15 projects with React 19, Tailwind v4, testing, AI assistant configs, and modern tooling",
   "main": "dist/index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "link-cli": "npm --global unlink . && chmod +x ./dist/index.js && npm link .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
+    "test:integration": "RUN_INTEGRATION=1 vitest run integration",
     "prepare": "husky",
     "commitlint": "commitlint --edit"
   },

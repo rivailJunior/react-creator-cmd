@@ -1,10 +1,17 @@
 [![ISC License](https://img.shields.io/badge/License-ISC-green.svg)](https://choosealicense.com/licenses/isc/)
 
-## React Creator CMD v2.2.0
+## React Creator CMD v2.3.0
 
 A CLI tool to bootstrap **production-ready Next.js 15** projects with modern tooling, testing, and **AI assistant configurations** — all pre-configured and ready to go.
 
-### What's New in v2.2.0
+### What's New in v2.3.0
+
+- **Tailwind build fix** — `tailwindcss`/`@tailwindcss/postcss` pinned to `~4.2.x`; Tailwind 4.3+ pulls ESM-only `magic-string@1.x` which breaks `next build` on Node <22.12 (and all Node 20)
+- **Template snapshot tests** — every valid stack combination (32 combos) snapshots the generated file tree, `package.json`, and file contents, catching template/overlay regressions before publish
+- **Integration tests** — `npm run test:integration` generates a real project and runs `npm install` → `next build` → `vitest run` end-to-end
+- **CI pipeline** — modernized GitHub Actions: Node 20/22 matrix, typecheck, coverage reporting, build verification, and the integration test gating every release
+
+### v2.2.0
 
 - **CLI flags for non-interactive mode** — pass `--name`, `--unit`, `--e2e`, `--lint`, `--ui`, `--docker`, and `--storybook` to skip all prompts; ideal for CI and scripting
 - **Stack preview summary** — review your full stack selection and confirm before the project is generated
@@ -110,6 +117,18 @@ my-project/
 ├── next.config.ts        # Next.js 15 config
 └── package.json
 ```
+
+### Development
+
+```bash
+npm install
+npm test                  # unit + snapshot tests (fast)
+npm run coverage          # tests with coverage report
+npm run test:integration  # E2E: generates a real project, installs, builds, and tests it (slow, needs network)
+npm run build             # compile CLI to dist/
+```
+
+Set `KEEP_INTEGRATION_OUTPUT=1` to keep the generated project for debugging after an integration run. Template snapshots update with `npx vitest run -u`.
 
 ### Author
 

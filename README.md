@@ -36,15 +36,15 @@ A CLI tool to bootstrap **production-ready Next.js 15** projects with modern too
 
 ### Stack Options
 
-| Category | Options |
-|---|---|
-| **Unit Testing** | [Vitest](https://vitest.dev/) or [Jest](https://jestjs.io/) |
-| **E2E Testing** | [Playwright](https://playwright.dev/) or [Cypress](https://www.cypress.io/) |
-| **Linting** | [Biome](https://biomejs.dev/) or [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) |
-| **UI Library** | [shadcn/ui](https://ui.shadcn.com/) or plain Tailwind CSS |
-| **Containerization** | [Docker](https://www.docker.com/) (`Dockerfile`, `docker-compose.yml`, `.dockerignore`) or none |
-| **Component Docs** | [Storybook](https://storybook.js.org/) (`.storybook/` config + example story) or none |
-| **Authentication** | [Auth.js](https://authjs.dev/) / NextAuth v5 (GitHub provider, middleware, sign-in page) or none |
+| Category             | Options                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
+| **Unit Testing**     | [Vitest](https://vitest.dev/) or [Jest](https://jestjs.io/)                                       |
+| **E2E Testing**      | [Playwright](https://playwright.dev/) or [Cypress](https://www.cypress.io/)                       |
+| **Linting**          | [Biome](https://biomejs.dev/) or [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) |
+| **UI Library**       | [shadcn/ui](https://ui.shadcn.com/) or plain Tailwind CSS                                         |
+| **Containerization** | [Docker](https://www.docker.com/) (`Dockerfile`, `docker-compose.yml`, `.dockerignore`) or none   |
+| **Component Docs**   | [Storybook](https://storybook.js.org/) (`.storybook/` config + example story) or none             |
+| **Authentication**   | [Auth.js](https://authjs.dev/) / NextAuth v5 (GitHub provider, middleware, sign-in page) or none  |
 
 **Always included:** [Zod](https://zod.dev/), [Conventional Commits](https://www.conventionalcommits.org/), [GitHub Actions CI/CD](https://docs.github.com/en/actions), [Husky](https://typicode.github.io/husky/)
 

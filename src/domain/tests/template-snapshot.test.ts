@@ -19,7 +19,10 @@ const LINTS = ['biome', 'eslint'] as const;
 const UIS = ['shadcn', 'none'] as const;
 const DOCKERS = ['docker', 'none'] as const;
 const STORYBOOKS = ['storybook', 'none'] as const;
+<<<<<<< HEAD
 const AUTHS = ['nextauth', 'none'] as const;
+=======
+>>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 type Combo = {
   name: string;
@@ -34,14 +37,30 @@ const buildMatrix = (): Combo[] => {
         for (const uiLibrary of UIS) {
           for (const docker of DOCKERS) {
             for (const storybook of STORYBOOKS) {
+<<<<<<< HEAD
               for (const auth of AUTHS) {
                 const name = [
+=======
+              const name = [
+                unit,
+                endToEnd,
+                linting,
+                uiLibrary,
+                docker,
+                storybook,
+              ].join('-');
+              combos.push({
+                name,
+                options: {
+                  projectName: name,
+>>>>>>> 7e02095 (Feat/plan 2.5 (#49))
                   unit,
                   endToEnd,
                   linting,
                   uiLibrary,
                   docker,
                   storybook,
+<<<<<<< HEAD
                   auth,
                 ].join('-');
                 combos.push({
@@ -58,6 +77,10 @@ const buildMatrix = (): Combo[] => {
                   },
                 });
               }
+=======
+                },
+              });
+>>>>>>> 7e02095 (Feat/plan 2.5 (#49))
             }
           }
         }
@@ -143,10 +166,17 @@ describe('Template snapshots — generated content', () => {
   // Combos chosen to exercise every conditional branch at least once:
   // minimal (all none), maximal (everything on), and two mixed variants.
   const CONTENT_COMBOS = [
+<<<<<<< HEAD
     'vitest-playwright-biome-none-none-none-none',
     'jest-cypress-eslint-shadcn-docker-storybook-nextauth',
     'vitest-cypress-eslint-none-docker-none-nextauth',
     'jest-playwright-biome-shadcn-none-storybook-none',
+=======
+    'vitest-playwright-biome-none-none-none',
+    'jest-cypress-eslint-shadcn-docker-storybook',
+    'vitest-cypress-eslint-none-docker-none',
+    'jest-playwright-biome-shadcn-none-storybook',
+>>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   ];
 
   it.each(CONTENT_COMBOS)(

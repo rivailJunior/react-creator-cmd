@@ -15,6 +15,7 @@ class AdapterExecutor {
       uiLibrary: 'none',
       docker: 'none',
       storybook: 'none',
+      auth: 'none',
     };
   }
 }
@@ -37,6 +38,7 @@ describe("Constructor", () => {
         uiLibrary: 'none',
         docker: 'none',
         storybook: 'none',
+        auth: 'none',
       },
     ],
     [
@@ -51,6 +53,7 @@ describe("Constructor", () => {
         uiLibrary: 'shadcn',
         docker: 'none',
         storybook: 'none',
+        auth: 'nextauth',
       },
     ],
   ])(

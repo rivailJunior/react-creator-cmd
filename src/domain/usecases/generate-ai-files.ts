@@ -15,6 +15,10 @@ const getStackDescription = (options: ProjectOptions): string => {
     options.docker === 'docker' ? '\n- **Containerization**: Docker' : '';
   const storybookLine =
     options.storybook === 'storybook' ? '\n- **Docs**: Storybook' : '';
+  const authLine =
+    options.auth === 'nextauth'
+      ? '\n- **Auth**: Auth.js (NextAuth v5) — session helpers in `src/auth.ts`, edge config in `src/auth.config.ts`'
+      : '';
 
   return `- **Framework**: Next.js 15 (App Router, Server Components, Turbopack)
 - **Language**: TypeScript 5.7+
@@ -23,7 +27,7 @@ const getStackDescription = (options: ProjectOptions): string => {
 - **E2E Testing**: ${e2eTest}
 - **Linting/Formatting**: ${linter}
 - **Validation**: Zod
-- **Commits**: Conventional Commits (commitlint + husky)${dockerLine}${storybookLine}`;
+- **Commits**: Conventional Commits (commitlint + husky)${dockerLine}${storybookLine}${authLine}`;
 };
 
 const getRulesContent = (options: ProjectOptions): string => {

@@ -99,6 +99,19 @@ export const PromptTexts = {
       },
     ],
   },
+  auth: {
+    name: '🔐 Would you like to include authentication?',
+    options: [
+      {
+        value: 'nextauth',
+        label: '🔐 Yes (Auth.js / NextAuth v5 + GitHub provider)',
+      },
+      {
+        value: 'none',
+        label: '🚫 No',
+      },
+    ],
+  },
   folder: {
     name: '📍📝 What is your route name?',
     placeholder: 'my-coolest-route',

@@ -1,6 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-docker-none-nextauth', options: { projectName: 'jest-cypress-biome-none-docker-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -98,9 +97,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-docker-none-none', options: { projectName: 'jest-cypress-biome-none-docker-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-docker-none', options: { projectName: 'jest-cypress-biome-none-docker-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -167,11 +163,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-none-docker-none-none",
-=======
-    "name": "jest-cypress-biome-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -193,7 +185,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-docker-storybook-nextauth', options: { projectName: 'jest-cypress-biome-none-docker-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -302,9 +293,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-docker-storybook-none', options: { projectName: 'jest-cypress-biome-none-docker-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-docker-storybook', options: { projectName: 'jest-cypress-biome-none-docker-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -380,11 +368,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-none-docker-storybook-none",
-=======
-    "name": "jest-cypress-biome-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -408,7 +392,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-none-none-nextauth', options: { projectName: 'jest-cypress-biome-none-none-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -503,9 +486,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-none-none-none', options: { projectName: 'jest-cypress-biome-none-none-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-none-none', options: { projectName: 'jest-cypress-biome-none-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -569,11 +549,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-none-none-none-none",
-=======
-    "name": "jest-cypress-biome-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -595,7 +571,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-none-storybook-nextauth', options: { projectName: 'jest-cypress-biome-none-none-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -701,9 +676,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-none-storybook-none', options: { projectName: 'jest-cypress-biome-none-none-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-none-none-storybook', options: { projectName: 'jest-cypress-biome-none-none-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -776,11 +748,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-none-none-storybook-none",
-=======
-    "name": "jest-cypress-biome-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -804,7 +772,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-docker-none-nextauth', options: { projectName: 'jest-cypress-biome-shadcn-docker-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -908,9 +875,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-docker-none-none', options: { projectName: 'jest-cypress-biome-shadcn-docker-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-docker-none', options: { projectName: 'jest-cypress-biome-shadcn-docker-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -983,11 +947,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-shadcn-docker-none-none",
-=======
-    "name": "jest-cypress-biome-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -1009,7 +969,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-docker-storybook-nextauth', options: { projectName: 'jest-cypress-biome-shadcn-docker-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -1124,9 +1083,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-docker-storybook-none', options: { projectName: 'jest-cypress-biome-shadcn-docker-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-docker-storybook', options: { projectName: 'jest-cypress-biome-shadcn-docker-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -1208,11 +1164,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-shadcn-docker-storybook-none",
-=======
-    "name": "jest-cypress-biome-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -1236,7 +1188,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-none-none-nextauth', options: { projectName: 'jest-cypress-biome-shadcn-none-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -1337,9 +1288,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-none-none-none', options: { projectName: 'jest-cypress-biome-shadcn-none-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-none-none', options: { projectName: 'jest-cypress-biome-shadcn-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -1409,11 +1357,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-shadcn-none-none-none",
-=======
-    "name": "jest-cypress-biome-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -1435,7 +1379,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-none-storybook-nextauth', options: { projectName: 'jest-cypress-biome-shadcn-none-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -1547,9 +1490,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-none-storybook-none', options: { projectName: 'jest-cypress-biome-shadcn-none-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-biome-shadcn-none-storybook', options: { projectName: 'jest-cypress-biome-shadcn-none-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -1628,11 +1568,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-biome-shadcn-none-storybook-none",
-=======
-    "name": "jest-cypress-biome-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -1656,7 +1592,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-docker-none-nextauth', options: { projectName: 'jest-cypress-eslint-none-docker-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -1758,9 +1693,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-docker-none-none', options: { projectName: 'jest-cypress-eslint-none-docker-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-docker-none', options: { projectName: 'jest-cypress-eslint-none-docker-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -1832,11 +1764,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-none-docker-none-none",
-=======
-    "name": "jest-cypress-eslint-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -1857,7 +1785,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-docker-storybook-nextauth', options: { projectName: 'jest-cypress-eslint-none-docker-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -1970,9 +1897,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-docker-storybook-none', options: { projectName: 'jest-cypress-eslint-none-docker-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-docker-storybook', options: { projectName: 'jest-cypress-eslint-none-docker-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -2053,11 +1977,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-none-docker-storybook-none",
-=======
-    "name": "jest-cypress-eslint-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -2080,7 +2000,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-none-none-nextauth', options: { projectName: 'jest-cypress-eslint-none-none-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -2179,9 +2098,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-none-none-none', options: { projectName: 'jest-cypress-eslint-none-none-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-none-none', options: { projectName: 'jest-cypress-eslint-none-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -2250,11 +2166,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-none-none-none-none",
-=======
-    "name": "jest-cypress-eslint-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -2275,7 +2187,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-none-storybook-nextauth', options: { projectName: 'jest-cypress-eslint-none-none-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -2385,9 +2296,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-none-storybook-none', options: { projectName: 'jest-cypress-eslint-none-none-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-none-none-storybook', options: { projectName: 'jest-cypress-eslint-none-none-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -2465,11 +2373,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-none-none-storybook-none",
-=======
-    "name": "jest-cypress-eslint-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -2492,7 +2396,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-docker-none-nextauth', options: { projectName: 'jest-cypress-eslint-shadcn-docker-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -2600,9 +2503,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-docker-none-none', options: { projectName: 'jest-cypress-eslint-shadcn-docker-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-docker-none', options: { projectName: 'jest-cypress-eslint-shadcn-docker-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -2680,11 +2580,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-shadcn-docker-none-none",
-=======
-    "name": "jest-cypress-eslint-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -2705,7 +2601,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-docker-storybook-nextauth', options: { projectName: 'jest-cypress-eslint-shadcn-docker-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -2824,9 +2719,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-docker-storybook-none', options: { projectName: 'jest-cypress-eslint-shadcn-docker-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-docker-storybook', options: { projectName: 'jest-cypress-eslint-shadcn-docker-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -2913,11 +2805,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-shadcn-docker-storybook-none",
-=======
-    "name": "jest-cypress-eslint-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -2940,7 +2828,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-none-none-nextauth', options: { projectName: 'jest-cypress-eslint-shadcn-none-none-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -3045,9 +2932,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-none-none-none', options: { projectName: 'jest-cypress-eslint-shadcn-none-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-none-none', options: { projectName: 'jest-cypress-eslint-shadcn-none-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -3122,11 +3006,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-shadcn-none-none-none",
-=======
-    "name": "jest-cypress-eslint-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -3147,7 +3027,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-none-storybook-nextauth', options: { projectName: 'jest-cypress-eslint-shadcn-none-storybook-nextauth', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -3263,9 +3142,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-none-storybook-none', options: { projectName: 'jest-cypress-eslint-shadcn-none-storybook-none', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-cypress-eslint-shadcn-none-storybook', options: { projectName: 'jest-cypress-eslint-shadcn-none-storybook', unit: 'jest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -3349,11 +3225,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-cypress-eslint-shadcn-none-storybook-none",
-=======
-    "name": "jest-cypress-eslint-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -3376,7 +3248,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-docker-none-nextauth', options: { projectName: 'jest-playwright-biome-none-docker-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -3470,9 +3341,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-docker-none-none', options: { projectName: 'jest-playwright-biome-none-docker-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-docker-none', options: { projectName: 'jest-playwright-biome-none-docker-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -3537,11 +3405,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-none-docker-none-none",
-=======
-    "name": "jest-playwright-biome-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -3561,7 +3425,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-docker-storybook-nextauth', options: { projectName: 'jest-playwright-biome-none-docker-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -3666,9 +3529,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-docker-storybook-none', options: { projectName: 'jest-playwright-biome-none-docker-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-docker-storybook', options: { projectName: 'jest-playwright-biome-none-docker-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -3742,11 +3602,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-none-docker-storybook-none",
-=======
-    "name": "jest-playwright-biome-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -3768,7 +3624,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-none-none-nextauth', options: { projectName: 'jest-playwright-biome-none-none-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -3859,9 +3714,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-none-none-none', options: { projectName: 'jest-playwright-biome-none-none-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-none-none', options: { projectName: 'jest-playwright-biome-none-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -3923,11 +3775,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-none-none-none-none",
-=======
-    "name": "jest-playwright-biome-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -3947,7 +3795,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-none-storybook-nextauth', options: { projectName: 'jest-playwright-biome-none-none-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -4049,9 +3896,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-none-storybook-none', options: { projectName: 'jest-playwright-biome-none-none-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-none-none-storybook', options: { projectName: 'jest-playwright-biome-none-none-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -4122,11 +3966,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-none-none-storybook-none",
-=======
-    "name": "jest-playwright-biome-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -4148,7 +3988,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-docker-none-nextauth', options: { projectName: 'jest-playwright-biome-shadcn-docker-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -4248,9 +4087,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-docker-none-none', options: { projectName: 'jest-playwright-biome-shadcn-docker-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-docker-none', options: { projectName: 'jest-playwright-biome-shadcn-docker-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -4321,11 +4157,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-shadcn-docker-none-none",
-=======
-    "name": "jest-playwright-biome-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -4345,7 +4177,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-docker-storybook-nextauth', options: { projectName: 'jest-playwright-biome-shadcn-docker-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -4456,9 +4287,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-docker-storybook-none', options: { projectName: 'jest-playwright-biome-shadcn-docker-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-docker-storybook', options: { projectName: 'jest-playwright-biome-shadcn-docker-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -4538,11 +4366,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-shadcn-docker-storybook-none",
-=======
-    "name": "jest-playwright-biome-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -4564,7 +4388,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-none-none-nextauth', options: { projectName: 'jest-playwright-biome-shadcn-none-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -4661,9 +4484,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-none-none-none', options: { projectName: 'jest-playwright-biome-shadcn-none-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-none-none', options: { projectName: 'jest-playwright-biome-shadcn-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -4731,11 +4551,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-shadcn-none-none-none",
-=======
-    "name": "jest-playwright-biome-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -4755,7 +4571,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-none-storybook-nextauth', options: { projectName: 'jest-playwright-biome-shadcn-none-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -4863,9 +4678,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-none-storybook-none', options: { projectName: 'jest-playwright-biome-shadcn-none-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-biome-shadcn-none-storybook', options: { projectName: 'jest-playwright-biome-shadcn-none-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -4942,11 +4754,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-biome-shadcn-none-storybook-none",
-=======
-    "name": "jest-playwright-biome-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -4968,7 +4776,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-docker-none-nextauth', options: { projectName: 'jest-playwright-eslint-none-docker-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -5066,9 +4873,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-docker-none-none', options: { projectName: 'jest-playwright-eslint-none-docker-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-docker-none', options: { projectName: 'jest-playwright-eslint-none-docker-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -5138,11 +4942,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-none-docker-none-none",
-=======
-    "name": "jest-playwright-eslint-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -5161,7 +4961,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-docker-storybook-nextauth', options: { projectName: 'jest-playwright-eslint-none-docker-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -5270,9 +5069,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-docker-storybook-none', options: { projectName: 'jest-playwright-eslint-none-docker-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-docker-storybook', options: { projectName: 'jest-playwright-eslint-none-docker-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -5351,11 +5147,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-none-docker-storybook-none",
-=======
-    "name": "jest-playwright-eslint-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -5376,7 +5168,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-none-none-nextauth', options: { projectName: 'jest-playwright-eslint-none-none-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -5471,9 +5262,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-none-none-none', options: { projectName: 'jest-playwright-eslint-none-none-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-none-none', options: { projectName: 'jest-playwright-eslint-none-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -5540,11 +5328,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-none-none-none-none",
-=======
-    "name": "jest-playwright-eslint-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -5563,7 +5347,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-none-storybook-nextauth', options: { projectName: 'jest-playwright-eslint-none-none-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -5669,9 +5452,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-none-storybook-none', options: { projectName: 'jest-playwright-eslint-none-none-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-none-none-storybook', options: { projectName: 'jest-playwright-eslint-none-none-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -5747,11 +5527,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-none-none-storybook-none",
-=======
-    "name": "jest-playwright-eslint-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -5772,7 +5548,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-docker-none-nextauth', options: { projectName: 'jest-playwright-eslint-shadcn-docker-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -5876,9 +5651,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-docker-none-none', options: { projectName: 'jest-playwright-eslint-shadcn-docker-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-docker-none', options: { projectName: 'jest-playwright-eslint-shadcn-docker-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -5954,11 +5726,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-shadcn-docker-none-none",
-=======
-    "name": "jest-playwright-eslint-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -5977,7 +5745,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-docker-storybook-nextauth', options: { projectName: 'jest-playwright-eslint-shadcn-docker-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -6092,9 +5859,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-docker-storybook-none', options: { projectName: 'jest-playwright-eslint-shadcn-docker-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-docker-storybook', options: { projectName: 'jest-playwright-eslint-shadcn-docker-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -6179,11 +5943,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-shadcn-docker-storybook-none",
-=======
-    "name": "jest-playwright-eslint-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -6204,7 +5964,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-none-none-nextauth', options: { projectName: 'jest-playwright-eslint-shadcn-none-none-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -6305,9 +6064,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-none-none-none', options: { projectName: 'jest-playwright-eslint-shadcn-none-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-none-none', options: { projectName: 'jest-playwright-eslint-shadcn-none-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -6380,11 +6136,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-shadcn-none-none-none",
-=======
-    "name": "jest-playwright-eslint-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -6403,7 +6155,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-none-storybook-nextauth', options: { projectName: 'jest-playwright-eslint-shadcn-none-storybook-nextauth', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -6515,9 +6266,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-none-storybook-none', options: { projectName: 'jest-playwright-eslint-shadcn-none-storybook-none', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'jest-playwright-eslint-shadcn-none-storybook', options: { projectName: 'jest-playwright-eslint-shadcn-none-storybook', unit: 'jest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -6599,11 +6347,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "ts-node": "^10.9.2",
       "typescript": "^5.7.0",
     },
-<<<<<<< HEAD
     "name": "jest-playwright-eslint-shadcn-none-storybook-none",
-=======
-    "name": "jest-playwright-eslint-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -6624,7 +6368,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-docker-none-nextauth', options: { projectName: 'vitest-cypress-biome-none-docker-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -6718,9 +6461,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-docker-none-none', options: { projectName: 'vitest-cypress-biome-none-docker-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-docker-none', options: { projectName: 'vitest-cypress-biome-none-docker-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -6784,11 +6524,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-none-docker-none-none",
-=======
-    "name": "vitest-cypress-biome-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -6809,7 +6545,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-docker-storybook-nextauth', options: { projectName: 'vitest-cypress-biome-none-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -6914,9 +6649,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-docker-storybook-none', options: { projectName: 'vitest-cypress-biome-none-docker-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-docker-storybook', options: { projectName: 'vitest-cypress-biome-none-docker-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -6989,11 +6721,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-none-docker-storybook-none",
-=======
-    "name": "vitest-cypress-biome-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -7016,7 +6744,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-none-none-nextauth', options: { projectName: 'vitest-cypress-biome-none-none-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -7107,9 +6834,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-none-none-none', options: { projectName: 'vitest-cypress-biome-none-none-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-none-none', options: { projectName: 'vitest-cypress-biome-none-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -7170,11 +6894,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-none-none-none-none",
-=======
-    "name": "vitest-cypress-biome-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -7195,7 +6915,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-none-storybook-nextauth', options: { projectName: 'vitest-cypress-biome-none-none-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -7297,9 +7016,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-none-storybook-none', options: { projectName: 'vitest-cypress-biome-none-none-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-none-none-storybook', options: { projectName: 'vitest-cypress-biome-none-none-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -7369,11 +7085,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-none-none-storybook-none",
-=======
-    "name": "vitest-cypress-biome-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -7396,7 +7108,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-docker-none-nextauth', options: { projectName: 'vitest-cypress-biome-shadcn-docker-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -7496,9 +7207,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-docker-none-none', options: { projectName: 'vitest-cypress-biome-shadcn-docker-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-docker-none', options: { projectName: 'vitest-cypress-biome-shadcn-docker-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -7568,11 +7276,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-shadcn-docker-none-none",
-=======
-    "name": "vitest-cypress-biome-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -7593,7 +7297,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-docker-storybook-nextauth', options: { projectName: 'vitest-cypress-biome-shadcn-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -7704,9 +7407,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-docker-storybook-none', options: { projectName: 'vitest-cypress-biome-shadcn-docker-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-docker-storybook', options: { projectName: 'vitest-cypress-biome-shadcn-docker-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -7785,11 +7485,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-shadcn-docker-storybook-none",
-=======
-    "name": "vitest-cypress-biome-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -7812,7 +7508,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-none-none-nextauth', options: { projectName: 'vitest-cypress-biome-shadcn-none-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -7909,9 +7604,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-none-none-none', options: { projectName: 'vitest-cypress-biome-shadcn-none-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-none-none', options: { projectName: 'vitest-cypress-biome-shadcn-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -7978,11 +7670,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-shadcn-none-none-none",
-=======
-    "name": "vitest-cypress-biome-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -8003,7 +7691,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-none-storybook-nextauth', options: { projectName: 'vitest-cypress-biome-shadcn-none-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -8111,9 +7798,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-none-storybook-none', options: { projectName: 'vitest-cypress-biome-shadcn-none-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-biome-shadcn-none-storybook', options: { projectName: 'vitest-cypress-biome-shadcn-none-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -8189,11 +7873,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-biome-shadcn-none-storybook-none",
-=======
-    "name": "vitest-cypress-biome-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -8216,7 +7896,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-docker-none-nextauth', options: { projectName: 'vitest-cypress-eslint-none-docker-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -8314,9 +7993,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-docker-none-none', options: { projectName: 'vitest-cypress-eslint-none-docker-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-docker-none', options: { projectName: 'vitest-cypress-eslint-none-docker-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -8385,11 +8061,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-none-docker-none-none",
-=======
-    "name": "vitest-cypress-eslint-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -8409,7 +8081,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-docker-storybook-nextauth', options: { projectName: 'vitest-cypress-eslint-none-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -8518,9 +8189,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-docker-storybook-none', options: { projectName: 'vitest-cypress-eslint-none-docker-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-docker-storybook', options: { projectName: 'vitest-cypress-eslint-none-docker-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -8598,11 +8266,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-none-docker-storybook-none",
-=======
-    "name": "vitest-cypress-eslint-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -8624,7 +8288,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-none-none-nextauth', options: { projectName: 'vitest-cypress-eslint-none-none-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -8719,9 +8382,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-none-none-none', options: { projectName: 'vitest-cypress-eslint-none-none-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-none-none', options: { projectName: 'vitest-cypress-eslint-none-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -8787,11 +8447,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-none-none-none-none",
-=======
-    "name": "vitest-cypress-eslint-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -8811,7 +8467,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-none-storybook-nextauth', options: { projectName: 'vitest-cypress-eslint-none-none-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -8917,9 +8572,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-none-storybook-none', options: { projectName: 'vitest-cypress-eslint-none-none-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-none-none-storybook', options: { projectName: 'vitest-cypress-eslint-none-none-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -8994,11 +8646,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-none-none-storybook-none",
-=======
-    "name": "vitest-cypress-eslint-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -9020,7 +8668,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-docker-none-nextauth', options: { projectName: 'vitest-cypress-eslint-shadcn-docker-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -9124,9 +8771,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-docker-none-none', options: { projectName: 'vitest-cypress-eslint-shadcn-docker-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-docker-none', options: { projectName: 'vitest-cypress-eslint-shadcn-docker-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -9201,11 +8845,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-shadcn-docker-none-none",
-=======
-    "name": "vitest-cypress-eslint-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -9225,7 +8865,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-docker-storybook-nextauth', options: { projectName: 'vitest-cypress-eslint-shadcn-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -9340,9 +8979,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-docker-storybook-none', options: { projectName: 'vitest-cypress-eslint-shadcn-docker-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-docker-storybook', options: { projectName: 'vitest-cypress-eslint-shadcn-docker-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -9426,11 +9062,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-shadcn-docker-storybook-none",
-=======
-    "name": "vitest-cypress-eslint-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -9452,7 +9084,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-none-none-nextauth', options: { projectName: 'vitest-cypress-eslint-shadcn-none-none-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -9553,9 +9184,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-none-none-none', options: { projectName: 'vitest-cypress-eslint-shadcn-none-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-none-none', options: { projectName: 'vitest-cypress-eslint-shadcn-none-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -9627,11 +9255,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-shadcn-none-none-none",
-=======
-    "name": "vitest-cypress-eslint-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -9651,7 +9275,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-none-storybook-nextauth', options: { projectName: 'vitest-cypress-eslint-shadcn-none-storybook-nextauth', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -9763,9 +9386,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-none-storybook-none', options: { projectName: 'vitest-cypress-eslint-shadcn-none-storybook-none', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-cypress-eslint-shadcn-none-storybook', options: { projectName: 'vitest-cypress-eslint-shadcn-none-storybook', unit: 'vitest', endToEnd: 'cypress', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -9846,11 +9466,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-cypress-eslint-shadcn-none-storybook-none",
-=======
-    "name": "vitest-cypress-eslint-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -9872,7 +9488,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-docker-none-nextauth', options: { projectName: 'vitest-playwright-biome-none-docker-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -9962,9 +9577,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-docker-none-none', options: { projectName: 'vitest-playwright-biome-none-docker-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-docker-none', options: { projectName: 'vitest-playwright-biome-none-docker-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -10026,11 +9638,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-none-docker-none-none",
-=======
-    "name": "vitest-playwright-biome-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -10049,7 +9657,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-docker-storybook-nextauth', options: { projectName: 'vitest-playwright-biome-none-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -10150,9 +9757,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-docker-storybook-none', options: { projectName: 'vitest-playwright-biome-none-docker-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-docker-storybook', options: { projectName: 'vitest-playwright-biome-none-docker-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -10223,11 +9827,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-none-docker-storybook-none",
-=======
-    "name": "vitest-playwright-biome-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -10248,7 +9848,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-none-none-nextauth', options: { projectName: 'vitest-playwright-biome-none-none-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -10335,9 +9934,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-none-none-none', options: { projectName: 'vitest-playwright-biome-none-none-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-none-none', options: { projectName: 'vitest-playwright-biome-none-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -10396,11 +9992,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-none-none-none-none",
-=======
-    "name": "vitest-playwright-biome-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -10419,7 +10011,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-none-storybook-nextauth', options: { projectName: 'vitest-playwright-biome-none-none-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -10517,9 +10108,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-none-storybook-none', options: { projectName: 'vitest-playwright-biome-none-none-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-none-none-storybook', options: { projectName: 'vitest-playwright-biome-none-none-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -10587,11 +10175,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-none-none-storybook-none",
-=======
-    "name": "vitest-playwright-biome-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -10612,7 +10196,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-docker-none-nextauth', options: { projectName: 'vitest-playwright-biome-shadcn-docker-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -10708,9 +10291,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-docker-none-none', options: { projectName: 'vitest-playwright-biome-shadcn-docker-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-docker-none', options: { projectName: 'vitest-playwright-biome-shadcn-docker-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -10778,11 +10358,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-shadcn-docker-none-none",
-=======
-    "name": "vitest-playwright-biome-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -10801,7 +10377,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-docker-storybook-nextauth', options: { projectName: 'vitest-playwright-biome-shadcn-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -10908,9 +10483,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-docker-storybook-none', options: { projectName: 'vitest-playwright-biome-shadcn-docker-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-docker-storybook', options: { projectName: 'vitest-playwright-biome-shadcn-docker-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -10987,11 +10559,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-shadcn-docker-storybook-none",
-=======
-    "name": "vitest-playwright-biome-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -11012,7 +10580,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-none-none-nextauth', options: { projectName: 'vitest-playwright-biome-shadcn-none-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -11105,9 +10672,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-none-none-none', options: { projectName: 'vitest-playwright-biome-shadcn-none-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-none-none', options: { projectName: 'vitest-playwright-biome-shadcn-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -11172,11 +10736,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-shadcn-none-none-none",
-=======
-    "name": "vitest-playwright-biome-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -11195,7 +10755,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-none-storybook-nextauth', options: { projectName: 'vitest-playwright-biome-shadcn-none-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -11299,9 +10858,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-none-storybook-none', options: { projectName: 'vitest-playwright-biome-shadcn-none-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-biome-shadcn-none-storybook', options: { projectName: 'vitest-playwright-biome-shadcn-none-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'biome', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -11375,11 +10931,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-biome-shadcn-none-storybook-none",
-=======
-    "name": "vitest-playwright-biome-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -11400,7 +10952,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-docker-none-nextauth', options: { projectName: 'vitest-playwright-eslint-none-docker-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -11494,9 +11045,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-docker-none-none', options: { projectName: 'vitest-playwright-eslint-none-docker-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-docker-none', options: { projectName: 'vitest-playwright-eslint-none-docker-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -11563,11 +11111,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-none-docker-none-none",
-=======
-    "name": "vitest-playwright-eslint-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -11585,7 +11129,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-docker-storybook-nextauth', options: { projectName: 'vitest-playwright-eslint-none-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -11690,9 +11233,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-docker-storybook-none', options: { projectName: 'vitest-playwright-eslint-none-docker-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-docker-storybook', options: { projectName: 'vitest-playwright-eslint-none-docker-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -11768,11 +11308,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-none-docker-storybook-none",
-=======
-    "name": "vitest-playwright-eslint-none-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -11792,7 +11328,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-none-none-nextauth', options: { projectName: 'vitest-playwright-eslint-none-none-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -11883,9 +11418,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-none-none-none', options: { projectName: 'vitest-playwright-eslint-none-none-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-none-none', options: { projectName: 'vitest-playwright-eslint-none-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -11949,11 +11481,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-none-none-none-none",
-=======
-    "name": "vitest-playwright-eslint-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -11971,7 +11499,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-none-storybook-nextauth', options: { projectName: 'vitest-playwright-eslint-none-none-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -12073,9 +11600,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-none-storybook-none', options: { projectName: 'vitest-playwright-eslint-none-none-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-none-none-storybook', options: { projectName: 'vitest-playwright-eslint-none-none-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'none', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -12148,11 +11672,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-none-none-storybook-none",
-=======
-    "name": "vitest-playwright-eslint-none-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -12172,7 +11692,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-docker-none-nextauth', options: { projectName: 'vitest-playwright-eslint-shadcn-docker-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -12272,9 +11791,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-docker-none-none', options: { projectName: 'vitest-playwright-eslint-shadcn-docker-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-docker-none', options: { projectName: 'vitest-playwright-eslint-shadcn-docker-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -12347,11 +11863,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-shadcn-docker-none-none",
-=======
-    "name": "vitest-playwright-eslint-shadcn-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -12369,7 +11881,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-docker-storybook-nextauth', options: { projectName: 'vitest-playwright-eslint-shadcn-docker-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -12480,9 +11991,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-docker-storybook-none', options: { projectName: 'vitest-playwright-eslint-shadcn-docker-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-docker-storybook', options: { projectName: 'vitest-playwright-eslint-shadcn-docker-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'docker', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -12564,11 +12072,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-shadcn-docker-storybook-none",
-=======
-    "name": "vitest-playwright-eslint-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -12588,7 +12092,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-none-none-nextauth', options: { projectName: 'vitest-playwright-eslint-shadcn-none-none-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -12685,9 +12188,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-none-none-none', options: { projectName: 'vitest-playwright-eslint-shadcn-none-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-none-none', options: { projectName: 'vitest-playwright-eslint-shadcn-none-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'none' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -12757,11 +12257,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-shadcn-none-none-none",
-=======
-    "name": "vitest-playwright-eslint-shadcn-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -12779,7 +12275,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-none-storybook-nextauth', options: { projectName: 'vitest-playwright-eslint-shadcn-none-storybook-nextauth', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'nextauth' } }) 1`] = `
 {
   "files": [
@@ -12887,9 +12382,6 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 `;
 
 exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-none-storybook-none', options: { projectName: 'vitest-playwright-eslint-shadcn-none-storybook-none', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook', auth: 'none' } }) 1`] = `
-=======
-exports[`Template snapshots — full option matrix > file tree and package.json match snapshot ({ name: 'vitest-playwright-eslint-shadcn-none-storybook', options: { projectName: 'vitest-playwright-eslint-shadcn-none-storybook', unit: 'vitest', endToEnd: 'playwright', linting: 'eslint', uiLibrary: 'shadcn', docker: 'none', storybook: 'storybook' } }) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   "files": [
     ".cursor/rules/project.mdc",
@@ -12968,11 +12460,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
       "typescript": "^5.7.0",
       "vitest": "^3.0.0",
     },
-<<<<<<< HEAD
     "name": "vitest-playwright-eslint-shadcn-none-storybook-none",
-=======
-    "name": "vitest-playwright-eslint-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     "private": true,
     "scripts": {
       "build": "next build",
@@ -12992,11 +12480,7 @@ exports[`Template snapshots — full option matrix > file tree and package.json 
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — generated content > generated file contents match snapshot (jest-cypress-eslint-shadcn-docker-storybook-nextauth) 1`] = `
-=======
-exports[`Template snapshots — generated content > generated file contents match snapshot (jest-cypress-eslint-shadcn-docker-storybook) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   ".cursor/rules/project.mdc": "---
 description: Project coding standards and patterns
@@ -13017,10 +12501,7 @@ globs: "**/*.{ts,tsx}"
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Architecture
 
@@ -13077,7 +12558,6 @@ coverage
 
 WELCOME_MESSAGE="We are here to help you with your Next.js project 🥳"
 
-<<<<<<< HEAD
 # Auth.js (NextAuth v5)
 # Generate with: npx auth secret   (or: openssl rand -base64 32)
 AUTH_SECRET=""
@@ -13085,8 +12565,6 @@ AUTH_SECRET=""
 # Callback URL: http://localhost:3000/api/auth/callback/github
 AUTH_GITHUB_ID=""
 AUTH_GITHUB_SECRET=""
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 ",
   ".github/copilot-instructions.md": "# Project Rules
 
@@ -13102,10 +12580,7 @@ AUTH_GITHUB_SECRET=""
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Architecture
 
@@ -13332,10 +12807,7 @@ export default preview;
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Architecture
 
@@ -13373,11 +12845,7 @@ export default preview;
 - Follow **Conventional Commits**: \`feat:\`, \`fix:\`, \`chore:\`, \`docs:\`, \`refactor:\`, \`test:\`.
 - Keep commits small and focused.
 ",
-<<<<<<< HEAD
   "CLAUDE.md": "# jest-cypress-eslint-shadcn-docker-storybook-nextauth
-=======
-  "CLAUDE.md": "# jest-cypress-eslint-shadcn-docker-storybook
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Tech Stack
 
@@ -13391,10 +12859,7 @@ export default preview;
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Commands
 
@@ -13456,11 +12921,7 @@ ENV HOSTNAME="0.0.0.0"
 
 CMD ["node", "server.js"]
 ",
-<<<<<<< HEAD
   "README.md": "# jest-cypress-eslint-shadcn-docker-storybook-nextauth
-=======
-  "README.md": "# jest-cypress-eslint-shadcn-docker-storybook
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd](https://github.com/rivailJunior/react-creator-cmd).
 
@@ -13477,10 +12938,7 @@ A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd
 - **Conventional Commits** — Commit convention (commitlint + husky)
 - **Docker** — Dockerfile + docker-compose for containerized deployment
 - **Storybook** — Component explorer and documentation
-<<<<<<< HEAD
 - **Auth.js (NextAuth v5)** — GitHub OAuth, middleware session handling, \`/signin\` page
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Getting Started
 
@@ -13658,11 +13116,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ",
   "package.json": "{
-<<<<<<< HEAD
   "name": "jest-cypress-eslint-shadcn-docker-storybook-nextauth",
-=======
-  "name": "jest-cypress-eslint-shadcn-docker-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13689,12 +13143,8 @@ export default nextConfig;
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.6.0",
     "lucide-react": "^0.468.0",
-<<<<<<< HEAD
     "class-variance-authority": "^0.7.1",
     "next-auth": "^5.0.0-beta.25"
-=======
-    "class-variance-authority": "^0.7.1"
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
@@ -13739,13 +13189,10 @@ export default nextConfig;
 ",
   "public/next.svg": "<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 394 80"><path fill="#000" d="M262 0h68.5v12.7h-27.2v66.6h-13.6V12.7H262V0ZM149 0v12.7H94v20.4h44.3v12.6H94v21h55v12.6H80.5V0h68.7zm34.3 0h-17.8l63.8 79.4h17.9l-32-39.7 32-39.6h-17.9l-23 28.6-23-28.6zm18.3 56.7-9-11-27.1 33.7h17.8l18.3-22.7z"/><path fill="#000" d="M81 79.3 17 0H0v79.3h13.6V17l50.2 62.3H81Zm252.6-.4c-1 0-1.8-.4-2.5-1s-1.1-1.6-1.1-2.6.3-1.8 1-2.5 1.6-1 2.6-1 1.8.3 2.5 1a3.4 3.4 0 0 1 .6 4.3 3.7 3.7 0 0 1-3 1.8zm23.2-33.5h6v23.3c0 2.1-.4 4-1.3 5.5a9.1 9.1 0 0 1-3.8 3.5c-1.6.8-3.5 1.3-5.7 1.3-2 0-3.7-.4-5.3-1s-2.8-1.8-3.7-3.2c-.9-1.3-1.4-3-1.4-5h6c.1.8.3 1.6.7 2.2s1 1.2 1.6 1.5c.7.4 1.5.5 2.4.5 1 0 1.8-.2 2.4-.6a4 4 0 0 0 1.6-1.8c.3-.8.5-1.8.5-3V45.5zm30.9 9.1a4.4 4.4 0 0 0-2-3.3 7.5 7.5 0 0 0-4.3-1.1c-1.3 0-2.4.2-3.3.5-.9.4-1.6 1-2 1.6a3.5 3.5 0 0 0-.3 4c.3.5.7.9 1.3 1.2l1.8 1 2 .5 3.2.8c1.3.3 2.5.7 3.7 1.2a13 13 0 0 1 3.2 1.8 8.1 8.1 0 0 1 3 6.5c0 2-.5 3.7-1.5 5.1a10 10 0 0 1-4.4 3.5c-1.8.8-4.1 1.2-6.8 1.2-2.6 0-4.9-.4-6.8-1.2-2-.8-3.4-2-4.5-3.5a10 10 0 0 1-1.7-5.6h6a5 5 0 0 0 3.5 4.6c1 .4 2.2.6 3.4.6 1.3 0 2.5-.2 3.5-.6 1-.4 1.8-1 2.4-1.7a4 4 0 0 0 .8-2.4c0-.9-.2-1.6-.7-2.2a11 11 0 0 0-2.1-1.4l-3.2-1-3.8-1c-2.8-.7-5-1.7-6.6-3.2a7.2 7.2 0 0 1-2.4-5.7 8 8 0 0 1 1.7-5 10 10 0 0 1 4.3-3.5c2-.8 4-1.2 6.4-1.2 2.3 0 4.4.4 6.2 1.2 1.8.8 3.2 2 4.3 3.4 1 1.4 1.5 3 1.5 5h-5.8z"/></svg>",
   "public/vercel.svg": "<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 283 64"><path fill="black" d="M141 16c-11 0-19 7-19 18s9 18 20 18c7 0 13-3 16-7l-7-5c-2 3-6 4-9 4-5 0-9-3-10-7h28v-3c0-11-8-18-19-18zm-9 15c1-4 4-7 9-7s8 3 9 7h-18zm117-15c-11 0-19 7-19 18s9 18 20 18c6 0 12-3 16-7l-8-5c-2 3-5 4-8 4-5 0-9-3-11-7h28l1-3c0-11-8-18-19-18zm-10 15c2-4 5-7 10-7s8 3 9 7h-19zm-39 3c0 6 4 10 10 10 4 0 7-2 9-5l8 5c-3 5-9 8-17 8-11 0-19-7-19-18s8-18 19-18c8 0 14 3 17 8l-8 5c-2-3-5-5-9-5-6 0-10 4-10 10zm83-29v46h-9V5h9zM37 0l37 64H0L37 0zm92 5-27 48L74 5h10l18 30 17-30h10zm59 12v10l-3-1c-6 0-10 4-10 10v15h-9V17h9v9c0-5 6-9 13-9z"/></svg>",
-<<<<<<< HEAD
   "src/app/api/auth/[...nextauth]/route.ts": "import { handlers } from '@/auth';
 
 export const { GET, POST } = handlers;
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/app/favicon.ico": "<<binary 25931 bytes>>",
   "src/app/globals.css": "@import "tailwindcss";
 
@@ -13801,7 +13248,6 @@ export default function RootLayout({
 }
 ",
   "src/app/page.tsx": "import { Heading } from "@/components";
-<<<<<<< HEAD
 import { UserMenu } from "@/components/user-menu";
 
 export default function Home() {
@@ -13834,18 +13280,10 @@ export default function SignInPage() {
           </button>
         </form>
       </div>
-=======
-
-export default function Home() {
-  return (
-    <main className="flex min-h-screen items-center justify-center">
-      <Heading />
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     </main>
   );
 }
 ",
-<<<<<<< HEAD
   "src/auth.config.ts": "import type { NextAuthConfig } from 'next-auth';
 
 /**
@@ -13893,8 +13331,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [GitHub],
 });
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/components/heading.stories.tsx": "import type { Meta, StoryObj } from "@storybook/react";
 import { Heading } from "./heading";
 
@@ -13926,7 +13362,6 @@ export function Heading() {
 ",
   "src/components/index.ts": "export { Heading } from "./heading";
 ",
-<<<<<<< HEAD
   "src/components/user-menu.tsx": "import Link from 'next/link';
 import { auth, signOut } from '@/auth';
 
@@ -13970,8 +13405,6 @@ export async function UserMenu() {
   );
 }
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/config/env.ts": "import { z } from "zod";
 
 /**
@@ -13982,14 +13415,11 @@ const envSchema = z.object({
     .string()
     .min(1)
     .default('We are here to help you with your Next.js project'),
-<<<<<<< HEAD
   // Auth.js — optional so the app boots without OAuth configured.
   // Signing in will fail until AUTH_GITHUB_ID/SECRET are set.
   AUTH_SECRET: z.string().optional(),
   AUTH_GITHUB_ID: z.string().optional(),
   AUTH_GITHUB_SECRET: z.string().optional(),
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 });
 
 export const env = envSchema.parse(process.env);
@@ -14001,7 +13431,6 @@ export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 };
 ",
-<<<<<<< HEAD
   "src/middleware.ts": "import NextAuth from 'next-auth';
 import { authConfig } from '@/auth.config';
 
@@ -14014,8 +13443,6 @@ export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/tests/unit/heading.test.tsx": "import { render, screen } from "@testing-library/react";
 import { Heading } from "@/components";
 
@@ -14070,11 +13497,7 @@ describe("Heading Component", () => {
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — generated content > generated file contents match snapshot (jest-playwright-biome-shadcn-none-storybook-none) 1`] = `
-=======
-exports[`Template snapshots — generated content > generated file contents match snapshot (jest-playwright-biome-shadcn-none-storybook) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   ".cursor/rules/project.mdc": "---
 description: Project coding standards and patterns
@@ -14410,11 +13833,7 @@ export default preview;
 - Follow **Conventional Commits**: \`feat:\`, \`fix:\`, \`chore:\`, \`docs:\`, \`refactor:\`, \`test:\`.
 - Keep commits small and focused.
 ",
-<<<<<<< HEAD
   "CLAUDE.md": "# jest-playwright-biome-shadcn-none-storybook-none
-=======
-  "CLAUDE.md": "# jest-playwright-biome-shadcn-none-storybook
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Tech Stack
 
@@ -14453,11 +13872,7 @@ src/
 - Follow Conventional Commits for all git messages.
 - Validate env vars with Zod in \`src/config/env.ts\`.
 ",
-<<<<<<< HEAD
   "README.md": "# jest-playwright-biome-shadcn-none-storybook-none
-=======
-  "README.md": "# jest-playwright-biome-shadcn-none-storybook
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd](https://github.com/rivailJunior/react-creator-cmd).
 
@@ -14633,11 +14048,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ",
   "package.json": "{
-<<<<<<< HEAD
   "name": "jest-playwright-biome-shadcn-none-storybook-none",
-=======
-  "name": "jest-playwright-biome-shadcn-none-storybook",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14940,11 +14351,7 @@ describe("Heading Component", () => {
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — generated content > generated file contents match snapshot (vitest-cypress-eslint-none-docker-none-nextauth) 1`] = `
-=======
-exports[`Template snapshots — generated content > generated file contents match snapshot (vitest-cypress-eslint-none-docker-none) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   ".cursor/rules/project.mdc": "---
 description: Project coding standards and patterns
@@ -14964,10 +14371,7 @@ globs: "**/*.{ts,tsx}"
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Architecture
 
@@ -15024,7 +14428,6 @@ coverage
 
 WELCOME_MESSAGE="We are here to help you with your Next.js project 🥳"
 
-<<<<<<< HEAD
 # Auth.js (NextAuth v5)
 # Generate with: npx auth secret   (or: openssl rand -base64 32)
 AUTH_SECRET=""
@@ -15032,8 +14435,6 @@ AUTH_SECRET=""
 # Callback URL: http://localhost:3000/api/auth/callback/github
 AUTH_GITHUB_ID=""
 AUTH_GITHUB_SECRET=""
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 ",
   ".github/copilot-instructions.md": "# Project Rules
 
@@ -15048,10 +14449,7 @@ AUTH_GITHUB_SECRET=""
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Architecture
 
@@ -15244,10 +14642,7 @@ next-env.d.ts
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Architecture
 
@@ -15285,11 +14680,7 @@ next-env.d.ts
 - Follow **Conventional Commits**: \`feat:\`, \`fix:\`, \`chore:\`, \`docs:\`, \`refactor:\`, \`test:\`.
 - Keep commits small and focused.
 ",
-<<<<<<< HEAD
   "CLAUDE.md": "# vitest-cypress-eslint-none-docker-none-nextauth
-=======
-  "CLAUDE.md": "# vitest-cypress-eslint-none-docker-none
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Tech Stack
 
@@ -15302,10 +14693,7 @@ next-env.d.ts
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
-<<<<<<< HEAD
 - **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Commands
 
@@ -15367,11 +14755,7 @@ ENV HOSTNAME="0.0.0.0"
 
 CMD ["node", "server.js"]
 ",
-<<<<<<< HEAD
   "README.md": "# vitest-cypress-eslint-none-docker-none-nextauth
-=======
-  "README.md": "# vitest-cypress-eslint-none-docker-none
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd](https://github.com/rivailJunior/react-creator-cmd).
 
@@ -15387,10 +14771,7 @@ A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd
 - **Zod** — Schema validation
 - **Conventional Commits** — Commit convention (commitlint + husky)
 - **Docker** — Dockerfile + docker-compose for containerized deployment
-<<<<<<< HEAD
 - **Auth.js (NextAuth v5)** — GitHub OAuth, middleware session handling, \`/signin\` page
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Getting Started
 
@@ -15517,11 +14898,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ",
   "package.json": "{
-<<<<<<< HEAD
   "name": "vitest-cypress-eslint-none-docker-none-nextauth",
-=======
-  "name": "vitest-cypress-eslint-none-docker-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15541,12 +14918,8 @@ export default nextConfig;
     "next": "^15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
     "zod": "^3.24.0",
     "next-auth": "^5.0.0-beta.25"
-=======
-    "zod": "^3.24.0"
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
@@ -15583,13 +14956,10 @@ export default nextConfig;
 ",
   "public/next.svg": "<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 394 80"><path fill="#000" d="M262 0h68.5v12.7h-27.2v66.6h-13.6V12.7H262V0ZM149 0v12.7H94v20.4h44.3v12.6H94v21h55v12.6H80.5V0h68.7zm34.3 0h-17.8l63.8 79.4h17.9l-32-39.7 32-39.6h-17.9l-23 28.6-23-28.6zm18.3 56.7-9-11-27.1 33.7h17.8l18.3-22.7z"/><path fill="#000" d="M81 79.3 17 0H0v79.3h13.6V17l50.2 62.3H81Zm252.6-.4c-1 0-1.8-.4-2.5-1s-1.1-1.6-1.1-2.6.3-1.8 1-2.5 1.6-1 2.6-1 1.8.3 2.5 1a3.4 3.4 0 0 1 .6 4.3 3.7 3.7 0 0 1-3 1.8zm23.2-33.5h6v23.3c0 2.1-.4 4-1.3 5.5a9.1 9.1 0 0 1-3.8 3.5c-1.6.8-3.5 1.3-5.7 1.3-2 0-3.7-.4-5.3-1s-2.8-1.8-3.7-3.2c-.9-1.3-1.4-3-1.4-5h6c.1.8.3 1.6.7 2.2s1 1.2 1.6 1.5c.7.4 1.5.5 2.4.5 1 0 1.8-.2 2.4-.6a4 4 0 0 0 1.6-1.8c.3-.8.5-1.8.5-3V45.5zm30.9 9.1a4.4 4.4 0 0 0-2-3.3 7.5 7.5 0 0 0-4.3-1.1c-1.3 0-2.4.2-3.3.5-.9.4-1.6 1-2 1.6a3.5 3.5 0 0 0-.3 4c.3.5.7.9 1.3 1.2l1.8 1 2 .5 3.2.8c1.3.3 2.5.7 3.7 1.2a13 13 0 0 1 3.2 1.8 8.1 8.1 0 0 1 3 6.5c0 2-.5 3.7-1.5 5.1a10 10 0 0 1-4.4 3.5c-1.8.8-4.1 1.2-6.8 1.2-2.6 0-4.9-.4-6.8-1.2-2-.8-3.4-2-4.5-3.5a10 10 0 0 1-1.7-5.6h6a5 5 0 0 0 3.5 4.6c1 .4 2.2.6 3.4.6 1.3 0 2.5-.2 3.5-.6 1-.4 1.8-1 2.4-1.7a4 4 0 0 0 .8-2.4c0-.9-.2-1.6-.7-2.2a11 11 0 0 0-2.1-1.4l-3.2-1-3.8-1c-2.8-.7-5-1.7-6.6-3.2a7.2 7.2 0 0 1-2.4-5.7 8 8 0 0 1 1.7-5 10 10 0 0 1 4.3-3.5c2-.8 4-1.2 6.4-1.2 2.3 0 4.4.4 6.2 1.2 1.8.8 3.2 2 4.3 3.4 1 1.4 1.5 3 1.5 5h-5.8z"/></svg>",
   "public/vercel.svg": "<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 283 64"><path fill="black" d="M141 16c-11 0-19 7-19 18s9 18 20 18c7 0 13-3 16-7l-7-5c-2 3-6 4-9 4-5 0-9-3-10-7h28v-3c0-11-8-18-19-18zm-9 15c1-4 4-7 9-7s8 3 9 7h-18zm117-15c-11 0-19 7-19 18s9 18 20 18c6 0 12-3 16-7l-8-5c-2 3-5 4-8 4-5 0-9-3-11-7h28l1-3c0-11-8-18-19-18zm-10 15c2-4 5-7 10-7s8 3 9 7h-19zm-39 3c0 6 4 10 10 10 4 0 7-2 9-5l8 5c-3 5-9 8-17 8-11 0-19-7-19-18s8-18 19-18c8 0 14 3 17 8l-8 5c-2-3-5-5-9-5-6 0-10 4-10 10zm83-29v46h-9V5h9zM37 0l37 64H0L37 0zm92 5-27 48L74 5h10l18 30 17-30h10zm59 12v10l-3-1c-6 0-10 4-10 10v15h-9V17h9v9c0-5 6-9 13-9z"/></svg>",
-<<<<<<< HEAD
   "src/app/api/auth/[...nextauth]/route.ts": "import { handlers } from '@/auth';
 
 export const { GET, POST } = handlers;
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/app/favicon.ico": "<<binary 25931 bytes>>",
   "src/app/globals.css": "@import "tailwindcss";
 
@@ -15645,7 +15015,6 @@ export default function RootLayout({
 }
 ",
   "src/app/page.tsx": "import { Heading } from "@/components";
-<<<<<<< HEAD
 import { UserMenu } from "@/components/user-menu";
 
 export default function Home() {
@@ -15678,18 +15047,10 @@ export default function SignInPage() {
           </button>
         </form>
       </div>
-=======
-
-export default function Home() {
-  return (
-    <main className="flex min-h-screen items-center justify-center">
-      <Heading />
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
     </main>
   );
 }
 ",
-<<<<<<< HEAD
   "src/auth.config.ts": "import type { NextAuthConfig } from 'next-auth';
 
 /**
@@ -15737,8 +15098,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [GitHub],
 });
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/components/heading.tsx": "import { env } from "../config/env";
 
 export function Heading() {
@@ -15756,7 +15115,6 @@ export function Heading() {
 ",
   "src/components/index.ts": "export { Heading } from "./heading";
 ",
-<<<<<<< HEAD
   "src/components/user-menu.tsx": "import Link from 'next/link';
 import { auth, signOut } from '@/auth';
 
@@ -15800,8 +15158,6 @@ export async function UserMenu() {
   );
 }
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/config/env.ts": "import { z } from "zod";
 
 /**
@@ -15812,19 +15168,15 @@ const envSchema = z.object({
     .string()
     .min(1)
     .default('We are here to help you with your Next.js project'),
-<<<<<<< HEAD
   // Auth.js — optional so the app boots without OAuth configured.
   // Signing in will fail until AUTH_GITHUB_ID/SECRET are set.
   AUTH_SECRET: z.string().optional(),
   AUTH_GITHUB_ID: z.string().optional(),
   AUTH_GITHUB_SECRET: z.string().optional(),
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 });
 
 export const env = envSchema.parse(process.env);
 ",
-<<<<<<< HEAD
   "src/middleware.ts": "import NextAuth from 'next-auth';
 import { authConfig } from '@/auth.config';
 
@@ -15837,8 +15189,6 @@ export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
 ",
-=======
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "src/tests/unit/heading.test.tsx": "import { render, screen } from "@testing-library/react";
 import { Heading } from "@/components";
 import { describe, expect, test, vi } from "vitest";
@@ -15915,11 +15265,7 @@ export default defineConfig({
 }
 `;
 
-<<<<<<< HEAD
 exports[`Template snapshots — generated content > generated file contents match snapshot (vitest-playwright-biome-none-none-none-none) 1`] = `
-=======
-exports[`Template snapshots — generated content > generated file contents match snapshot (vitest-playwright-biome-none-none-none) 1`] = `
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 {
   ".cursor/rules/project.mdc": "---
 description: Project coding standards and patterns
@@ -16219,11 +15565,7 @@ next-env.d.ts
 - Follow **Conventional Commits**: \`feat:\`, \`fix:\`, \`chore:\`, \`docs:\`, \`refactor:\`, \`test:\`.
 - Keep commits small and focused.
 ",
-<<<<<<< HEAD
   "CLAUDE.md": "# vitest-playwright-biome-none-none-none-none
-=======
-  "CLAUDE.md": "# vitest-playwright-biome-none-none-none
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 ## Tech Stack
 
@@ -16261,11 +15603,7 @@ src/
 - Follow Conventional Commits for all git messages.
 - Validate env vars with Zod in \`src/config/env.ts\`.
 ",
-<<<<<<< HEAD
   "README.md": "# vitest-playwright-biome-none-none-none-none
-=======
-  "README.md": "# vitest-playwright-biome-none-none-none
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
 
 A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd](https://github.com/rivailJunior/react-creator-cmd).
 
@@ -16389,11 +15727,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ",
   "package.json": "{
-<<<<<<< HEAD
   "name": "vitest-playwright-biome-none-none-none-none",
-=======
-  "name": "vitest-playwright-biome-none-none-none",
->>>>>>> 7e02095 (Feat/plan 2.5 (#49))
   "version": "1.0.0",
   "private": true,
   "scripts": {

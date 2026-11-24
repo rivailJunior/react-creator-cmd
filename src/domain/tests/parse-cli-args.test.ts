@@ -32,6 +32,8 @@ describe('parseCliArgs', () => {
         'docker',
         '--storybook',
         'storybook',
+        '--auth',
+        'nextauth',
       ]),
     );
     expect(result).toEqual({
@@ -42,6 +44,7 @@ describe('parseCliArgs', () => {
       ui: 'shadcn',
       docker: 'docker',
       storybook: 'storybook',
+      auth: 'nextauth',
     });
   });
 
@@ -98,6 +101,12 @@ describe('parseCliArgs', () => {
       'Invalid --storybook value "ladle". Valid options: storybook, none',
     );
   });
+
+  it('should throw on invalid --auth value', () => {
+    expect(() => parseCliArgs(buildArgv(['--auth', 'clerk']))).toThrow(
+      'Invalid --auth value "clerk". Valid options: nextauth, none',
+    );
+  });
 });
 
 describe('hasAllFlags', () => {
@@ -110,6 +119,7 @@ describe('hasAllFlags', () => {
       ui: 'shadcn',
       docker: 'docker',
       storybook: 'storybook',
+      auth: 'nextauth',
     };
     expect(hasAllFlags(flags)).toBe(true);
   });

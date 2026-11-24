@@ -29,6 +29,7 @@ export default class CLI implements ICommandLine {
         uiLibrary: data.uiLibrary,
         docker: data.docker,
         storybook: data.storybook,
+        auth: data.auth,
       });
       return "Project created";
     } catch (err) {

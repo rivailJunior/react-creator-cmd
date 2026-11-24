@@ -26,6 +26,10 @@ export const generateReadme = (
     options.storybook === 'storybook'
       ? '\n| `npm run storybook` | Start Storybook on :6006 |'
       : '';
+  const authLine =
+    options.auth === 'nextauth'
+      ? '\n- **Auth.js (NextAuth v5)** — GitHub OAuth, middleware session handling, `/signin` page'
+      : '';
 
   const content = `# ${options.projectName}
 
@@ -37,7 +41,7 @@ A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd
 - **React 19** — Latest React with Server Components
 - **TypeScript 5.7+** — Strict type checking
 - **${ui}** — Styling
-- **${unitTest}** — Unit testing
+- **${unitTest}** — Unit testing${authLine}
 - **${e2eTest}** — E2E testing
 - **${linter}** — Code quality
 - **Zod** — Schema validation

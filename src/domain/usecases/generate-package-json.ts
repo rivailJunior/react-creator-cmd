@@ -6,6 +6,7 @@ export type ProjectOptions = {
   uiLibrary: string;
   docker: string;
   storybook: string;
+  auth: string;
 };
 
 type PackageJson = {
@@ -140,6 +141,11 @@ const STORYBOOK_DEV_DEPENDENCIES: Record<string, string> = {
   '@storybook/test': '^8.5.0',
 };
 
+const NEXTAUTH_DEPENDENCIES: Record<string, string> = {
+  // Auth.js v5 for Next.js — @see https://authjs.dev
+  'next-auth': '^5.0.0-beta.25',
+};
+
 export const generatePackageJson = (options: ProjectOptions): string => {
   const pkg: PackageJson = {
     name: options.projectName,
@@ -188,5 +194,10 @@ export const generatePackageJson = (options: ProjectOptions): string => {
     Object.assign(pkg.devDependencies, STORYBOOK_DEV_DEPENDENCIES);
   }
 
+  // Auth overlay
+  if (options.auth === 'nextauth') {
+    Object.assign(pkg.dependencies, NEXTAUTH_DEPENDENCIES);
+  }
+
   return JSON.stringify(pkg, null, 2) + '\n';
-};;
+};;;

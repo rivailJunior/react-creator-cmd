@@ -33,6 +33,7 @@ describe("clack-adapter", () => {
       'none',
       'docker',
       'none',
+      'none',
       {
         operation: 'create-project',
         projectName: 'my-first-react-project',
@@ -43,6 +44,7 @@ describe("clack-adapter", () => {
         uiLibrary: 'none',
         docker: 'docker',
         storybook: 'none',
+        auth: 'none',
       },
     ],
     [
@@ -52,6 +54,7 @@ describe("clack-adapter", () => {
       'shadcn',
       'none',
       'storybook',
+      'nextauth',
       {
         operation: 'create-project',
         projectName: 'my-first-react-project',
@@ -62,6 +65,7 @@ describe("clack-adapter", () => {
         uiLibrary: 'shadcn',
         docker: 'none',
         storybook: 'storybook',
+        auth: 'nextauth',
       },
     ],
     [
@@ -71,6 +75,7 @@ describe("clack-adapter", () => {
       'shadcn',
       'docker',
       'storybook',
+      'nextauth',
       {
         operation: 'create-project',
         projectName: 'my-first-react-project',
@@ -81,10 +86,11 @@ describe("clack-adapter", () => {
         uiLibrary: 'shadcn',
         docker: 'docker',
         storybook: 'storybook',
+        auth: 'nextauth',
       },
     ],
   ])(
-    'should call create project with unit=%s e2e=%s linting=%s ui=%s docker=%s storybook=%s',
+    'should call create project with unit=%s e2e=%s linting=%s ui=%s docker=%s storybook=%s auth=%s',
     async (
       testMethod,
       endToEndTestMethod,
@@ -92,6 +98,7 @@ describe("clack-adapter", () => {
       uiLibraryMethod,
       dockerMethod,
       storybookMethod,
+      authMethod,
       expectedObject,
     ) => {
       const selectMock = vi
@@ -113,13 +120,14 @@ describe("clack-adapter", () => {
         .mockResolvedValueOnce(lintingMethod)
         .mockResolvedValueOnce(uiLibraryMethod)
         .mockResolvedValueOnce(dockerMethod)
-        .mockResolvedValueOnce(storybookMethod);
+        .mockResolvedValueOnce(storybookMethod)
+        .mockResolvedValueOnce(authMethod);
 
       const clackAdapter = new ClackAdapter();
       const response = await clackAdapter.init();
 
       expect(clack.text).toHaveBeenCalled();
-      expect(clack.select).toHaveBeenCalledTimes(7);
+      expect(clack.select).toHaveBeenCalledTimes(8);
       expect(clack.isCancel).toHaveBeenCalled();
 
       expect(response).toStrictEqual(expectedObject);

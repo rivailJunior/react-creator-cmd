@@ -94,6 +94,18 @@ async function createProject(
     storybookChoice = response as string;
   }
 
+  let authChoice: string;
+  if (flags.auth) {
+    authChoice = flags.auth;
+  } else {
+    const response = await select({
+      message: PromptTexts.auth.name,
+      options: PromptTexts.auth.options,
+    });
+    checkCancelation(response);
+    authChoice = response as string;
+  }
+
   const choices = {
     unit: unitChoice,
     endToEnd: e2eChoice,
@@ -101,6 +113,7 @@ async function createProject(
     uiLibrary: uiChoice,
     docker: dockerChoice,
     storybook: storybookChoice,
+    auth: authChoice,
   };
 
   const summary = [
@@ -111,6 +124,7 @@ async function createProject(
     `  ${color.bold('UI')}:        ${color.cyan(choices.uiLibrary)}`,
     `  ${color.bold('Docker')}:    ${color.cyan(choices.docker)}`,
     `  ${color.bold('Storybook')}: ${color.cyan(choices.storybook)}`,
+    `  ${color.bold('Auth')}:      ${color.cyan(choices.auth)}`,
   ].join('\n');
 
   log.info(`${PromptTexts.stackPreview.message}\n${summary}`);

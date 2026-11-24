@@ -22,18 +22,6 @@ export function copyProject(folderPath: string, options: ProjectOptions) {
   // 1. Copy base template
   fs.cpSync(basePath, folderPath, { recursive: true });
 
-  // 1b. Rename dotfiles that npm strips during publish
-  const dotfileRenames: [string, string][] = [
-    ['gitignore', '.gitignore'],
-    ['env.example', '.env.example'],
-  ];
-  for (const [from, to] of dotfileRenames) {
-    const src = path.join(folderPath, from);
-    if (fs.existsSync(src)) {
-      fs.renameSync(src, path.join(folderPath, to));
-    }
-  }
-
   // 2. Copy unit test overlay
   const unitOverlay = path.resolve(
     ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/' + options.unit,
@@ -75,10 +63,6 @@ export function copyProject(folderPath: string, options: ProjectOptions) {
     );
     if (fs.existsSync(dockerOverlay)) {
       fs.cpSync(dockerOverlay, folderPath, { recursive: true });
-      const dockerignoreSrc = path.join(folderPath, 'dockerignore');
-      if (fs.existsSync(dockerignoreSrc)) {
-        fs.renameSync(dockerignoreSrc, path.join(folderPath, '.dockerignore'));
-      }
     }
   }
 
@@ -92,7 +76,32 @@ export function copyProject(folderPath: string, options: ProjectOptions) {
     }
   }
 
-  // 8. Generate dynamic files
+  // 8. Copy auth overlay
+  if (options.auth === 'nextauth') {
+    const authOverlay = path.resolve(
+      ROOT_DIR_LOCATION + TEMPLATE_OVERLAYS + '/nextauth',
+    );
+    if (fs.existsSync(authOverlay)) {
+      fs.cpSync(authOverlay, folderPath, { recursive: true });
+    }
+  }
+
+  // 9. Rename dotfiles that npm strips during publish.
+  //    Runs after all overlays so overlay-provided dotfiles
+  //    (e.g. auth's env.example) are renamed too.
+  const dotfileRenames: [string, string][] = [
+    ['gitignore', '.gitignore'],
+    ['env.example', '.env.example'],
+    ['dockerignore', '.dockerignore'],
+  ];
+  for (const [from, to] of dotfileRenames) {
+    const src = path.join(folderPath, from);
+    if (fs.existsSync(src)) {
+      fs.renameSync(src, path.join(folderPath, to));
+    }
+  }
+
+  // 10. Generate dynamic files
   const packageJsonContent = generatePackageJson(options);
   fs.writeFileSync(path.join(folderPath, 'package.json'), packageJsonContent);
 

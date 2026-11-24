@@ -8,6 +8,7 @@ export interface CliFlags {
   ui?: string;
   docker?: string;
   storybook?: string;
+  auth?: string;
 }
 
 const VALID_UNITS = ['vitest', 'jest'] as const;
@@ -16,6 +17,7 @@ const VALID_LINT = ['biome', 'eslint'] as const;
 const VALID_UI = ['shadcn', 'none'] as const;
 const VALID_DOCKER = ['docker', 'none'] as const;
 const VALID_STORYBOOK = ['storybook', 'none'] as const;
+const VALID_AUTH = ['nextauth', 'none'] as const;
 
 const validateOption = <T extends string>(
   value: string | undefined,
@@ -40,6 +42,7 @@ export const parseCliArgs = (argv: string[] = process.argv): CliFlags => {
       ui: { type: 'string' },
       docker: { type: 'string' },
       storybook: { type: 'string' },
+      auth: { type: 'string' },
     },
     strict: false,
   });
@@ -64,6 +67,7 @@ export const parseCliArgs = (argv: string[] = process.argv): CliFlags => {
       VALID_STORYBOOK,
       'storybook',
     ),
+    auth: validateOption(values.auth as string | undefined, VALID_AUTH, 'auth'),
   };
 };
 
@@ -75,5 +79,6 @@ export const hasAllFlags = (flags: CliFlags): boolean =>
     flags.lint &&
     flags.ui &&
     flags.docker &&
-    flags.storybook,
+    flags.storybook &&
+    flags.auth,
   );

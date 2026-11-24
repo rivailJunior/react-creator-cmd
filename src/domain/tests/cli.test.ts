@@ -38,6 +38,7 @@ describe("CLI", () => {
         uiLibrary: 'none',
         docker: 'none',
         storybook: 'none',
+        auth: 'none',
       },
       {
         projectName: 'projectWithVitest',
@@ -47,6 +48,7 @@ describe("CLI", () => {
         uiLibrary: 'none',
         docker: 'none',
         storybook: 'none',
+        auth: 'none',
       },
     ],
     [
@@ -61,6 +63,7 @@ describe("CLI", () => {
         uiLibrary: 'shadcn',
         docker: 'docker',
         storybook: 'storybook',
+        auth: 'nextauth',
       },
       {
         projectName: 'projectWithJest',
@@ -70,6 +73,7 @@ describe("CLI", () => {
         uiLibrary: 'shadcn',
         docker: 'docker',
         storybook: 'storybook',
+        auth: 'nextauth',
       },
     ],
   ])(
@@ -96,6 +100,7 @@ describe("CLI", () => {
         uiLibrary: 'none',
         docker: 'none',
         storybook: 'none',
+        auth: 'none',
       }),
     ).rejects.toThrow('FOLDERNAME is required');
     expect(copyProject).not.toBeCalled();
@@ -112,6 +117,7 @@ describe("CLI", () => {
         uiLibrary: 'none',
         docker: 'none',
         storybook: 'none',
+        auth: 'none',
       }),
     ).rejects.toThrow('FOLDERNAME is required');
     expect(copyProject).not.toBeCalled();

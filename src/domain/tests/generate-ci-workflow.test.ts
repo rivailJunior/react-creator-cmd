@@ -10,6 +10,7 @@ const BASE_OPTIONS: ProjectOptions = {
   uiLibrary: 'none',
   docker: 'none',
   storybook: 'none',
+  auth: 'none',
 };
 
 describe("generateCiWorkflow", () => {

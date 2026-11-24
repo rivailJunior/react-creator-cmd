@@ -23,6 +23,7 @@ const DEFAULT_OPTIONS: ProjectOptions = {
   uiLibrary: 'none',
   docker: 'none',
   storybook: 'none',
+  auth: 'none',
 };
 
 const removeDir = (dirPath: string) => {
@@ -109,6 +110,56 @@ describe('Create Folder From Template', () => {
         path.join(destinationPath, 'src', 'components', 'heading.stories.tsx'),
       ),
     ).toBe(true);
+  });
+
+  it('should include nextauth overlay files', () => {
+    copyProject(destinationPath, { ...DEFAULT_OPTIONS, auth: 'nextauth' });
+    expect(fs.existsSync(path.join(destinationPath, 'src', 'auth.ts'))).toBe(
+      true,
+    );
+    expect(
+      fs.existsSync(path.join(destinationPath, 'src', 'auth.config.ts')),
+    ).toBe(true);
+    expect(
+      fs.existsSync(path.join(destinationPath, 'src', 'middleware.ts')),
+    ).toBe(true);
+    expect(
+      fs.existsSync(
+        path.join(
+          destinationPath,
+          'src',
+          'app',
+          'api',
+          'auth',
+          '[...nextauth]',
+          'route.ts',
+        ),
+      ),
+    ).toBe(true);
+    expect(
+      fs.existsSync(
+        path.join(destinationPath, 'src', 'app', 'signin', 'page.tsx'),
+      ),
+    ).toBe(true);
+    // Overlay env.example is renamed to .env.example
+    expect(fs.existsSync(path.join(destinationPath, '.env.example'))).toBe(
+      true,
+    );
+    expect(
+      fs.readFileSync(path.join(destinationPath, '.env.example'), 'utf-8'),
+    ).toContain('AUTH_SECRET');
+  });
+
+  it('should NOT include nextauth overlay files when auth=none', () => {
+    copyProject(destinationPath, DEFAULT_OPTIONS);
+    expect(fs.existsSync(path.join(destinationPath, 'src', 'auth.ts'))).toBe(
+      false,
+    );
+    expect(
+      fs.existsSync(
+        path.join(destinationPath, 'src', 'app', 'signin', 'page.tsx'),
+      ),
+    ).toBe(false);
   });
 });
 

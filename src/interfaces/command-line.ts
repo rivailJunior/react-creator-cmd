@@ -8,6 +8,7 @@ export type TCreateProjectData = {
   uiLibrary: string;
   docker: string;
   storybook: string;
+  auth: string;
 };
 export interface ICommandLine {
   createProjectFromTemplate: (

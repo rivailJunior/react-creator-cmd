@@ -12,6 +12,7 @@ const BASE_OPTIONS: ProjectOptions = {
   uiLibrary: 'none',
   docker: 'none',
   storybook: 'none',
+  auth: 'none',
 };
 
 describe("generatePackageJson", () => {
@@ -97,6 +98,18 @@ describe("generatePackageJson", () => {
     const pkg = JSON.parse(generatePackageJson(BASE_OPTIONS));
     expect(pkg.devDependencies.storybook).toBeUndefined();
     expect(pkg.scripts.storybook).toBeUndefined();
+  });
+
+  test('should include next-auth dep when auth=nextauth', () => {
+    const pkg = JSON.parse(
+      generatePackageJson({ ...BASE_OPTIONS, auth: 'nextauth' }),
+    );
+    expect(pkg.dependencies['next-auth']).toBeDefined();
+  });
+
+  test('should NOT include next-auth dep when auth=none', () => {
+    const pkg = JSON.parse(generatePackageJson(BASE_OPTIONS));
+    expect(pkg.dependencies['next-auth']).toBeUndefined();
   });
 
   test('should include tailwindcss and postcss plugin in base devDependencies', () => {

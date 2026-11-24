@@ -10,6 +10,7 @@ A CLI tool to bootstrap **production-ready Next.js 15** projects with modern too
 - **Template snapshot tests** — every valid stack combination (32 combos) snapshots the generated file tree, `package.json`, and file contents, catching template/overlay regressions before publish
 - **Integration tests** — `npm run test:integration` generates a real project and runs `npm install` → `next build` → `vitest run` end-to-end
 - **CI pipeline** — modernized GitHub Actions: Node 20/22 matrix, typecheck, coverage reporting, build verification, and the integration test gating every release
+- **Auth overlay** — optional [Auth.js](https://authjs.dev/) (NextAuth v5) with GitHub provider: `src/auth.ts`, edge-safe `src/auth.config.ts`, `middleware.ts`, `/api/auth/[...nextauth]` route handler, `/signin` page, and a session-aware `UserMenu` component
 
 ### v2.2.0
 
@@ -35,14 +36,15 @@ A CLI tool to bootstrap **production-ready Next.js 15** projects with modern too
 
 ### Stack Options
 
-| Category | Options |
-|---|---|
-| **Unit Testing** | [Vitest](https://vitest.dev/) or [Jest](https://jestjs.io/) |
-| **E2E Testing** | [Playwright](https://playwright.dev/) or [Cypress](https://www.cypress.io/) |
-| **Linting** | [Biome](https://biomejs.dev/) or [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) |
-| **UI Library** | [shadcn/ui](https://ui.shadcn.com/) or plain Tailwind CSS |
-| **Containerization** | [Docker](https://www.docker.com/) (`Dockerfile`, `docker-compose.yml`, `.dockerignore`) or none |
-| **Component Docs** | [Storybook](https://storybook.js.org/) (`.storybook/` config + example story) or none |
+| Category             | Options                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
+| **Unit Testing**     | [Vitest](https://vitest.dev/) or [Jest](https://jestjs.io/)                                       |
+| **E2E Testing**      | [Playwright](https://playwright.dev/) or [Cypress](https://www.cypress.io/)                       |
+| **Linting**          | [Biome](https://biomejs.dev/) or [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) |
+| **UI Library**       | [shadcn/ui](https://ui.shadcn.com/) or plain Tailwind CSS                                         |
+| **Containerization** | [Docker](https://www.docker.com/) (`Dockerfile`, `docker-compose.yml`, `.dockerignore`) or none   |
+| **Component Docs**   | [Storybook](https://storybook.js.org/) (`.storybook/` config + example story) or none             |
+| **Authentication**   | [Auth.js](https://authjs.dev/) / NextAuth v5 (GitHub provider, middleware, sign-in page) or none  |
 
 **Always included:** [Zod](https://zod.dev/), [Conventional Commits](https://www.conventionalcommits.org/), [GitHub Actions CI/CD](https://docs.github.com/en/actions), [Husky](https://typicode.github.io/husky/)
 
@@ -73,6 +75,7 @@ npx react-creator-cmd
 # Dependencies are installed and the first commit is created automatically
 # cd <your-project>
 # cp .env.example .env
+# (auth overlay: fill AUTH_SECRET + AUTH_GITHUB_ID/AUTH_GITHUB_SECRET — run `npx auth secret`)
 # npm run dev
 ```
 
@@ -88,7 +91,8 @@ npx react-creator-cmd \
   --lint biome \         # biome | eslint
   --ui shadcn \          # shadcn | none
   --docker docker \      # docker | none
-  --storybook storybook  # storybook | none
+  --storybook storybook \ # storybook | none
+  --auth nextauth         # nextauth | none
 ```
 
 ### Features

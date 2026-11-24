@@ -31,6 +31,7 @@ const OPTIONS: ProjectOptions = {
   uiLibrary: 'none',
   docker: 'none',
   storybook: 'none',
+  auth: 'nextauth',
 };
 
 let tmpRoot: string;

@@ -200,4 +200,4 @@ export const generatePackageJson = (options: ProjectOptions): string => {
   }
 
   return JSON.stringify(pkg, null, 2) + '\n';
-};;;
+};

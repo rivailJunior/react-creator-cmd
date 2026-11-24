@@ -23,11 +23,11 @@ const getStackDescription = (options: ProjectOptions): string => {
   return `- **Framework**: Next.js 15 (App Router, Server Components, Turbopack)
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: ${ui}
-- **Unit Testing**: ${unitTest} + Testing Library${authLine}
+- **Unit Testing**: ${unitTest} + Testing Library
 - **E2E Testing**: ${e2eTest}
 - **Linting/Formatting**: ${linter}
 - **Validation**: Zod
-- **Commits**: Conventional Commits (commitlint + husky)${dockerLine}${storybookLine}`;
+- **Commits**: Conventional Commits (commitlint + husky)${dockerLine}${storybookLine}${authLine}`;
 };
 
 const getRulesContent = (options: ProjectOptions): string => {

@@ -12495,13 +12495,13 @@ globs: "**/*.{ts,tsx}"
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: shadcn/ui + Tailwind CSS v4
 - **Unit Testing**: Jest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Architecture
 
@@ -12574,13 +12574,13 @@ AUTH_GITHUB_SECRET=""
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: shadcn/ui + Tailwind CSS v4
 - **Unit Testing**: Jest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Architecture
 
@@ -12801,13 +12801,13 @@ export default preview;
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: shadcn/ui + Tailwind CSS v4
 - **Unit Testing**: Jest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Architecture
 
@@ -12853,13 +12853,13 @@ export default preview;
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: shadcn/ui + Tailwind CSS v4
 - **Unit Testing**: Jest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
 - **Docs**: Storybook
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Commands
 
@@ -12932,13 +12932,13 @@ A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd
 - **TypeScript 5.7+** — Strict type checking
 - **shadcn/ui + Tailwind CSS v4** — Styling
 - **Jest** — Unit testing
-- **Auth.js (NextAuth v5)** — GitHub OAuth, middleware session handling, \`/signin\` page
 - **Cypress** — E2E testing
 - **ESLint + Prettier** — Code quality
 - **Zod** — Schema validation
 - **Conventional Commits** — Commit convention (commitlint + husky)
 - **Docker** — Dockerfile + docker-compose for containerized deployment
 - **Storybook** — Component explorer and documentation
+- **Auth.js (NextAuth v5)** — GitHub OAuth, middleware session handling, \`/signin\` page
 
 ## Getting Started
 
@@ -14366,12 +14366,12 @@ globs: "**/*.{ts,tsx}"
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: Tailwind CSS v4
 - **Unit Testing**: Vitest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Architecture
 
@@ -14444,12 +14444,12 @@ AUTH_GITHUB_SECRET=""
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: Tailwind CSS v4
 - **Unit Testing**: Vitest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Architecture
 
@@ -14637,12 +14637,12 @@ next-env.d.ts
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: Tailwind CSS v4
 - **Unit Testing**: Vitest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Architecture
 
@@ -14688,12 +14688,12 @@ next-env.d.ts
 - **Language**: TypeScript 5.7+
 - **UI/Styling**: Tailwind CSS v4
 - **Unit Testing**: Vitest + Testing Library
-- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 - **E2E Testing**: Cypress
 - **Linting/Formatting**: ESLint v9 (flat config) + Prettier
 - **Validation**: Zod
 - **Commits**: Conventional Commits (commitlint + husky)
 - **Containerization**: Docker
+- **Auth**: Auth.js (NextAuth v5) — session helpers in \`src/auth.ts\`, edge config in \`src/auth.config.ts\`
 
 ## Commands
 
@@ -14766,12 +14766,12 @@ A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd
 - **TypeScript 5.7+** — Strict type checking
 - **Tailwind CSS v4** — Styling
 - **Vitest** — Unit testing
-- **Auth.js (NextAuth v5)** — GitHub OAuth, middleware session handling, \`/signin\` page
 - **Cypress** — E2E testing
 - **ESLint + Prettier** — Code quality
 - **Zod** — Schema validation
 - **Conventional Commits** — Commit convention (commitlint + husky)
 - **Docker** — Dockerfile + docker-compose for containerized deployment
+- **Auth.js (NextAuth v5)** — GitHub OAuth, middleware session handling, \`/signin\` page
 
 ## Getting Started
 

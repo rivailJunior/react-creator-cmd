@@ -41,11 +41,11 @@ A [Next.js 15](https://nextjs.org/) project bootstrapped with [react-creator-cmd
 - **React 19** — Latest React with Server Components
 - **TypeScript 5.7+** — Strict type checking
 - **${ui}** — Styling
-- **${unitTest}** — Unit testing${authLine}
+- **${unitTest}** — Unit testing
 - **${e2eTest}** — E2E testing
 - **${linter}** — Code quality
 - **Zod** — Schema validation
-- **Conventional Commits** — Commit convention (commitlint + husky)${dockerLine}${storybookLine}
+- **Conventional Commits** — Commit convention (commitlint + husky)${dockerLine}${storybookLine}${authLine}
 
 ## Getting Started
 
